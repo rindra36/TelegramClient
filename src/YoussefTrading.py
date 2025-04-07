@@ -164,7 +164,7 @@ class YoussefTradingBot:
         elif trade_result != 'lose' and trade_result != 'loss':
             return None
 
-        message_retrying = ', retrying...' if retry == self.pocket_option.MAX_RETRY else ''
+        message_retrying = ', retrying...' if retry < self.pocket_option.MAX_RETRY else ''
         logging.warning(f'{martingale_message}Trade {trade_id} failed ({trade_result}){message_retrying}')
         return False
 
