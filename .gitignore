@@ -1,0 +1,5 @@
+.venv
+logs/*
+lib/*
+__pycache__/
+*.session

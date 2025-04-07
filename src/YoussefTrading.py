@@ -9,7 +9,6 @@ import logging
 import re
 import asyncio
 import traceback
-import sys
 from typing import Optional
 
 from telethon import events
@@ -36,7 +35,6 @@ class YoussefTradingBot:
         self.chats = load_chats()
         self.client = setup_client(SESSION_NAME, self.credentials['id'], self.credentials['hash'])
         self.pocket_option = PocketOptionAPI('real')
-        print(sys.path)
 
     async def handle_trade_execution(self, message: str) -> bool:
         """
@@ -55,7 +53,7 @@ class YoussefTradingBot:
 
         channel = SESSION_NAME
         retry = 0
-        amount = 1.0
+        amount = 4.0
         expiration = 5 * 60  # 5 minutes
 
         # Initialize trade data
