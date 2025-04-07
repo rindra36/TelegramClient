@@ -1,0 +1,1355 @@
+2025-04-02T20:56:13.797676Z  INFO TryConnect: Trying to connecto to wss://demo-api-eu.po.market/socket.io/?EIO=4&transport=websocket
+2025-04-02T20:56:14.715363Z DEBUG tungstenite::handshake::client: Client handshake done.    
+2025-04-02T20:56:14.715522Z  INFO SuccessConnect: Succesfully connected to wss://demo-api-eu.po.market/socket.io/?EIO=4&transport=websocket
+2025-04-02T20:56:14.715768Z  INFO TryConnect: Trying to connecto to wss://demo-api-eu.po.market/socket.io/?EIO=4&transport=websocket
+2025-04-02T20:56:15.747178Z DEBUG tungstenite::handshake::client: Client handshake done.    
+2025-04-02T20:56:15.747418Z  INFO SuccessConnect: Succesfully connected to wss://demo-api-eu.po.market/socket.io/?EIO=4&transport=websocket
+2025-04-02T20:56:15.747606Z  INFO binary_options_tools_core::general::client: Started WebSocketClient
+2025-04-02T20:56:15.748908Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T20:56:15.945949Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T20:56:16.234930Z DEBUG binary_options_tools_core::general::client: Recieved info: updateAssets
+2025-04-02T20:56:16.252132Z  INFO Buy: Placing a buy trade for asset 'EURUSD_otc', with amount '1' and time '300'
+2025-04-02T20:56:16.532293Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateAssets
+2025-04-02T20:56:16.532782Z DEBUG binary_options_tools_core::general::client: Recieved info: successauth
+2025-04-02T20:56:16.532935Z DEBUG binary_options_tools_core::general::client: Recieved data of type: successauth
+2025-04-02T20:56:16.533149Z DEBUG binary_options_tools_core::general::client: Recieved info: successupdatePending
+2025-04-02T20:56:16.535043Z DEBUG binary_options_tools_core::general::client: Recieved data of type: successupdatePending
+2025-04-02T20:56:16.535232Z DEBUG binary_options_tools_core::general::client: Recieved info: updateOpenedDeals
+2025-04-02T20:56:16.535357Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateOpenedDeals
+2025-04-02T20:56:16.535487Z DEBUG binary_options_tools_core::general::client: Recieved raw message: RawWebsocketMessage { value: "451-[\"updateCharts\",{\"_placeholder\":true,\"num\":0}]" }
+2025-04-02T20:56:16.535724Z  WARN binary_option_tools::pocketoption::parser::message: Failed to parse message of type 'updateOpenedDeals':
+ [{"chart_id":"chart-1","settings":"{\"chartId\":\"chart-1\",\"chartType\":2,\"chartPeriod\":6,\"candlesTimer\":true,\"symbol\":\"EURJPY_otc\",\"demoDealAmount\":1000,\"liveDealAmount\":1,\"enabledTradeMonitor\":false,\"enabledRatingWidget\":true,\"isVisible\":true,\"fastTimeframe\":180,\"enabledAutoscroll\":false,\"enabledGridSnap\":true,\"minimizedTradePanel\":false,\"fastCloseAt\":1743632460,\"enableQuickAutoOffset\":true,\"quickAutoOffsetValue\":300,\"showArea\":true,\"percentAmount\":2}"}], parsing it as raw data
+2025-04-02T20:56:16.535793Z DEBUG binary_options_tools_core::general::client: Recieved raw message: RawWebsocketMessage { value: "[{\"chart_id\":\"chart-1\",\"settings\":\"{\\\"chartId\\\":\\\"chart-1\\\",\\\"chartType\\\":2,\\\"chartPeriod\\\":6,\\\"candlesTimer\\\":true,\\\"symbol\\\":\\\"EURJPY_otc\\\",\\\"demoDealAmount\\\":1000,\\\"liveDealAmount\\\":1,\\\"enabledTradeMonitor\\\":false,\\\"enabledRatingWidget\\\":true,\\\"isVisible\\\":true,\\\"fastTimeframe\\\":180,\\\"enabledAutoscroll\\\":false,\\\"enabledGridSnap\\\":true,\\\"minimizedTradePanel\\\":false,\\\"fastCloseAt\\\":1743632460,\\\"enableQuickAutoOffset\\\":true,\\\"quickAutoOffsetValue\\\":300,\\\"showArea\\\":true,\\\"percentAmount\\\":2}\"}]" }
+2025-04-02T20:56:16.535910Z DEBUG binary_options_tools_core::general::client: Recieved info: successupdateBalance
+2025-04-02T20:56:16.536029Z DEBUG binary_options_tools_core::general::client: Recieved data of type: successupdateBalance
+2025-04-02T20:56:16.550899Z DEBUG binary_options_tools_core::general::client: Recieved info: updateClosedDeals
+2025-04-02T20:56:16.551227Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T20:56:16.578601Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateClosedDeals
+2025-04-02T20:56:16.767763Z DEBUG binary_options_tools_core::general::client: Recieved info: updateHistoryNew
+2025-04-02T20:56:16.882842Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateHistoryNew
+2025-04-02T20:56:17.136042Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:17.210548Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:17.647114Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:17.730794Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:18.151649Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:18.192865Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:18.663331Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:18.682369Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:19.140474Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:19.232646Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:19.640321Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:19.785258Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:20.134712Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:20.221218Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:20.634701Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:20.697948Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:20.748755Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T20:56:20.953395Z DEBUG binary_options_tools_core::general::client: Recieved info: successopenOrder
+2025-04-02T20:56:20.953767Z DEBUG binary_options_tools_core::general::client: Recieved data of type: successopenOrder
+2025-04-02T20:56:20.954193Z DEBUG binary_options_tools_core::general::client: Recieved info: successupdateBalance
+2025-04-02T20:56:20.954704Z DEBUG binary_option_tools::pocketoption::pocket_client: Successfully opened buy trade!
+2025-04-02T20:56:20.954840Z DEBUG binary_options_tools_core::general::client: Recieved data of type: successupdateBalance
+2025-04-02T20:56:20.956956Z  INFO Sell: Placing a sell trade for asset 'EURUSD_otc', with amount '1' and time '300'
+2025-04-02T20:56:20.958134Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T20:56:21.126236Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:21.162120Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:21.262060Z DEBUG binary_options_tools_core::general::client: Recieved info: successopenOrder
+2025-04-02T20:56:21.262407Z DEBUG binary_options_tools_core::general::client: Recieved data of type: successopenOrder
+2025-04-02T20:56:21.262684Z DEBUG binary_options_tools_core::general::client: Recieved info: successupdateBalance
+2025-04-02T20:56:21.262752Z DEBUG binary_option_tools::pocketoption::pocket_client: Successfully opened buy trade!
+2025-04-02T20:56:21.263206Z DEBUG binary_options_tools_core::general::client: Recieved data of type: successupdateBalance
+2025-04-02T20:56:21.299337Z DEBUG debug: BinaryOptionsToolsV2::logs: Timeout set to: 305 (6 extra seconds)
+2025-04-02T20:56:21.299751Z  INFO CheckResults: Checking results for trade of id 930482d0-25fa-4e40-a3e3-f0b26fbfad68
+2025-04-02T20:56:21.300768Z DEBUG binary_option_tools::pocketoption::pocket_client: Trade result not found in closed deals list, waiting for closing order to check.
+2025-04-02T20:56:21.300960Z DEBUG CheckResult: Expiration time in 314.69904942s seconds.
+2025-04-02T20:56:21.301349Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T20:56:21.645192Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:21.718075Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:22.141961Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:22.193964Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:22.634274Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:22.656164Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:23.141384Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:23.216136Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:23.633305Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:23.662365Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:24.120339Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:24.217164Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:24.646628Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:24.707847Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:25.142363Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:25.217573Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:25.646350Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:25.690665Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:26.134070Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:26.144454Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:26.647165Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:26.733291Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:27.131565Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:27.164437Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:27.649733Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:27.732645Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:28.142450Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:28.183725Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:28.667087Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:28.724688Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:29.160614Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:29.234281Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:29.667839Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:29.691594Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:30.157496Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:30.228592Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:30.683076Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:30.740811Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:31.153911Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:31.241673Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:31.680060Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:31.769728Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:32.185595Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:32.221874Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:32.698324Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:32.753873Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:33.176752Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:33.268546Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:33.679203Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:33.757377Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:34.146780Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:34.256841Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:34.690511Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:34.719740Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:35.174197Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:35.197620Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:35.728682Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:35.758235Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:36.226580Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:36.264339Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:36.738253Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:36.803006Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:37.143215Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:37.210779Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:37.748081Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:37.781764Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:38.208215Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:38.289665Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:38.699547Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:38.729814Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:39.197309Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:39.269642Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:39.707649Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:39.794858Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:40.150612Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:40.364206Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:40.708137Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:40.795502Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:40.820290Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T20:56:41.196311Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:41.256074Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:41.701944Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:41.740423Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:42.212282Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:42.227852Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:42.719364Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:42.736265Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:43.151465Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:43.249933Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:43.713966Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:43.803460Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:44.205285Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:44.300881Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:44.710613Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:44.771350Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:45.197316Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:45.225420Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:45.723257Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:45.748196Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:46.153918Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:46.229189Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:46.713652Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:46.739130Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:47.243096Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:47.288415Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:47.763682Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:47.857343Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:48.281294Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:48.415076Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:48.737845Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:48.889485Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:49.147790Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:49.230215Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:49.728315Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:49.737349Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:50.206101Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:50.221261Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:50.707334Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:50.810754Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:51.242867Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:51.326601Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:51.713224Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:51.786985Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:52.175028Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:52.249117Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:52.704539Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:52.732295Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:53.221156Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:53.303897Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:53.712650Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:53.734119Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:54.210896Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:54.221397Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:54.717553Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:54.806159Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:55.159594Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:55.257722Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:55.711387Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:55.792195Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:56.267277Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:56.365915Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:56.713247Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:56.794660Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:57.261721Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:57.275733Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:57.736976Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:57.768190Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:58.157980Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:58.246478Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:58.719183Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:58.789526Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:59.233189Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:59.327326Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:56:59.764762Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:56:59.824156Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:00.279018Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:00.363429Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:00.802745Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:00.832485Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:01.163863Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:01.258703Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:01.756782Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:01.768654Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:02.266341Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:02.296495Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:02.776188Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:02.852987Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:03.274579Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:03.393465Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:03.768679Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:03.834377Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:04.168025Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:04.242042Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:04.772731Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:04.842297Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:05.278296Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:05.396237Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:05.781386Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:05.867913Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:06.012680Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T20:57:06.230567Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:06.264811Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:06.744177Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:06.781973Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:07.167976Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:07.263436Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:07.753362Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:07.806344Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:08.229661Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:08.279958Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:08.717804Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:08.741201Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:09.252803Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:09.315891Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:09.746126Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:09.800976Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:10.174646Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:10.311357Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:10.731467Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:10.805755Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:11.231473Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:11.296970Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:11.747043Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:11.787739Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:12.235687Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:12.255507Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:12.770438Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:12.849274Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:13.178149Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:13.255222Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:13.736283Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:13.758439Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:14.237159Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:14.272682Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:14.747885Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:14.826612Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:15.239889Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:15.263046Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:15.746866Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:15.815167Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:16.170790Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:16.263573Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:16.744738Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:16.770261Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:17.255584Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:17.299250Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:17.463075Z DEBUG binary_options_tools_core::general::client: Recieved info: updateAssets
+2025-04-02T20:57:17.567228Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateAssets
+2025-04-02T20:57:17.729585Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:17.790335Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:18.244320Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:18.331563Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:18.757414Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:18.780555Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:19.164505Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:19.245973Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:19.768505Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:19.838163Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:20.261513Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:20.328478Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:20.449163Z DEBUG binary_options_tools_core::general::client: Recieved info: updateAssets
+2025-04-02T20:57:20.589750Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateAssets
+2025-04-02T20:57:20.772261Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:20.857153Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:21.267135Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:21.329800Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:21.758083Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:21.839983Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:22.188762Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:22.272981Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:22.766265Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:22.821291Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:23.268296Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:23.317317Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:23.768740Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:23.796683Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:24.266010Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:24.313932Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:24.755457Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:24.852233Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:25.170635Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:25.238169Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:25.754554Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:25.816502Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:26.270070Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:26.293537Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:26.766001Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:26.817538Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:27.275922Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:27.359180Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:27.780407Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:27.820882Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:28.181439Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:28.264072Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:28.778557Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:28.863175Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:29.289773Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:29.303280Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:29.780387Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:29.871487Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:30.285326Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:30.368266Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:30.778356Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:30.854777Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:31.179300Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:31.236704Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:31.248331Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T20:57:31.804357Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:31.834290Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:32.296132Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:32.402843Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:32.789169Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:32.841669Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:33.327295Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:33.397504Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:33.783513Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:33.863419Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:34.186684Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:34.257608Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:34.795355Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:34.863669Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:35.295799Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:35.324553Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:35.812362Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:35.861323Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:36.283266Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:36.296744Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:36.807624Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:36.894754Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:37.189795Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:37.265506Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:37.777148Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:37.777439Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:38.298135Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:38.367889Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:38.815622Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:38.903509Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:39.337148Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:39.438888Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:39.816337Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:39.883546Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:40.180772Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:40.313021Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:40.825681Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:40.908028Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:41.313519Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:41.337489Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:41.791784Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:41.816282Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:42.321279Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:42.366630Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:42.815671Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:42.912926Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:43.184851Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:43.249580Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:43.806440Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:43.815656Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:44.306611Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:44.371785Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:44.806135Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:44.895561Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:45.316971Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:45.347407Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:45.818859Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:45.896250Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:46.200195Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:46.289428Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:46.795631Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:46.829655Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:47.296523Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:47.321200Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:47.826234Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:47.906485Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:48.326114Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:48.402941Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:48.793625Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:48.800125Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:49.187528Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:49.267556Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:49.800328Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:49.821375Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:50.306291Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:50.369185Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:50.806572Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:50.860407Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:51.320817Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:51.361074Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:51.817248Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:51.850390Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:52.194838Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:52.248194Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:52.807115Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:52.807369Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:53.333635Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:53.427170Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:53.863718Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:53.945960Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:54.318546Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:54.374545Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:54.837406Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:54.906117Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:55.192189Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:55.264444Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:55.826964Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:55.869263Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:56.317077Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:56.327249Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:56.443928Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T20:57:56.823573Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:56.861063Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:57.325124Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:57.401609Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:57.829355Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:57.900798Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:58.197940Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:58.290476Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:58.804446Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:58.831271Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:59.326898Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:59.396193Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:57:59.825018Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:57:59.893654Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:00.322192Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:00.343580Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:00.827842Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:00.895315Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:01.205498Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:01.223102Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:01.827981Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:01.861361Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:02.329168Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:02.396375Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:02.831731Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:02.916191Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:03.341926Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:03.371297Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:03.841492Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:03.881205Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:04.191370Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:04.274739Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:04.816799Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:04.846202Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:05.342926Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:05.386852Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:05.810469Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:05.855152Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:06.334971Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:06.368817Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:06.838687Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:06.899463Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:07.192934Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:07.259187Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:07.835893Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:07.923586Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:08.316776Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:08.374466Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:08.829509Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:08.871084Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:09.320350Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:09.337552Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:09.817849Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:09.861082Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:10.196598Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:10.325122Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:10.839209Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:10.899020Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:11.314195Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:11.340618Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:11.796533Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:11.823066Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:12.302875Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:12.319154Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:12.811890Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:12.934242Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:13.200017Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:13.307095Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:13.805189Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:13.807547Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:14.301326Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:14.324219Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:14.826487Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:14.866494Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:15.309272Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:15.347606Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:15.802388Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:15.810204Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:16.207452Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:16.289757Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:16.823752Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:16.842927Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:17.321690Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:17.345296Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:17.839165Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:17.958598Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:18.356741Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:18.395404Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:18.839214Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:18.878029Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:19.197322Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:19.288808Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:19.825088Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:19.869547Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:20.322182Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:20.342542Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:20.829321Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:20.852975Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:21.325123Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:21.364178Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:21.638849Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T20:58:21.829689Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:21.890142Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:22.205976Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:22.264269Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:22.828394Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:22.935536Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:23.330662Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:23.381560Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:23.711838Z DEBUG binary_options_tools_core::general::client: Recieved info: updateAssets
+2025-04-02T20:58:23.786614Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateAssets
+2025-04-02T20:58:23.832986Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:23.873471Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:24.331318Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:24.395620Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:24.831287Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:24.845637Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:25.210350Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:25.278472Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:25.854586Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:25.953059Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:26.341787Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:26.444504Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:26.849586Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:26.891302Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:27.345311Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:27.417566Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:27.871260Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:27.899971Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:28.223219Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:28.258261Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:28.851180Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:28.861137Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:29.370339Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:29.418458Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:29.852231Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:29.935801Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:30.343331Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:30.375578Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:30.844253Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:30.867187Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:31.208889Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:31.295086Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:31.848818Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:31.864967Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:32.346095Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:32.363281Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:32.866917Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:32.930165Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:33.341964Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:33.345285Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:33.868297Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:33.941678Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:34.204521Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:34.277619Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:34.896237Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:34.916425Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:35.391134Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:35.487210Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:35.888245Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:35.970779Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:36.411268Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:36.483395Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:36.889378Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:36.940522Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:37.202258Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:37.288564Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:37.930158Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:37.940970Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:38.401751Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:38.436300Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:38.894168Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:38.995492Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:39.411804Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:39.426455Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:39.895167Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:39.961390Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:40.217169Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:40.347155Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:40.894125Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:40.935598Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:41.384146Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:41.424620Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:41.900958Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:41.986957Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:42.409319Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:42.470506Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:42.910121Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:42.940241Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:43.210901Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:43.241636Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:43.888775Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:43.911647Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:44.405307Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:44.491667Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:44.898330Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:44.964859Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:45.387200Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:45.399476Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:45.912587Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:45.962239Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:46.209499Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:46.280205Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:46.428156Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:46.501085Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:46.901730Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:46.943602Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:46.988655Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T20:58:47.429566Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:47.494635Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:47.896704Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:47.933286Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:48.410447Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:48.421130Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:48.930844Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:48.967899Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:49.228820Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:49.279204Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:49.445709Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:49.478706Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:49.935165Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:50.016183Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:50.417510Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:50.466227Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:50.915639Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:50.941154Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:51.408571Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:51.429512Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:51.909351Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:51.928030Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:52.206536Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:52.268465Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:52.423433Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:52.505049Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:52.917658Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:52.941543Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:53.411224Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:53.489696Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:53.910442Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:53.938445Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:54.427540Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:54.452237Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:54.911620Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:54.921106Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:55.214500Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:55.330949Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:55.416693Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:55.452245Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:55.925788Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:55.986812Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:56.418163Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:56.505534Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:56.919482Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:56.974745Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:57.424241Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:57.482293Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:57.923589Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:57.940906Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:58.210066Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:58.299152Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:58.427015Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:58.500289Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:58.910638Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:58.943620Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:59.417336Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:59.489697Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:58:59.914418Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:58:59.934761Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:00.424236Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:00.466449Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:00.698324Z DEBUG tungstenite::protocol: Received close frame: None    
+2025-04-02T20:59:00.698550Z DEBUG tungstenite::protocol: Replying to close with Frame { header: FrameHeader { is_final: true, rsv1: false, rsv2: false, rsv3: false, opcode: Control(Close), mask: None }, payload: b"" }    
+2025-04-02T20:59:00.698741Z  INFO binary_options_tools_core::general::client: Recieved closing frame
+2025-04-02T20:59:00.698960Z  WARN binary_options_tools_core::general::client: Error in event loop, Websocket connection was closed by the server, Recieved closing frame, reconnecting...
+2025-04-02T20:59:00.699158Z  INFO TryConnect: Trying to connecto to wss://demo-api-eu.po.market/socket.io/?EIO=4&transport=websocket
+2025-04-02T20:59:01.678486Z DEBUG tungstenite::handshake::client: Client handshake done.    
+2025-04-02T20:59:01.678695Z  INFO SuccessConnect: Succesfully connected to wss://demo-api-eu.po.market/socket.io/?EIO=4&transport=websocket
+2025-04-02T20:59:01.679543Z  INFO binary_options_tools_core::general::client: Reconnected successfully!
+2025-04-02T20:59:01.683237Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T20:59:01.879183Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T20:59:02.099723Z DEBUG binary_options_tools_core::general::client: Recieved info: updateAssets
+2025-04-02T20:59:02.375280Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateAssets
+2025-04-02T20:59:02.376050Z DEBUG binary_options_tools_core::general::client: Recieved info: successauth
+2025-04-02T20:59:02.376523Z DEBUG binary_options_tools_core::general::client: Recieved data of type: successauth
+2025-04-02T20:59:02.382977Z DEBUG binary_options_tools_core::general::client: Recieved info: successupdatePending
+2025-04-02T20:59:02.383183Z DEBUG binary_options_tools_core::general::client: Recieved data of type: successupdatePending
+2025-04-02T20:59:02.383337Z DEBUG binary_options_tools_core::general::client: Recieved info: updateOpenedDeals
+2025-04-02T20:59:02.383785Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateOpenedDeals
+2025-04-02T20:59:02.384789Z DEBUG binary_options_tools_core::general::client: Recieved info: successupdateBalance
+2025-04-02T20:59:02.384971Z DEBUG binary_options_tools_core::general::client: Recieved data of type: successupdateBalance
+2025-04-02T20:59:02.385176Z DEBUG binary_options_tools_core::general::client: Recieved raw message: RawWebsocketMessage { value: "451-[\"updateCharts\",{\"_placeholder\":true,\"num\":0}]" }
+2025-04-02T20:59:02.385455Z  WARN binary_option_tools::pocketoption::parser::message: Failed to parse message of type 'successupdateBalance':
+ [{"chart_id":"chart-1","settings":"{\"chartId\":\"chart-1\",\"chartType\":2,\"chartPeriod\":6,\"candlesTimer\":true,\"symbol\":\"EURJPY_otc\",\"demoDealAmount\":1000,\"liveDealAmount\":1,\"enabledTradeMonitor\":false,\"enabledRatingWidget\":true,\"isVisible\":true,\"fastTimeframe\":180,\"enabledAutoscroll\":false,\"enabledGridSnap\":true,\"minimizedTradePanel\":false,\"fastCloseAt\":1743632460,\"enableQuickAutoOffset\":true,\"quickAutoOffsetValue\":300,\"showArea\":true,\"percentAmount\":2}"}], parsing it as raw data
+2025-04-02T20:59:02.385534Z DEBUG binary_options_tools_core::general::client: Recieved raw message: RawWebsocketMessage { value: "[{\"chart_id\":\"chart-1\",\"settings\":\"{\\\"chartId\\\":\\\"chart-1\\\",\\\"chartType\\\":2,\\\"chartPeriod\\\":6,\\\"candlesTimer\\\":true,\\\"symbol\\\":\\\"EURJPY_otc\\\",\\\"demoDealAmount\\\":1000,\\\"liveDealAmount\\\":1,\\\"enabledTradeMonitor\\\":false,\\\"enabledRatingWidget\\\":true,\\\"isVisible\\\":true,\\\"fastTimeframe\\\":180,\\\"enabledAutoscroll\\\":false,\\\"enabledGridSnap\\\":true,\\\"minimizedTradePanel\\\":false,\\\"fastCloseAt\\\":1743632460,\\\"enableQuickAutoOffset\\\":true,\\\"quickAutoOffsetValue\\\":300,\\\"showArea\\\":true,\\\"percentAmount\\\":2}\"}]" }
+2025-04-02T20:59:02.385709Z DEBUG binary_options_tools_core::general::client: Recieved info: updateClosedDeals
+2025-04-02T20:59:02.385981Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T20:59:02.441221Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateClosedDeals
+2025-04-02T20:59:02.671478Z DEBUG binary_options_tools_core::general::client: Recieved info: updateHistoryNew
+2025-04-02T20:59:02.736722Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateHistoryNew
+2025-04-02T20:59:02.958853Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:03.011388Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:03.424634Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:03.446648Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:04.045119Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:04.120772Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:04.365548Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:04.425060Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:04.530755Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:04.554803Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:05.050985Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:05.086662Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:05.426581Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:05.509318Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:06.013023Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:06.050609Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:06.549100Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:06.550276Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:06.685314Z  INFO call: CheckResultCallback: Sending closed orders data after disconnection
+2025-04-02T20:59:07.071161Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:07.101156Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:07.333080Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:07.357145Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:07.525949Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:07.544630Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:07.995974Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:08.014142Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:08.514733Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:08.582907Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:09.016873Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:09.017190Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:09.534738Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:09.630646Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:09.927461Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:09.947117Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:10.221066Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:10.298573Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:10.426577Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:10.450290Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:10.938572Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:10.975405Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:11.423843Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:11.500903Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:11.931986Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:11.973205Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:12.435788Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:12.481797Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:12.928959Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:12.968151Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:13.231401Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:13.316351Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:13.432212Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:13.478907Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:13.943956Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:13.980370Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:14.431382Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:14.451399Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:14.944559Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:15.039834Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:15.431950Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:15.442610Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:15.940147Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:15.979268Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:16.232802Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:16.278002Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:16.436692Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:16.480420Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:16.937871Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:16.985411Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:17.433468Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:17.508653Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:17.962352Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:18.021614Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:18.438282Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:18.480121Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:18.939855Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:19.008583Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:19.233448Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:19.303943Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:19.438655Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:19.501242Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:19.981607Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:20.050533Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:20.432370Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:20.554064Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:20.977331Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:21.045138Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:21.474018Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:21.520965Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:21.978222Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:21.998645Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:22.233144Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:22.310945Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:22.481227Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:22.517983Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:23.032724Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:23.032986Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:23.432965Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:23.491617Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:23.975542Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:23.991420Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:24.476617Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:24.556187Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:25.001547Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:25.044812Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:25.228678Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:25.329312Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:25.512544Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:25.542935Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:25.992892Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:26.039664Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:26.459517Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:26.522007Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:26.681662Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T20:59:26.989579Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:27.013461Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:27.526176Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:27.565907Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:28.002005Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:28.058582Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:28.242984Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:28.297323Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:28.480279Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:28.538070Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:29.004111Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:29.041121Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:29.423177Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:29.516077Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:30.036410Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:30.054413Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:30.528843Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:30.556934Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:31.011720Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:31.031174Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:31.228360Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:31.291304Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:31.547498Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:31.621872Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:32.045619Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:32.082878Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:32.430254Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:32.505127Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:33.024385Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:33.040099Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:33.532490Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:33.545835Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:34.034855Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:34.043656Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:34.521863Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:34.606127Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:35.015706Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:35.064183Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:35.434228Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:35.577660Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:36.024793Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:36.114422Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:36.519104Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:36.568248Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:37.024038Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:37.097856Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:37.239395Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:37.307314Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:37.516773Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:37.572753Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:38.015665Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:38.101483Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:38.424950Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:38.504793Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:39.013593Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:39.042557Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:39.521927Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:39.554892Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:40.029207Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:40.139478Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:40.236435Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:40.330773Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:40.532332Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:40.592300Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:41.025987Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:41.092018Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:41.436253Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:41.507909Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:42.023533Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:42.066856Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:42.505614Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:42.546104Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:43.072267Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:43.157960Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:43.522535Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:43.614110Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:44.028563Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:44.074156Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:44.430322Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:44.503923Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:45.019192Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:45.053323Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:45.525760Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:45.585427Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:46.031324Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:46.041980Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:46.520572Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:46.542805Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:47.026500Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:47.118477Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:47.465152Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:47.501909Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:48.039512Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:48.074732Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:48.538022Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:48.562695Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:49.029972Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:49.083751Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:49.243857Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:49.274205Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:49.550886Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:49.619515Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:50.067925Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:50.137421Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:50.439008Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:50.493588Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:51.045744Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:51.065122Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:51.526173Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:51.540107Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:51.875280Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T20:59:52.038028Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:52.065313Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:52.570240Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:52.629186Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:53.058217Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:53.078355Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:53.441768Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:53.526964Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:54.050669Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:54.084312Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:54.559085Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:54.578512Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:55.071417Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:56.531599Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:56.531813Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:56.532059Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:56.532299Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:56.533319Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:56.533645Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:56.534266Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:57.064191Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:57.083844Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:57.569560Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:57.582964Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:58.057392Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:58.082592Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:58.543873Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:58.560126Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:59.064708Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:59.112240Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T20:59:59.448193Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T20:59:59.521166Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:00.075747Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:00.180924Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:00.561680Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:00.602216Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:01.135857Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:01.183897Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:01.564887Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:01.586656Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:02.079988Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:02.153607Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:02.434283Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:02.509230Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:03.104068Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:03.167363Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:03.641234Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:03.699548Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:04.086247Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:04.150020Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:04.571390Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:04.612171Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:05.076161Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:05.113361Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:05.561125Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:05.602192Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:06.082792Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:06.159826Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:06.568535Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:06.590586Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:07.088160Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:07.359332Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:07.589257Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:07.626229Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:08.102669Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:08.190943Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:08.452983Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:08.500015Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:09.101788Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:09.208796Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:09.616174Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:09.765187Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:10.090345Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:10.156280Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:10.597679Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:10.677115Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:11.096924Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:11.169778Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:11.441539Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:11.528473Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:12.102693Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:12.111185Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:12.596853Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:12.616659Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:13.087204Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:13.148199Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:13.589584Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:13.615853Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:14.129200Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:14.164697Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:14.454649Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:14.529887Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:15.102256Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:21.526665Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:21.526891Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:21.527070Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:21.527263Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:21.527481Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:21.531507Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:21.533288Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:21.533525Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:21.533671Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:21.533864Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:21.534022Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:21.534229Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:21.534376Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:21.534520Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:21.534661Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:21.537172Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:21.537478Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:21.537658Z DEBUG binary_options_tools_core::general::client: Recieved info: updateAssets
+2025-04-02T21:00:21.561691Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateAssets
+2025-04-02T21:00:21.562611Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:21.564080Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:21.566789Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:21.567098Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:21.567588Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:21.568127Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:21.569251Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:21.569795Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:21.570605Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T21:00:21.597271Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:21.638364Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:22.116145Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:22.169335Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:22.619563Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:22.763763Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:23.128567Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:23.137374Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:23.618766Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:23.668432Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:23.753769Z DEBUG binary_options_tools_core::general::client: Recieved info: updateAssets
+2025-04-02T21:00:23.904228Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateAssets
+2025-04-02T21:00:24.156198Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:24.233189Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:24.628568Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:24.733754Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:25.138397Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:25.166286Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:25.639401Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:25.693264Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:26.157057Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:26.201622Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:26.632196Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:26.652354Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:27.140172Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:27.197341Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:27.637191Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:27.684531Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:28.137598Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:28.151722Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:28.636118Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:28.658372Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:29.154851Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:29.225062Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:29.656161Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:29.704041Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:30.131577Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:30.146454Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:30.796349Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:30.839596Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:31.142165Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:31.144614Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:31.651391Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:31.665483Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:32.123213Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:32.158806Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:32.625233Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:32.663585Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:33.135624Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:33.145043Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:33.647900Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:33.683629Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:34.170797Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:34.228041Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:34.633625Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:34.668384Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:35.164523Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:35.211818Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:35.650722Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:35.729895Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:36.136542Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:36.163114Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:36.647184Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:36.692315Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:37.134456Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:37.149383Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:37.645260Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:37.689631Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:38.129842Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:38.140466Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:38.647741Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:38.694938Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:39.122533Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:39.135519Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:39.658332Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:39.707656Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:40.151173Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:40.215285Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:40.667075Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:40.681229Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:41.151179Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:41.199191Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:41.663126Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:41.673097Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:42.151492Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:42.176323Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:42.651286Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:42.705318Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:43.150682Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:43.198808Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:43.639392Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:43.764315Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:44.163534Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:44.319657Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:44.689186Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:44.692387Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:45.179326Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:45.252411Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:45.780020Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:45.828100Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:46.184140Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:46.208299Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:46.683368Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:46.697848Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:46.765453Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T21:00:47.183094Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:47.225203Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:47.686173Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:47.726413Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:48.171465Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:48.188030Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:48.685805Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:48.706092Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:49.183706Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:49.283372Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:49.672235Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:49.722690Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:50.175865Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:50.216182Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:50.706476Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:50.752881Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:51.206924Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:51.291680Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:51.686851Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:51.700926Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:52.217557Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:52.236940Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:52.683276Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:52.707982Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:53.202117Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:55.040296Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:55.040461Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:55.042313Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:55.043179Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:55.045295Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:55.045945Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:55.048298Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:55.235848Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:55.282656Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:55.708010Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:55.935552Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:56.196947Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:56.236770Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:56.732406Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:56.755814Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:57.268246Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:57.347870Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:57.706562Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:57.745659Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:58.197496Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:58.236916Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:58.725493Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:58.738243Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:59.257724Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:59.275798Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:00:59.732513Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:00:59.804669Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:00.242877Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:00.253476Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:00.753051Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:00.769930Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:01.269500Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:01.323529Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:01.738489Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:01.836618Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:02.240217Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:02.294012Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:02.820554Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:02.890259Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:03.356195Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:03.379331Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:03.844797Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:03.856881Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:04.299080Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:04.450713Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:04.854143Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:04.895556Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:05.351765Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:05.378016Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:05.839869Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:05.878084Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:06.243201Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:06.321075Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:06.752256Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:06.841250Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:07.235338Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:07.281194Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:07.757349Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:07.837071Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:08.239178Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:08.287105Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:08.757816Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:08.834056Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:09.229901Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:09.255246Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:09.761245Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:09.808439Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:10.251239Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:10.336703Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:10.754108Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:10.787491Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:11.257208Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:11.296027Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:11.768653Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:11.825379Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:11.961286Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T21:01:12.260729Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:12.285938Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:12.798236Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:12.899908Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:13.265014Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:13.305226Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:13.775324Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:13.875076Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:14.276572Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:14.302197Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:14.786159Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:14.873252Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:15.255878Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:15.292164Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:15.762165Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:15.801469Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:16.246255Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:16.255895Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:16.762635Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:16.812352Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:17.248290Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:17.260370Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:17.789740Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:17.850168Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:18.250730Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:18.280654Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:18.757345Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:18.784854Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:19.263311Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:19.293649Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:19.796373Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:19.873687Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:20.273553Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:20.322660Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:20.533466Z DEBUG binary_options_tools_core::general::client: Recieved info: successcloseOrder
+2025-04-02T21:01:20.534421Z DEBUG binary_options_tools_core::general::client: Recieved data of type: successcloseOrder
+2025-04-02T21:01:20.537205Z DEBUG binary_options_tools_core::general::client: Recieved info: successupdateBalance
+2025-04-02T21:01:20.537624Z DEBUG binary_options_tools_core::general::client: Recieved data of type: successupdateBalance
+2025-04-02T21:01:20.539037Z DEBUG debug: BinaryOptionsToolsV2::logs: Timeout set to: 7 (6 extra seconds)
+2025-04-02T21:01:20.542601Z  INFO CheckResults: Checking results for trade of id 57045b96-70b4-4fc7-b97a-e98aed3ae0b6
+2025-04-02T21:01:20.542830Z DEBUG binary_option_tools::pocketoption::pocket_client: Trade result not found in closed deals list, waiting for closing order to check.
+2025-04-02T21:01:20.542950Z DEBUG CheckResult: Expiration time in 16.457059437s seconds.
+2025-04-02T21:01:20.543397Z DEBUG binary_options_tools_core::general::client: Sent message to websocket!
+2025-04-02T21:01:20.788652Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:20.856550Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:21.254721Z DEBUG binary_options_tools_core::general::client: Recieved info: updateStream
+2025-04-02T21:01:21.292169Z DEBUG binary_options_tools_core::general::client: Recieved data of type: updateStream
+2025-04-02T21:01:21.678149Z DEBUG binary_options_tools_core::general::client: Recieved info: successcloseOrder
+2025-04-02T21:01:21.678853Z DEBUG binary_options_tools_core::general::client: Recieved data of type: successcloseOrder
+2025-04-02T21:01:21.683187Z DEBUG binary_options_tools_core::general::client: Recieved info: successupdateBalance
+2025-04-02T21:01:21.683927Z DEBUG binary_options_tools_core::general::client: Recieved data of type: successupdateBalance

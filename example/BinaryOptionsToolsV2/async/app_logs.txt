@@ -1,0 +1,5 @@
+2025-04-02T21:53:31.420487Z  INFO info: BinaryOptionsToolsV2::logs: This is an info message
+2025-04-02T21:53:31.438507Z  WARN warn: BinaryOptionsToolsV2::logs: This is a warning message
+2025-04-02T21:53:31.438731Z ERROR error: BinaryOptionsToolsV2::logs: This is an error message
+2025-04-02T21:53:31.438879Z  INFO info: BinaryOptionsToolsV2::logs: Bought 100 units of EURUSD
+2025-04-02T21:53:36.444666Z  INFO info: BinaryOptionsToolsV2::logs: Async operation completed
