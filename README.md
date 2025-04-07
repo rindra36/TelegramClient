@@ -28,7 +28,7 @@ mkdir lib && cd lib
 
 # Install BinaryOptionsTools-V2
 git clone https://github.com/ChipaDevTeam/BinaryOptionsTools-v2.git
-cd BinaryOptionsTools-v2
+cd BinaryOptionsTools-v2/BinaryOptionsToolsV2
 maturin develop -r
 cd ..
 
