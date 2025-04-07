@@ -26,8 +26,8 @@ VALID_TIMEZONES = {
     -3: 'America/Sao_Paulo'  # UTC-3
 }
 
-TRADE_EXECUTION_BUFFER: float = 0  # Seconds to subtract from wait time for API preparation
-ROOT_PATH = Path(__file__).parent[1]
+TRADE_EXECUTION_BUFFER: float = 0.5  # Seconds to subtract from wait time for API preparation
+ROOT_PATH = Path(__file__).parents[1]
 CONFIG_PATH = f'{ROOT_PATH}/assets/telegramCredentials.json'
 
 
@@ -92,7 +92,7 @@ async def waiting_time(entry_time: str, timezone_offset: TimeOffset = -4) -> boo
             logging.warning("Entry time has already passed")
             return False
 
-        adjusted_wait = max(0, wait_seconds - TRADE_EXECUTION_BUFFER) if wait_seconds > TRADE_EXECUTION_BUFFER else 0
+        adjusted_wait = max(0, wait_seconds + TRADE_EXECUTION_BUFFER) if wait_seconds > TRADE_EXECUTION_BUFFER else 0
         logging.info(f"Waiting {adjusted_wait:.2f} seconds...")
         await asyncio.sleep(adjusted_wait)
         return True
@@ -121,7 +121,7 @@ def get_telegram_credentials() -> JsonDict:
         KeyError: If required credentials are missing
     """
     try:
-        with CONFIG_PATH.open('r', encoding='utf-8') as f:
+        with open(CONFIG_PATH, 'r', encoding='utf-8') as f:
             credentials = json.load(f)
 
         # Validate required fields

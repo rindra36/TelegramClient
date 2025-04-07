@@ -1,3 +1,7 @@
 telethon
 pandas
 maturin
+websockets==10.4
+tzlocal
+requests
+nest_asyncio
