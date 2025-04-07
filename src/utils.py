@@ -89,7 +89,7 @@ async def waiting_time(entry_time: str, timezone_offset: TimeOffset = -4) -> boo
     try:
         wait_seconds = get_wait_time(entry_time, timezone_offset)
         if wait_seconds is None:
-            logging.warning("Entry time has already passed")
+            logging.warning(f"Entry time has already passed : {entry_time}")
             return False
 
         adjusted_wait = max(0, wait_seconds + TRADE_EXECUTION_BUFFER) if wait_seconds > TRADE_EXECUTION_BUFFER else 0
