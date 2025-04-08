@@ -14,17 +14,18 @@ class PocketOptionAPI:
     LIMIT_BALANCE = 25
     MAX_BID = 4  # Maximum bid amount considering Martingale strategy with base amount of $1
 
-    def __init__(self, wallet_type: str = 'demo'):
+    def __init__(self, account: int, wallet_type: str = 'demo'):
         """
         Initialize PocketOption API wrapper.
 
         Args:
+            account (int): The account in which launching the trade
             wallet_type (str): Type of wallet ('demo' or 'real')
         """
         self._variables: Dict[str, Dict[str, Any]] = {}
         self.wallet_type = wallet_type.lower()
         self._logger = logging.getLogger(__name__)
-        self.pocket_option_method = PocketOptionMethod(self.wallet_type)
+        self.pocket_option_method = PocketOptionMethod(account, self.wallet_type)
 
     @property
     def variables(self) -> Dict[str, Dict[str, Any]]:

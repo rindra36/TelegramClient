@@ -34,7 +34,7 @@ class YoussefTradingBot:
         self.credentials = load_credentials()
         self.chats = load_chats()
         self.client = setup_client(SESSION_NAME, self.credentials['id'], self.credentials['hash'])
-        self.pocket_option = PocketOptionAPI('real')
+        self.pocket_option = PocketOptionAPI(1, 'real')
 
     async def handle_trade_execution(self, message: str) -> bool:
         """

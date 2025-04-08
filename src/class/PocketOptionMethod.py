@@ -14,12 +14,20 @@ class PocketOptionMethod:
     """
 
     # Class constants
-    DEMO_SSID = '''42["auth",{"session":"24k4ea9r0a1qck71rfojrgnl8o","isDemo":1,"uid":96282099,"platform":3}]'''
-    REAL_SSID = r'''42["auth",{"session":"a:4:{s:10:\"session_id\";s:32:\"b14deaeb687db05a7a49318bdb0973b6\";s:10:\"ip_address\";s:12:\"102.18.29.29\";s:10:\"user_agent\";s:70:\"Mozilla/5.0 (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0\";s:13:\"last_activity\";i:1743529087;}cc8be88ba075e7d0598e1e887eea1e50","isDemo":0,"uid":96282099,"platform":3}]'''
+    SSID = {
+        1: {
+            'DEMO': '''42["auth",{"session":"24k4ea9r0a1qck71rfojrgnl8o","isDemo":1,"uid":96282099,"platform":3}]''',
+            'REAL': r'''42["auth",{"session":"a:4:{s:10:\"session_id\";s:32:\"b14deaeb687db05a7a49318bdb0973b6\";s:10:\"ip_address\";s:12:\"102.18.29.29\";s:10:\"user_agent\";s:70:\"Mozilla/5.0 (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0\";s:13:\"last_activity\";i:1743529087;}cc8be88ba075e7d0598e1e887eea1e50","isDemo":0,"uid":96282099,"platform":3}]'''
+        },
+        2: {
+            'DEMO': '''42["auth",{"session":"u1n8euostr7agl269u7bo55f6l","isDemo":1,"uid":98422233,"platform":3}]''',
+            'REAL': r'''42["auth",{"session":"a:4:{s:10:\"session_id\";s:32:\"5ccd052cd6fa15869a64b979fc15191c\";s:10:\"ip_address\";s:13:\"102.18.45.228\";s:10:\"user_agent\";s:70:\"Mozilla/5.0 (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0\";s:13:\"last_activity\";i:1744140658;}f118368f92ce971e6c44cd3a09aa0e78","isDemo":0,"uid":98422233,"platform":3}]'''
+        }
+    }
     MAX_RETRIES = 3
     RETRY_DELAY = 5  # seconds
 
-    def __init__(self, wallet_type: str = 'demo'):
+    def __init__(self, account: int, wallet_type: str = 'demo'):
         """
         Initialize PocketOptionMethod with specified wallet type.
 
@@ -27,7 +35,7 @@ class PocketOptionMethod:
             wallet_type (str): Type of wallet ('demo' or 'real')
         """
         self.wallet_type = wallet_type.lower()
-        self.ssid = self.REAL_SSID if 'real' in self.wallet_type else self.DEMO_SSID
+        self.ssid = self.SSID[account]['REAL'] if 'real' in self.wallet_type else self.SSID[account]['DEMO']
         self.api_async = PocketOptionAsync(self.ssid)
         self._logger = logging.getLogger(__name__)
         self.isDemo = False if 'real' in self.wallet_type else True
