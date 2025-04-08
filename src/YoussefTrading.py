@@ -87,7 +87,7 @@ class YoussefTradingBot:
                     logging.error(f'Trade cycle failed: {e}', traceback_exception)
                     break
             else:
-                logging.warning('Entry time has passed')
+                logging.warning(f'Entry time has passed : {message}')
                 self.pocket_option.remove_channel_data(channel)
                 break
 
