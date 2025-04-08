@@ -9,7 +9,6 @@ import logging
 import re
 import asyncio
 import traceback
-import sys
 from typing import Optional
 
 from telethon import events
@@ -36,7 +35,6 @@ class YoussefTradingBot:
         self.chats = load_chats()
         self.client = setup_client(SESSION_NAME, self.credentials['id'], self.credentials['hash'])
         self.pocket_option = PocketOptionAPI('real')
-        print(sys.path)
 
     async def handle_trade_execution(self, message: str) -> bool:
         """
@@ -55,7 +53,7 @@ class YoussefTradingBot:
 
         channel = SESSION_NAME
         retry = 0
-        amount = 1.0
+        amount = 2.0
         expiration = 5 * 60  # 5 minutes
 
         # Initialize trade data
@@ -89,7 +87,7 @@ class YoussefTradingBot:
                     logging.error(f'Trade cycle failed: {e}', traceback_exception)
                     break
             else:
-                logging.warning('Entry time has passed')
+                logging.warning(f'Entry time has passed : {message}')
                 self.pocket_option.remove_channel_data(channel)
                 break
 
@@ -166,7 +164,7 @@ class YoussefTradingBot:
         elif trade_result != 'lose' and trade_result != 'loss':
             return None
 
-        message_retrying = ', retrying...' if retry == self.pocket_option.MAX_RETRY else ''
+        message_retrying = ', retrying...' if retry < self.pocket_option.MAX_RETRY else ''
         logging.warning(f'{martingale_message}Trade {trade_id} failed ({trade_result}){message_retrying}')
         return False
 
