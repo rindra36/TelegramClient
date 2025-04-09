@@ -1,4 +1,7 @@
 {
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder};${workspaceFolder}/src/class"
+    },
     "terminal.integrated.env.linux": {
         "PYTHONPATH": "${workspaceFolder}:${workspaceFolder}/src/class"
     }
