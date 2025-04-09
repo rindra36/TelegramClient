@@ -28,7 +28,7 @@ VALID_TIMEZONES = {
 
 TRADE_EXECUTION_BUFFER: float = 0.5  # Seconds to subtract from wait time for API preparation
 ROOT_PATH = Path(__file__).parents[1]
-CONFIG_PATH = f'{ROOT_PATH}/assets/telegramCredentials.json'
+CONFIG_PATH = f'{ROOT_PATH}/assets/env/telegramCredentials.json'
 
 
 class TimeZoneError(ValueError):
@@ -174,7 +174,7 @@ def setup_logging(session_name: str) -> None:
 
 def load_chats() -> Dict[str, Any]:
     """Load monitored chat configurations."""
-    with open(f'{ROOT_PATH}/assets/chats.json', 'r', encoding='utf-8') as f:
+    with open(f'{ROOT_PATH}/assets/env/chats.json', 'r', encoding='utf-8') as f:
         return json.loads(f.read())
 
 

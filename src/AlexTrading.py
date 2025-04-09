@@ -60,7 +60,7 @@ class AlexTradingBot:
             'action': action,
             'asset': asset,
             'expiration': int(expiration) * 60,
-            'amount': 1.0,
+            'amount': 5.0,
         })
 
         return await self._execute_new_trade(channel)    
@@ -153,8 +153,7 @@ class AlexTradingBot:
     async def start(self) -> None:
         """Start the trading bot"""
 
-        # @self.client.on(events.NewMessage(chats=self.chats[SESSION_NAME]))
-        @self.client.on(events.NewMessage)
+        @self.client.on(events.NewMessage(chats=self.chats[SESSION_NAME]))
         async def message_handler(event):
             await self.handle_trade_execution(event.raw_text)
 

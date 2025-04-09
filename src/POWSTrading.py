@@ -36,7 +36,7 @@ class POWSTradingBot:
         self.credentials = load_credentials()
         self.chats = load_chats()
         self.client = setup_client(SESSION_NAME, self.credentials['id'], self.credentials['hash'])
-        self.pocket_option = PocketOptionAPI('real')
+        self.pocket_option = PocketOptionAPI(2)
 
     async def handle_trade_execution(self, message: str) -> bool:
         """
@@ -168,7 +168,8 @@ class POWSTradingBot:
     async def start(self) -> None:
         """Start the trading bot"""
 
-        @self.client.on(events.NewMessage(chats=self.chats[SESSION_NAME]))
+        # @self.client.on(events.NewMessage(chats=self.chats[SESSION_NAME]))
+        @self.client.on(events.NewMessage)
         async def message_handler(event):
             await self.handle_trade_execution(event.raw_text)
 

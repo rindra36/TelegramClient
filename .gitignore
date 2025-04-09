@@ -3,4 +3,4 @@ logs/*
 lib/*
 __pycache__/
 *.session
-assets/*
+assets/env/*
