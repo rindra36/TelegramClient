@@ -41,7 +41,9 @@ pip install .
 ## ⚙️ Configuration
 
 1. Navigate to the `assets` directory
-2. Configure the following JSON files:
+2. Create an `env` directory
+3. Copy all the JSON files from `example`
+4. Configure the following JSON files:
    - `assets.json`: Trading assets configuration
    - `binomoCredentials.json`: Trading platform credentials
    - `telegramCredentials.json`: Telegram bot credentials
