@@ -1,6 +1,7 @@
 from typing import Dict, Any, Optional, Union
 import asyncio
 import logging
+from BinaryOptionsToolsV2.validator import Validator
 from PocketOptionMethod import PocketOptionMethod
 
 
@@ -244,3 +245,14 @@ class PocketOptionAPI:
             Any: Trade data
         """
         return await self.pocket_option_method.get_trade_data(trade_id)
+
+    async def get_best_payout(self):
+        """
+        Get the best payout.
+        Returns:
+            Any: Best payout
+        """
+        return await self.pocket_option_method.get_best_payout()
+
+    async def create_raw_order(self, message: str, validator: Validator):
+        return await self.pocket_option_method.create_raw_order(message, validator)

@@ -7,6 +7,7 @@ import json
 import asyncio
 import logging
 from logging import RootLogger
+import re
 
 import pytz
 from datetime import datetime, timedelta
@@ -189,7 +190,7 @@ def load_credentials() -> Dict[str, str]:
 def setup_client(session_name, id, hash) -> TelegramClient:
     """Initialize and configure Telegram client."""
     return TelegramClient(
-        f'{session_name}-home',
+        f'{session_name}-codeanywhere',
         id,
         hash
     )
@@ -308,3 +309,69 @@ async def wait_until_close_timestamp(close_timestamp: int, waiting_second: int =
 
     if wait_time > 0:
         await asyncio.sleep(wait_time)
+
+def filter_keys_by_allowed_list(all_keys, allowed_keys):
+    # Return only keys that are in the allowed list
+    return [key for key in all_keys if key in allowed_keys]
+
+def check_other_asset(message: str):
+    ASSETS_DICT = {
+        'ADA-USD_otc': r'Cardano.*(\(?OTC\)?)?',
+        'AMZN_otc': r'Amazon.*(\(?OTC\)?)?',
+        'AUS200_otc': r'AUS 200.*(\(?OTC\)?)?',
+        'BABA_otc': r'Alibaba.*(\(?OTC\)?)?',
+        'BITB_otc': r'Bitcoin ETF.*(\(?OTC\)?)?',
+        'BNB-USD_otc': r'BNB.*(\(?OTC\)?)?',
+        'BTCUSD_otc': r'Bitcoin.*(\(?OTC\)?)?',
+        'CITI_otc': r'Citigroup Inc.*(\(?OTC\)?)?',
+        'D30EUR_otc': r'D30EUR.*(\(?OTC\)?)?',
+        'DJI30_otc': r'DJI30.*(\(?OTC\)?)?',
+        'DOGE_otc': r'Dogecoin.*(\(?OTC\)?)?',
+        'DOTUSD_otc': r'Polkadot.*(\(?OTC\)?)?',
+        'E35EUR_otc': r'E35EUR.*(\(?OTC\)?)?',
+        'E50EUR_otc': r'E50EUR.*(\(?OTC\)?)?',
+        'ETHUSD_otc': r'Ethereum.*(\(?OTC\)?)?',
+        'F40EUR_otc': r'F40EUR.*(\(?OTC\)?)?',
+        'FDX_otc': r'FedEx.*(\(?OTC\)?)?',
+        'JNJ_otc': r'Johnson & Johnson.*(\(?OTC\)?)?',
+        'JPN225_otc': r'JPN225.*(\(?OTC\)?)?',
+        'LINK_otc': r'Chainlink.*(\(?OTC\)?)?',
+        'LTCUSD_otc': r'Litecoin.*(\(?OTC\)?)?',
+        'MATIC_otc': r'Polygon.*(\(?OTC\)?)?',
+        'MSFT_otc': r'Microsoft.*(\(?OTC\)?)?',
+        'NFLX_otc': r'Netflix.*(\(?OTC\)?)?',
+        'NASUSD_otc': r'US100.*(\(?OTC\)?)?',
+        'SOL-USD_otc': r'Solana.*(\(?OTC\)?)?',
+        'SP500_otc': r'SP500.*(\(?OTC\)?)?',
+        'TON-USD_otc': r'Toncoin.*(\(?OTC\)?)?',
+        'TRX-USD_otc': r'TRON.*(\(?OTC\)?)?',
+        'TWITTER_otc': r'Twitter.*(\(?OTC\)?)?',
+        'UKBrent_otc': r'Brent Oil.*(\(?OTC\)?)?',
+        'USCrude_otc': r'WTI Crude Oil.*(\(?OTC\)?)?',
+        'VISA_otc': r'VISA.*(\(?OTC\)?)?',
+        'XAGUSD_otc': r'Silver.*(\(?OTC\)?)?',
+        'XAUUSD_otc': r'Gold.*(\(?OTC\)?)?',
+        'XNGUSD_otc': r'Natural Gas.*(\(?OTC\)?)?',
+        'XPDUSD_otc': r'Palladium spot.*(\(?OTC\)?)?',
+        'XPTUSD_otc': r'Platinum spot.*(\(?OTC\)?)?',
+        'XPRUSD_otc': r'American Express.*(\(?OTC\)?)?',
+        '#AXP_otc': r'American Express.*(\(?OTC\)?)?',
+        '#CSCO_otc': r'Cisco.*(\(?OTC\)?)?',
+        '#FB_otc': r'FACEBOOK INC.*(\(?OTC\)?)?',
+        '#INTC_otc': r'Intel.*(\(?OTC\)?)?',
+        '#JNJ_otc': r'Johnson & Johnson.*(\(?OTC\)?)?',
+        '#MCD_otc': r"McDonald's.*(\(?OTC\)?)?",
+        '#MSFT_otc': r'Microsoft.*(\(?OTC\)?)?',
+        '#PFE_otc': r'Pfizer Inc.*(\(?OTC\)?)?',
+        '#TSLA_otc': r'Tesla.*(\(?OTC\)?)?',
+        '#XOM_otc': r'ExxonMobil.*(\(?OTC\)?)?'
+    }
+
+    for value, regex in ASSETS_DICT.items():
+        asset_match = re.search(regex, message, re.IGNORECASE)
+        if asset_match:
+            if not 'OTC' in asset_match.group():
+                value = value.replace('_otc', '')
+            
+            return value
+    return None

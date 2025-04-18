@@ -1,5 +1,5 @@
 """
-Youseff Trading Bot Module
+Matthew Trading Bot Module
 
 This module implements a Telegram bot that monitors specific channels for trading signals
 and executes trades on PocketOption platform using the Martingale strategy.
@@ -15,14 +15,14 @@ from src.utils import waiting_time, safe_trade, \
     find_trade_in_opened_deals, get_trade_result, determine_trade_result
 
 
-class YoussefTradingBot:
+class MatthewTradingBot:
     """
     Trading bot that monitors Telegram channels for signals and executes trades on PocketOption.
     """
 
     def __init__(self, pocket_option):
         """Initialize the trading bot with configuration and credentials."""
-        self.SESSION_NAME = 'Youseff'
+        self.SESSION_NAME = 'Matthew'
         self.TIMEZONE_OFFSET = -4
         self.DO_MARTINGALE = True # To control if we will going to Martingale or not because it is not working properly actually, set to True if want to go to Martingale
         self.MAX_RETRY = 2
@@ -56,7 +56,7 @@ class YoussefTradingBot:
             'amount': amount,
         })
 
-        logging.info(f"YoussefTrading.py Trade parameters: {self.pocket_option.get_channel_data(channel)}")
+        logging.info(f"MatthewTrading.py Trade parameters: {self.pocket_option.get_channel_data(channel)}")
 
         # Execute trade with Martingale strategy
         while retry <= self.MAX_RETRY:
@@ -68,7 +68,7 @@ class YoussefTradingBot:
                     elif success is None:
                         return False
                     if not self.DO_MARTINGALE:
-                        logging.warning(f'YoussefTrading.py Martingale needed here but not activated. Stop on retry {retry}')
+                        logging.warning(f'MatthewTrading.py Martingale needed here but not activated. Stop on retry {retry}')
                         return False
                     retry += 1
                     amount *= 2
@@ -76,10 +76,10 @@ class YoussefTradingBot:
                     self.pocket_option.set_value(channel, 'amount', amount)
                 except Exception as e:
                     traceback_exception = traceback.format_exc()
-                    logging.error(f'YoussefTrading.py Trade cycle failed: {e}', traceback_exception)
+                    logging.error(f'MatthewTrading.py Trade cycle failed: {e}', traceback_exception)
                     break
             else:
-                logging.warning(f'YoussefTrading.py Entry time has passed : {message}')
+                logging.warning(f'MatthewTrading.py Entry time has passed : {message}')
                 self.pocket_option.remove_channel_data(channel)
                 break
 
@@ -106,7 +106,7 @@ class YoussefTradingBot:
             action = action_match.group(1)
 
         # Extract asset
-        asset_match = re.search(r'([A-Z]{3})/.*([A-Z]{3}).*OTC', message)
+        asset_match = re.search(r'([A-Z]{3}).*/.*([A-Z]{3}).*OTC', message)
         if asset_match:
             asset = f'{asset_match.group(1)}{asset_match.group(2)}_otc'
 
@@ -127,7 +127,7 @@ class YoussefTradingBot:
         martingale_message = ''
         if retry > 0:
             martingale_message = f'MARTINGALE {retry} '
-        logging.info(f'YoussefTrading.py {martingale_message}INITIATE TRADE')
+        logging.info(f'MatthewTrading.py {martingale_message}INITIATE TRADE')
 
         trade_id = await safe_trade(self.pocket_option, channel)
 
@@ -136,10 +136,10 @@ class YoussefTradingBot:
             if not trade_id:
                 return None
 
-        logging.info(f'YoussefTrading.py {martingale_message}TRADE PLACED SUCCESSFULLY: "{trade_id}" AND WAITING FOR RESPONSE')
+        logging.info(f'MatthewTrading.py {martingale_message}TRADE PLACED SUCCESSFULLY: "{trade_id}" AND WAITING FOR RESPONSE')
 
         expiration = int(self.pocket_option.get_value(channel, 'expiration')) - 5
-        logging.info(f'YoussefTrading.py Waiting for the expiration time minus 5 seconds : {expiration}')
+        logging.info(f'MatthewTrading.py Waiting for the expiration time minus 5 seconds : {expiration}')
         await asyncio.sleep(expiration)
 
         trade_data = await get_trade_result(self.pocket_option, trade_id)
@@ -147,17 +147,17 @@ class YoussefTradingBot:
             return None
 
         trade_result = determine_trade_result(trade_data)
-        logging.info(f'YoussefTrading.py Trade result: {trade_result}')
+        logging.info(f'MatthewTrading.py Trade result: {trade_result}')
 
         if trade_result in ['win', 'draw']:
-            logging.info(f'YoussefTrading.py Trade successful: {trade_result}')
+            logging.info(f'MatthewTrading.py Trade successful: {trade_result}')
             self.pocket_option.remove_channel_data(channel)
             return True
         elif trade_result != 'lose' and trade_result != 'loss':
             return None
 
         message_retrying = ', retrying...' if retry < self.MAX_RETRY else ''
-        logging.warning(f'YoussefTrading.py {martingale_message}Trade {trade_id} failed ({trade_result}){message_retrying}')
+        logging.warning(f'MatthewTrading.py {martingale_message}Trade {trade_id} failed ({trade_result}){message_retrying}')
         return False
 
     def cleanup_channel_data(self, channel: str, retry: int) -> None:

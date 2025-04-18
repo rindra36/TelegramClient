@@ -2,5 +2,6 @@
 logs/*
 lib/*
 __pycache__/
-*.session
+*.session*
 assets/env/*
+notes/*

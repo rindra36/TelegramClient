@@ -1,5 +1,5 @@
 """
-POWS Trading Bot Module
+Viperion Trading Bot Module
 
 This module implements a Telegram bot that monitors specific channels for trading signals and
 executes trades on PocketOption platform.
@@ -12,7 +12,7 @@ import re
 from typing import Dict
 from src.utils import safe_trade, find_trade_in_opened_deals, get_trade_result, determine_trade_result
 
-class POWSTradingBot:
+class ViperionTradingBot:
     """
     Trading bot that monitors Telegram channels for signals and executes trades on PocketOption.
 
@@ -21,12 +21,12 @@ class POWSTradingBot:
     """
     def __init__(self, pocket_option):
         """Initialize the trading bot with configuration and API connections."""
-        self.SESSION_NAME = 'POWS'
+        self.SESSION_NAME = 'Viperion'
         self.TRADE_PATTERNS = {
-            'ASSET': r'([A-Z]{3})/.*([A-Z]{3}).*OTC',
-            'EXPIRATION': r'(\d)\s+minutes?$',
-            'ACTION': r'(UP|DOWN)'
+            'ASSET_EXPIRATION': r'([A-Z]{3})\s+([A-Z]{3})\s+(?:OTC\s+)?M(\d)',
+            'ACTION': r'(UP|DOWN)$'
         }
+        self.ACTIONS = ['🔼', '🔽']
         self.pocket_option = pocket_option
 
     async def handle_trade_execution(self, message: str) -> bool:
@@ -51,8 +51,12 @@ class POWSTradingBot:
             if not extracted_data:
                 return False
 
-            logging.info(f'POWSTrading.py {extracted_data}')
-            self.pocket_option.set_value(channel, extracted_data['key'], extracted_data['value'])
+            logging.info(f'ViperionTrading.py {extracted_data}')
+            if type(extracted_data) == list:
+                for data in extracted_data:
+                    self.pocket_option.set_value(channel, data['key'], data['value'])
+            else:
+                self.pocket_option.set_value(channel, extracted_data['key'], extracted_data['value'])
 
             if self._has_complete_trade_data(channel):
                 return await self._execute_new_trade(channel)
@@ -77,12 +81,12 @@ class POWSTradingBot:
     async def _execute_new_trade(self, channel: str) -> bool:
         """Set up and execute a new trade."""
         self.pocket_option.set_value(channel, 'amount', 1.0)
-        logging.info(f'POWSTrading.py Trade parameters: {self.pocket_option.get_channel_data(channel)}')
+        logging.info(f'ViperionTrading.py Trade parameters: {self.pocket_option.get_channel_data(channel)}')
 
         try:
             return await self.execute_trade_cycle(channel)
         except Exception as e:
-            logging.error(f'POWSTrading.py Trade cycle failed: {e}')
+            logging.error(f'ViperionTrading.py Trade cycle failed: {e}')
             return False
 
     def parse_trading_signal(self, message: str) -> Dict[str, str] | bool:
@@ -102,16 +106,23 @@ class POWSTradingBot:
                 return {'key': 'action', 'value': 'BUY'}
             elif action_match.group(1).upper() == 'DOWN':
                 return {'key': 'action', 'value': 'SELL'}
+        elif message[0] in self.ACTIONS:
+            if message[0] == '🔼':
+                return {'key': 'action', 'value': 'BUY'}
+            elif message[0] == '🔽':
+                return {'key': 'action', 'value': 'SELL'}
 
         # Extract asset if this is the message
-        asset_match = re.search(self.TRADE_PATTERNS['ASSET'], message, re.IGNORECASE)
-        if asset_match:
-            return {'key': 'asset', 'value': f'{asset_match.group(1)}{asset_match.group(2)}_otc'}
+        asset_expiration_match = re.search(self.TRADE_PATTERNS['ASSET_EXPIRATION'], message, re.IGNORECASE)
+        if asset_expiration_match:
+            has_otc = ''
+            if 'otc' in message.lower():
+                has_otc = '_otc'
 
-        # Extract expiration if this is the message
-        expiration_match = re.search(self.TRADE_PATTERNS['EXPIRATION'], message, re.IGNORECASE)
-        if expiration_match:
-            return {'key': 'expiration', 'value': int(expiration_match.group(1)) * 60}
+            return [
+                {'key': 'asset', 'value': f'{asset_expiration_match.group(1)}{asset_expiration_match.group(2)}{has_otc}'},
+                {'key': 'expiration', 'value': int(asset_expiration_match.group(3)) * 60}
+            ]
 
         return False
 
@@ -125,7 +136,7 @@ class POWSTradingBot:
         Returns:
             bool: True if trade was successful, False otherwise
         """
-        logging.info('POWSTrading.py INITIATE TRADE')
+        logging.info('ViperionTrading.py INITIATE TRADE')
         trade_id = await safe_trade(self.pocket_option, channel)
 
         if not trade_id:
@@ -135,7 +146,7 @@ class POWSTradingBot:
 
         # Remove the channel data right after the trade is placed
         self.pocket_option.remove_channel_data(channel)
-        logging.info(f'POWSTrading.py TRADE PLACED SUCCESSFULLY: "{trade_id}" AND WAITING FOR RESPONSE')
+        logging.info(f'ViperionTrading.py TRADE PLACED SUCCESSFULLY: "{trade_id}" AND WAITING FOR RESPONSE')
 
         return await self._monitor_trade_result(trade_id, channel)
 
@@ -146,13 +157,13 @@ class POWSTradingBot:
             return False
 
         trade_result = determine_trade_result(trade_data)
-        logging.info(f'POWSTrading.py Trade result: {trade_result}')
+        logging.info(f'ViperionTrading.py Trade result: {trade_result}')
 
         if trade_result in ['win', 'draw']:
-            logging.info(f'POWSTrading.py Trade successful: {trade_result}')
+            logging.info(f'ViperionTrading.py Trade successful: {trade_result}')
             return True
 
-        logging.warning(f'POWSTrading.py Trade {trade_id} failed ({trade_result})')
+        logging.warning(f'ViperionTrading.py Trade {trade_id} failed ({trade_result})')
         return False
 
     async def start(self, message) -> None:

@@ -1,6 +1,8 @@
 from typing import Tuple, Any, Optional, Callable, TypeVar, Coroutine
 from BinaryOptionsToolsV2.pocketoption import PocketOptionAsync, PocketOption
+from BinaryOptionsToolsV2.validator import Validator
 from BinaryOptionsTools import pocketoption
+from datetime import timedelta
 import asyncio
 import logging
 import nest_asyncio
@@ -40,6 +42,7 @@ class PocketOptionMethod:
         self._logger = logging.getLogger(__name__)
         self.isDemo = False if 'real' in self.wallet_type else True
         self.api_v1 = pocketoption(self.ssid, self.isDemo)
+        self.use_delay_retry = True
         nest_asyncio.apply()
 
     async def get_balance(self) -> float | None:
@@ -139,13 +142,15 @@ class PocketOptionMethod:
                 result = await func(*args, **kwargs)
                 if not result and attempt < self.MAX_RETRIES - 1:
                     self._logger.warning(f"Empty result on attempt {attempt + 1}, retrying...")
-                    await asyncio.sleep(self.RETRY_DELAY)
+                    if self.use_delay_retry:
+                        await asyncio.sleep(self.RETRY_DELAY)
                     continue
                 return result
             except Exception as e:
                 self._logger.warning(f"Attempt {attempt + 1} failed: {str(e)}")
                 if attempt < self.MAX_RETRIES - 1:
-                    await asyncio.sleep(self.RETRY_DELAY)
+                    if self.use_delay_retry:
+                        await asyncio.sleep(self.RETRY_DELAY)
                 else:
                     self._logger.error(f"All retry attempts failed for {func.__name__}")
                     raise
@@ -192,3 +197,28 @@ class PocketOptionMethod:
 
         logging.info('Try using execute_with_retry')
         return await self.execute_with_retry(self.api_async.check_win, trade_id)
+
+    async def get_best_payout(self):
+        """
+        Get the best payout.
+        """
+        await asyncio.sleep(5)
+        payouts = await self.execute_with_retry(self.api_async.payout)
+        
+        return self.get_keys_with_max_value(payouts)
+
+    def get_keys_with_max_value(self, data_dict):
+        # Find the maximum value in the dictionary
+        max_value = max(data_dict.values())
+        
+        # Get all keys that have this maximum value
+        keys_with_max_value = [key for key, value in data_dict.items() if value == max_value]
+        
+        return keys_with_max_value
+    
+    async def create_raw_order(self, message: str, validator: Validator):
+        # Disable delay on retry
+        self.use_delay_retry = False
+        raw_order = await self.execute_with_retry(self.api_async.create_raw_order_with_timout, message, validator, timedelta(seconds=5))
+        self.use_delay_retry = True
+        return raw_order
