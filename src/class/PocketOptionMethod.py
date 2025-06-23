@@ -17,13 +17,23 @@ class PocketOptionMethod:
 
     # Class constants
     SSID = {
+        # rindra36@gmail.com
+        # 1: {
+        #     'DEMO': '''42["auth",{"session":"24k4ea9r0a1qck71rfojrgnl8o","isDemo":1,"uid":96282099,"platform":3}]''',
+        #     'REAL': r'''42["auth",{"session":"a:4:{s:10:\"session_id\";s:32:\"b2254c2e6b4ac99a32b83c1cf3bc1c5a\";s:10:\"ip_address\";s:11:\"102.18.37.8\";s:10:\"user_agent\";s:70:\"Mozilla/5.0 (X11; Linux x86_64; rv:137.0) Gecko/20100101 Firefox/137.0\";s:13:\"last_activity\";i:1744740582;}05c047b229940bbd6729c6f02e0e33b9","isDemo":0,"uid":96282099,"platform":3}]'''
+        # },
         1: {
-            'DEMO': '''42["auth",{"session":"24k4ea9r0a1qck71rfojrgnl8o","isDemo":1,"uid":96282099,"platform":3}]''',
-            'REAL': r'''42["auth",{"session":"a:4:{s:10:\"session_id\";s:32:\"b14deaeb687db05a7a49318bdb0973b6\";s:10:\"ip_address\";s:12:\"102.18.29.29\";s:10:\"user_agent\";s:70:\"Mozilla/5.0 (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0\";s:13:\"last_activity\";i:1743529087;}cc8be88ba075e7d0598e1e887eea1e50","isDemo":0,"uid":96282099,"platform":3}]'''
+            'DEMO': '''42["auth",{"session":"j079fsgog45pjnbsj9a2hvpnnb","isDemo":1,"uid":102766033,"platform":3,"isFastHistory":true}]''',
+            'REAL': r'''42["auth",{"session":"a:4:{s:10:\"session_id\";s:32:\"e880474778a3286b35b5a23504b76206\";s:10:\"ip_address\";s:13:\"102.18.26.137\";s:10:\"user_agent\";s:70:\"Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0\";s:13:\"last_activity\";i:1748984628;}f1f2b4e8c412d3cef2198dc3d0ffc662","isDemo":0,"uid":102766033,"platform":3,"isFastHistory":true}]'''
         },
+        #  aronihmax@gmail.com
+        # 2: {
+        #     'DEMO': '''42["auth",{"session":"u1n8euostr7agl269u7bo55f6l","isDemo":1,"uid":98422233,"platform":3}]''',
+        #     'REAL': r'''42["auth",{"session":"a:4:{s:10:\"session_id\";s:32:\"5ccd052cd6fa15869a64b979fc15191c\";s:10:\"ip_address\";s:13:\"102.18.45.228\";s:10:\"user_agent\";s:70:\"Mozilla/5.0 (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0\";s:13:\"last_activity\";i:1744140658;}f118368f92ce971e6c44cd3a09aa0e78","isDemo":0,"uid":98422233,"platform":3}]'''
+        # }
         2: {
-            'DEMO': '''42["auth",{"session":"u1n8euostr7agl269u7bo55f6l","isDemo":1,"uid":98422233,"platform":3}]''',
-            'REAL': r'''42["auth",{"session":"a:4:{s:10:\"session_id\";s:32:\"5ccd052cd6fa15869a64b979fc15191c\";s:10:\"ip_address\";s:13:\"102.18.45.228\";s:10:\"user_agent\";s:70:\"Mozilla/5.0 (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0\";s:13:\"last_activity\";i:1744140658;}f118368f92ce971e6c44cd3a09aa0e78","isDemo":0,"uid":98422233,"platform":3}]'''
+            'DEMO': '''42["auth",{"session":"upen8g2mcd3cvu5ai5i4jjl6si","isDemo":1,"uid":102365452,"platform":3,"isFastHistory":false}]''',
+            'REAL': r'''42["auth",{"session":"a:4:{s:10:\"session_id\";s:32:\"63469838d39604af877c0f5759e0fde5\";s:10:\"ip_address\";s:12:\"102.18.38.77\";s:10:\"user_agent\";s:70:\"Mozilla/5.0 (X11; Linux x86_64; rv:137.0) Gecko/20100101 Firefox/137.0\";s:13:\"last_activity\";i:1748113468;}40e4371abb280075c4d016787b9fc52a","isDemo":0,"uid":102365452,"platform":3,"isFastHistory":false}]'''
         }
     }
     MAX_RETRIES = 3
@@ -222,3 +232,6 @@ class PocketOptionMethod:
         raw_order = await self.execute_with_retry(self.api_async.create_raw_order_with_timout, message, validator, timedelta(seconds=5))
         self.use_delay_retry = True
         return raw_order
+    
+    async def get_candles(self, asset: str, period: int, offset: int) -> list[dict]:
+        return await self.execute_with_retry(self.api_async.get_candles, asset, period, offset)

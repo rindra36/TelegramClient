@@ -140,9 +140,11 @@ class AxelTradingBot:
 
         # Remove the channel data right after the trade is placed
         self.pocket_option.remove_channel_data(channel)
-        logging.info(f'AxelTrading.py TRADE PLACED SUCCESSFULLY: "{trade_id}" AND WAITING FOR RESPONSE')
+        logging.info(f'AxelTrading.py TRADE PLACED SUCCESSFULLY: "{trade_id}"')
 
-        return await self._monitor_trade_result(trade_id, channel)
+        return True
+
+        # return await self._monitor_trade_result(trade_id, channel)
 
     async def _monitor_trade_result(self, trade_id: str, channel: str) -> bool:
         """Monitor and process trade results."""

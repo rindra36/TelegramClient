@@ -45,7 +45,7 @@ class YoussefTradingBot:
 
         channel = self.SESSION_NAME
         retry = 0
-        amount = 1.0
+        amount = 2.0
         expiration = 5 * 60  # 5 minutes
 
         # Initialize trade data

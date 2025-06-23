@@ -133,6 +133,35 @@ class PocketOptionAPI:
         if key != "channel":  # Prevent overwriting channel identifier
             self._variables[channel][key] = value
 
+    def are_channels_identical(self, channel1: str, channel2: str) -> bool:
+        """
+        Compare if two channels have exactly the same data.
+
+        Args:
+            channel1: First channel identifier
+            channel2: Second channel identifier
+
+        Returns:
+            bool: True if channels have identical data, False otherwise
+        """
+        # Check if both channels exist
+        if not self.has_channel(channel1) or not self.has_channel(channel2):
+            return False
+
+        data1 = self.get_channel_data(channel1)
+        data2 = self.get_channel_data(channel2)
+
+        # Check if they have the same keys
+        if set(data1.keys()) != set(data2.keys()):
+            return False
+
+        # Compare all values except the channel identifier
+        return all(
+            data1[key] == data2[key] 
+            for key in data1.keys() 
+            if key != "channel"
+        )
+
     async def trade(self, channel: str, check_win: bool = False, use_v1: bool = True) -> Union[str, bool, None]:
         """
         Execute a trade for a specific channel.
@@ -256,3 +285,6 @@ class PocketOptionAPI:
 
     async def create_raw_order(self, message: str, validator: Validator):
         return await self.pocket_option_method.create_raw_order(message, validator)
+
+    async def get_payout(self, asset: str):
+        return await self.pocket_option_method.get_payout(asset)

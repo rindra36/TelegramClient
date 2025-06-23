@@ -25,7 +25,7 @@ class VictorTradingBot:
         self.SESSION_NAME = 'Victor'
         self.TIMEZONE_OFFSET = -4
         self.DO_MARTINGALE = True # To control if we will going to Martingale or not because it is not working properly actually, set to True if want to go to Martingale
-        self.MAX_RETRY = 2
+        self.MAX_RETRY = 1
         self.pocket_option = pocket_option
 
     async def handle_trade_execution(self, message: str) -> bool:
@@ -55,6 +55,14 @@ class VictorTradingBot:
             'expiration': expiration,
             'amount': amount,
         })
+
+        # Adding the entry point
+        self.pocket_option.set_value(channel, 'entry', entry)
+
+        if (self.pocket_option.are_channels_identical(channel, 'Youseff')):
+            logging.error(f'Identical to Youseff\'s call : {self.pocket_option.get_channel_data(channel)}')
+            self.pocket_option.remove_channel_data(channel)
+            return False
 
         logging.info(f"VictorTrading.py Trade parameters: {self.pocket_option.get_channel_data(channel)}")
 

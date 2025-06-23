@@ -10,7 +10,7 @@ import logging
 import re
 
 from typing import Dict, Optional
-from src.utils import safe_trade, find_trade_in_opened_deals, get_trade_result, determine_trade_result
+from src.utils import safe_trade, find_trade_in_opened_deals, get_trade_result, determine_trade_result, check_other_asset
 class AlexTradingBot:
     """
     Trading bot that monitors Telegram channels for signals and executes trades on PocketOption.
@@ -25,6 +25,11 @@ class AlexTradingBot:
             'ASSET': r'([A-Z]{3})/([A-Z]{3})(?:\s+)?(\(OTC\))?',
             'EXPIRATION': r'Duration\s+(\d)\s+minutes?$',
             'ACTION': r'Deal\s+for\s+(BUY|SELL)'
+        }
+        self.TRADE_PATTERNS_2 = {
+            'EXPIRATION': r'(\d)\s+minutes?',
+            'ACTION': r'(BUY|SELL)',
+            'ASSET': r'([A-Z]{3})/([A-Z]{3})\s+(\(OTC\))?'
         }
         self.pocket_option = pocket_option
 
@@ -75,24 +80,33 @@ class AlexTradingBot:
         action = expiration = asset = None
 
         # Verify message format
-        if not re.search(r'Deal\s+for\s+', message, re.IGNORECASE):
+        if not re.search(r'Deal\s+for\s+', message, re.IGNORECASE) and not re.search(r'Bet - ', message, re.IGNORECASE):
             return action, asset, expiration
 
+        if re.search(r'Deal\s+for\s+', message, re.IGNORECASE):
+            trade_pattern = self.TRADE_PATTERNS
+            logging.info('AlexTrading.py: Trading only with Cryptocurrency')
+            return action, asset, expiration # Not taken account when trading with normal currency. Only focus on Cryptocurrency for Alex
+        elif re.search(r'Bet - ', message, re.IGNORECASE):
+            trade_pattern = self.TRADE_PATTERNS_2
+
         # Check for action pattern
-        action_match = re.search(self.TRADE_PATTERNS['ACTION'], message, re.IGNORECASE)
+        action_match = re.search(trade_pattern['ACTION'], message, re.IGNORECASE)
         if action_match:
             action = action_match.group(1)
 
         # Extract asset if this is the message
-        asset_match = re.search(self.TRADE_PATTERNS['ASSET'], message, re.IGNORECASE)
+        asset_match = re.search(trade_pattern['ASSET'], message, re.IGNORECASE)
         if asset_match:
             has_otc = ''
             if asset_match.group(3) and asset_match.group(3).lower() == '(otc)':
                 has_otc = '_otc'
             asset = f'{asset_match.group(1)}{asset_match.group(2)}{has_otc}'
+        else:
+            asset = check_other_asset(message)
 
         # Extract expiration if this is the message
-        expiration_match = re.search(self.TRADE_PATTERNS['EXPIRATION'], message, re.IGNORECASE)
+        expiration_match = re.search(trade_pattern['EXPIRATION'], message, re.IGNORECASE)
         if expiration_match:
             expiration = expiration_match.group(1)
 
@@ -118,9 +132,11 @@ class AlexTradingBot:
 
         # Remove the channel data right after the trade is placed
         self.pocket_option.remove_channel_data(channel)
-        logging.info(f'AlexTrading.py TRADE PLACED SUCCESSFULLY: "{trade_id}" AND WAITING FOR RESPONSE')
+        logging.info(f'AlexTrading.py TRADE PLACED SUCCESSFULLY: "{trade_id}"')
 
-        return await self._monitor_trade_result(trade_id, channel)
+        return True
+
+        # return await self._monitor_trade_result(trade_id, channel)
 
     async def _monitor_trade_result(self, trade_id: str, channel: str) -> bool:
         """Monitor and process trade results."""

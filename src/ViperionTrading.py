@@ -106,7 +106,7 @@ class ViperionTradingBot:
                 return {'key': 'action', 'value': 'BUY'}
             elif action_match.group(1).upper() == 'DOWN':
                 return {'key': 'action', 'value': 'SELL'}
-        elif message[0] in self.ACTIONS:
+        elif message[0] and message[0] in self.ACTIONS:
             if message[0] == '🔼':
                 return {'key': 'action', 'value': 'BUY'}
             elif message[0] == '🔽':
@@ -148,7 +148,9 @@ class ViperionTradingBot:
         self.pocket_option.remove_channel_data(channel)
         logging.info(f'ViperionTrading.py TRADE PLACED SUCCESSFULLY: "{trade_id}" AND WAITING FOR RESPONSE')
 
-        return await self._monitor_trade_result(trade_id, channel)
+        return True
+
+        # return await self._monitor_trade_result(trade_id, channel)
 
     async def _monitor_trade_result(self, trade_id: str, channel: str) -> bool:
         """Monitor and process trade results."""

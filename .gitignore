@@ -5,3 +5,6 @@ __pycache__/
 *.session*
 assets/env/*
 notes/*
+candles_data/*
+bot/*
+bot-v2/*

@@ -25,7 +25,7 @@ class POWSTradingBot:
         self.TRADE_PATTERNS = {
             'ASSET': r'([A-Z]{3})/.*([A-Z]{3}).*OTC',
             'EXPIRATION': r'(\d)\s+minutes?$',
-            'ACTION': r'(UP|DOWN)'
+            'ACTION': r'(UP|DOWN)$'
         }
         self.pocket_option = pocket_option
 
@@ -135,9 +135,11 @@ class POWSTradingBot:
 
         # Remove the channel data right after the trade is placed
         self.pocket_option.remove_channel_data(channel)
-        logging.info(f'POWSTrading.py TRADE PLACED SUCCESSFULLY: "{trade_id}" AND WAITING FOR RESPONSE')
+        logging.info(f'POWSTrading.py TRADE PLACED SUCCESSFULLY: "{trade_id}"')
 
-        return await self._monitor_trade_result(trade_id, channel)
+        return True
+
+        # return await self._monitor_trade_result(trade_id, channel)
 
     async def _monitor_trade_result(self, trade_id: str, channel: str) -> bool:
         """Monitor and process trade results."""

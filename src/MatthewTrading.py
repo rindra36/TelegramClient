@@ -25,7 +25,7 @@ class MatthewTradingBot:
         self.SESSION_NAME = 'Matthew'
         self.TIMEZONE_OFFSET = -4
         self.DO_MARTINGALE = True # To control if we will going to Martingale or not because it is not working properly actually, set to True if want to go to Martingale
-        self.MAX_RETRY = 2
+        self.MAX_RETRY = 1
         self.pocket_option = pocket_option
 
     async def handle_trade_execution(self, message: str) -> bool:

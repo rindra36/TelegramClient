@@ -1,0 +1,9 @@
+{
+    "trading_type": "compound",
+    "initial_amount": 1.0,
+    "current_amount": 1.0,
+    "max_compound_level": 1,
+    "current_compound_level": 0,
+    "consecutive_wins": 0,
+    "save_csv": false
+}
