@@ -1,0 +1,2976 @@
+M5
+
+[Running] python -u "/workspaces/TelegramClient/example/analyze_stats_trade.py"
+
+=== 2025-04-29 ===
+
+Trade Statistics:
+Total Wins: 20
+Martingale 1 Wins: 4
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 3
+
+Profit Scenarios:
+No Martingale Strategy: $13.00
+Martingale 1 Strategy: $11.00
+Martingale 2 Strategy: $-1.00
+Martingale 3 Strategy: $-25.00
+
+=== 2025-04-28 ===
+
+Trade Statistics:
+Total Wins: 79
+Martingale 1 Wins: 21
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 18
+
+Profit Scenarios:
+No Martingale Strategy: $40.00
+Martingale 1 Strategy: $25.00
+Martingale 2 Strategy: $-47.00
+Martingale 3 Strategy: $-191.00
+
+=== 2025-04-27 ===
+
+Trade Statistics:
+Total Wins: 73
+Martingale 1 Wins: 25
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 25
+
+Profit Scenarios:
+No Martingale Strategy: $23.00
+Martingale 1 Strategy: $-2.00
+Martingale 2 Strategy: $-102.00
+Martingale 3 Strategy: $-302.00
+
+=== 2025-04-26 ===
+
+Trade Statistics:
+Total Wins: 72
+Martingale 1 Wins: 28
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 31
+
+Profit Scenarios:
+No Martingale Strategy: $13.00
+Martingale 1 Strategy: $-21.00
+Martingale 2 Strategy: $-145.00
+Martingale 3 Strategy: $-393.00
+
+=== 2025-04-25 ===
+
+Trade Statistics:
+Total Wins: 70
+Martingale 1 Wins: 22
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 27
+
+Profit Scenarios:
+No Martingale Strategy: $21.00
+Martingale 1 Strategy: $-11.00
+Martingale 2 Strategy: $-119.00
+Martingale 3 Strategy: $-335.00
+
+=== 2025-04-24 ===
+
+Trade Statistics:
+Total Wins: 51
+Martingale 1 Wins: 13
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 12
+
+Profit Scenarios:
+No Martingale Strategy: $26.00
+Martingale 1 Strategy: $15.00
+Martingale 2 Strategy: $-33.00
+Martingale 3 Strategy: $-129.00
+
+=== 2025-04-23 ===
+
+Trade Statistics:
+Total Wins: 58
+Martingale 1 Wins: 18
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 15
+
+Profit Scenarios:
+No Martingale Strategy: $25.00
+Martingale 1 Strategy: $13.00
+Martingale 2 Strategy: $-47.00
+Martingale 3 Strategy: $-167.00
+
+=== 2025-04-22 ===
+
+Trade Statistics:
+Total Wins: 52
+Martingale 1 Wins: 18
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 14
+
+Profit Scenarios:
+No Martingale Strategy: $20.00
+Martingale 1 Strategy: $10.00
+Martingale 2 Strategy: $-46.00
+Martingale 3 Strategy: $-158.00
+
+=== 2025-04-21 ===
+
+Trade Statistics:
+Total Wins: 26
+Martingale 1 Wins: 10
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 4
+
+Profit Scenarios:
+No Martingale Strategy: $12.00
+Martingale 1 Strategy: $14.00
+Martingale 2 Strategy: $-2.00
+Martingale 3 Strategy: $-34.00
+
+=== 2025-04-20 ===
+
+Trade Statistics:
+Total Wins: 60
+Martingale 1 Wins: 19
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 24
+
+Profit Scenarios:
+No Martingale Strategy: $17.00
+Martingale 1 Strategy: $-12.00
+Martingale 2 Strategy: $-108.00
+Martingale 3 Strategy: $-300.00
+
+=== 2025-04-19 ===
+
+Trade Statistics:
+Total Wins: 37
+Martingale 1 Wins: 14
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 13
+
+Profit Scenarios:
+No Martingale Strategy: $10.00
+Martingale 1 Strategy: $-2.00
+Martingale 2 Strategy: $-54.00
+Martingale 3 Strategy: $-158.00
+
+=== 2025-04-18 ===
+
+Trade Statistics:
+Total Wins: 73
+Martingale 1 Wins: 21
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 16
+
+Profit Scenarios:
+No Martingale Strategy: $36.00
+Martingale 1 Strategy: $25.00
+Martingale 2 Strategy: $-39.00
+Martingale 3 Strategy: $-167.00
+
+=== 2025-04-17 ===
+
+Trade Statistics:
+Total Wins: 72
+Martingale 1 Wins: 15
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 15
+
+Profit Scenarios:
+No Martingale Strategy: $42.00
+Martingale 1 Strategy: $27.00
+Martingale 2 Strategy: $-33.00
+Martingale 3 Strategy: $-153.00
+
+=== 2025-04-16 ===
+
+Trade Statistics:
+Total Wins: 60
+Martingale 1 Wins: 14
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 21
+
+Profit Scenarios:
+No Martingale Strategy: $25.00
+Martingale 1 Strategy: $-3.00
+Martingale 2 Strategy: $-87.00
+Martingale 3 Strategy: $-255.00
+
+=== 2025-04-15 ===
+
+Trade Statistics:
+Total Wins: 78
+Martingale 1 Wins: 17
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 21
+
+Profit Scenarios:
+No Martingale Strategy: $40.00
+Martingale 1 Strategy: $15.00
+Martingale 2 Strategy: $-69.00
+Martingale 3 Strategy: $-237.00
+
+=== 2025-04-14 ===
+
+Trade Statistics:
+Total Wins: 81
+Martingale 1 Wins: 22
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 12
+
+Profit Scenarios:
+No Martingale Strategy: $47.00
+Martingale 1 Strategy: $45.00
+Martingale 2 Strategy: $-3.00
+Martingale 3 Strategy: $-99.00
+
+=== 2025-04-13 ===
+
+Trade Statistics:
+Total Wins: 78
+Martingale 1 Wins: 23
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 30
+
+Profit Scenarios:
+No Martingale Strategy: $25.00
+Martingale 1 Strategy: $-12.00
+Martingale 2 Strategy: $-132.00
+Martingale 3 Strategy: $-372.00
+
+=== 2025-04-12 ===
+
+Trade Statistics:
+Total Wins: 85
+Martingale 1 Wins: 24
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 26
+
+Profit Scenarios:
+No Martingale Strategy: $35.00
+Martingale 1 Strategy: $7.00
+Martingale 2 Strategy: $-97.00
+Martingale 3 Strategy: $-305.00
+
+=== 2025-04-11 ===
+
+Trade Statistics:
+Total Wins: 26
+Martingale 1 Wins: 7
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 9
+
+Profit Scenarios:
+No Martingale Strategy: $10.00
+Martingale 1 Strategy: $-1.00
+Martingale 2 Strategy: $-37.00
+Martingale 3 Strategy: $-109.00
+
+=== 2025-04-10 ===
+
+Trade Statistics:
+Total Wins: 32
+Martingale 1 Wins: 10
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 11
+
+Profit Scenarios:
+No Martingale Strategy: $11.00
+Martingale 1 Strategy: $-1.00
+Martingale 2 Strategy: $-45.00
+Martingale 3 Strategy: $-133.00
+
+=== 2025-04-09 ===
+
+Trade Statistics:
+Total Wins: 68
+Martingale 1 Wins: 24
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 22
+
+Profit Scenarios:
+No Martingale Strategy: $22.00
+Martingale 1 Strategy: $2.00
+Martingale 2 Strategy: $-86.00
+Martingale 3 Strategy: $-262.00
+
+=== 2025-04-08 ===
+
+Trade Statistics:
+Total Wins: 34
+Martingale 1 Wins: 8
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 9
+
+Profit Scenarios:
+No Martingale Strategy: $17.00
+Martingale 1 Strategy: $7.00
+Martingale 2 Strategy: $-29.00
+Martingale 3 Strategy: $-101.00
+
+=== 2025-04-07 ===
+
+Trade Statistics:
+Total Wins: 43
+Martingale 1 Wins: 13
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 14
+
+Profit Scenarios:
+No Martingale Strategy: $16.00
+Martingale 1 Strategy: $1.00
+Martingale 2 Strategy: $-55.00
+Martingale 3 Strategy: $-167.00
+
+=== 2025-04-06 ===
+
+Trade Statistics:
+Total Wins: 78
+Martingale 1 Wins: 21
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 30
+
+Profit Scenarios:
+No Martingale Strategy: $27.00
+Martingale 1 Strategy: $-12.00
+Martingale 2 Strategy: $-132.00
+Martingale 3 Strategy: $-372.00
+
+=== 2025-04-05 ===
+
+Trade Statistics:
+Total Wins: 93
+Martingale 1 Wins: 24
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 22
+
+Profit Scenarios:
+No Martingale Strategy: $47.00
+Martingale 1 Strategy: $27.00
+Martingale 2 Strategy: $-61.00
+Martingale 3 Strategy: $-237.00
+
+=== 2025-04-04 ===
+
+Trade Statistics:
+Total Wins: 50
+Martingale 1 Wins: 20
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 12
+
+Profit Scenarios:
+No Martingale Strategy: $18.00
+Martingale 1 Strategy: $14.00
+Martingale 2 Strategy: $-34.00
+Martingale 3 Strategy: $-130.00
+
+=== 2025-04-03 ===
+
+Trade Statistics:
+Total Wins: 69
+Martingale 1 Wins: 24
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 15
+
+Profit Scenarios:
+No Martingale Strategy: $30.00
+Martingale 1 Strategy: $24.00
+Martingale 2 Strategy: $-36.00
+Martingale 3 Strategy: $-156.00
+
+=== 2025-04-02 ===
+
+Trade Statistics:
+Total Wins: 18
+Martingale 1 Wins: 2
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 10
+
+Profit Scenarios:
+No Martingale Strategy: $6.00
+Martingale 1 Strategy: $-12.00
+Martingale 2 Strategy: $-52.00
+Martingale 3 Strategy: $-132.00
+
+=== 2025-04-01 ===
+
+Trade Statistics:
+Total Wins: 41
+Martingale 1 Wins: 12
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 18
+
+Profit Scenarios:
+No Martingale Strategy: $11.00
+Martingale 1 Strategy: $-13.00
+Martingale 2 Strategy: $-85.00
+Martingale 3 Strategy: $-229.00
+
+=== 2025-03-31 ===
+
+Trade Statistics:
+Total Wins: 76
+Martingale 1 Wins: 20
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 18
+
+Profit Scenarios:
+No Martingale Strategy: $38.00
+Martingale 1 Strategy: $22.00
+Martingale 2 Strategy: $-50.00
+Martingale 3 Strategy: $-194.00
+
+=== 2025-03-30 ===
+
+Trade Statistics:
+Total Wins: 83
+Martingale 1 Wins: 26
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 22
+
+Profit Scenarios:
+No Martingale Strategy: $35.00
+Martingale 1 Strategy: $17.00
+Martingale 2 Strategy: $-71.00
+Martingale 3 Strategy: $-247.00
+
+=== 2025-03-29 ===
+
+Trade Statistics:
+Total Wins: 83
+Martingale 1 Wins: 18
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 27
+
+Profit Scenarios:
+No Martingale Strategy: $38.00
+Martingale 1 Strategy: $2.00
+Martingale 2 Strategy: $-106.00
+Martingale 3 Strategy: $-322.00
+
+=== 2025-03-28 ===
+
+Trade Statistics:
+Total Wins: 78
+Martingale 1 Wins: 27
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 18
+
+Profit Scenarios:
+No Martingale Strategy: $33.00
+Martingale 1 Strategy: $24.00
+Martingale 2 Strategy: $-48.00
+Martingale 3 Strategy: $-192.00
+
+=== 2025-03-27 ===
+
+Trade Statistics:
+Total Wins: 42
+Martingale 1 Wins: 12
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 19
+
+Profit Scenarios:
+No Martingale Strategy: $11.00
+Martingale 1 Strategy: $-15.00
+Martingale 2 Strategy: $-91.00
+Martingale 3 Strategy: $-243.00
+
+=== 2025-03-26 ===
+
+Trade Statistics:
+Total Wins: 72
+Martingale 1 Wins: 26
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 23
+
+Profit Scenarios:
+No Martingale Strategy: $23.00
+Martingale 1 Strategy: $3.00
+Martingale 2 Strategy: $-89.00
+Martingale 3 Strategy: $-273.00
+
+=== 2025-03-25 ===
+
+Trade Statistics:
+Total Wins: 66
+Martingale 1 Wins: 26
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 18
+
+Profit Scenarios:
+No Martingale Strategy: $22.00
+Martingale 1 Strategy: $12.00
+Martingale 2 Strategy: $-60.00
+Martingale 3 Strategy: $-204.00
+
+=== 2025-03-24 ===
+
+Trade Statistics:
+Total Wins: 87
+Martingale 1 Wins: 16
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 10
+
+Profit Scenarios:
+No Martingale Strategy: $61.00
+Martingale 1 Strategy: $57.00
+Martingale 2 Strategy: $17.00
+Martingale 3 Strategy: $-63.00
+
+=== 2025-03-23 ===
+
+Trade Statistics:
+Total Wins: 71
+Martingale 1 Wins: 29
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 16
+
+Profit Scenarios:
+No Martingale Strategy: $26.00
+Martingale 1 Strategy: $23.00
+Martingale 2 Strategy: $-41.00
+Martingale 3 Strategy: $-169.00
+
+=== 2025-03-22 ===
+
+Trade Statistics:
+Total Wins: 79
+Martingale 1 Wins: 23
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 25
+
+Profit Scenarios:
+No Martingale Strategy: $31.00
+Martingale 1 Strategy: $4.00
+Martingale 2 Strategy: $-96.00
+Martingale 3 Strategy: $-296.00
+
+=== 2025-03-21 ===
+
+Trade Statistics:
+Total Wins: 67
+Martingale 1 Wins: 18
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 16
+
+Profit Scenarios:
+No Martingale Strategy: $33.00
+Martingale 1 Strategy: $19.00
+Martingale 2 Strategy: $-45.00
+Martingale 3 Strategy: $-173.00
+
+=== 2025-03-20 ===
+
+Trade Statistics:
+Total Wins: 66
+Martingale 1 Wins: 24
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 14
+
+Profit Scenarios:
+No Martingale Strategy: $28.00
+Martingale 1 Strategy: $24.00
+Martingale 2 Strategy: $-32.00
+Martingale 3 Strategy: $-144.00
+
+=== 2025-03-19 ===
+
+Trade Statistics:
+Total Wins: 69
+Martingale 1 Wins: 18
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 23
+
+Profit Scenarios:
+No Martingale Strategy: $28.00
+Martingale 1 Strategy: $0.00
+Martingale 2 Strategy: $-92.00
+Martingale 3 Strategy: $-276.00
+
+=== 2025-03-18 ===
+
+Trade Statistics:
+Total Wins: 67
+Martingale 1 Wins: 23
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 17
+
+Profit Scenarios:
+No Martingale Strategy: $27.00
+Martingale 1 Strategy: $16.00
+Martingale 2 Strategy: $-52.00
+Martingale 3 Strategy: $-188.00
+
+=== 2025-03-17 ===
+
+Trade Statistics:
+Total Wins: 78
+Martingale 1 Wins: 22
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 18
+
+Profit Scenarios:
+No Martingale Strategy: $38.00
+Martingale 1 Strategy: $24.00
+Martingale 2 Strategy: $-48.00
+Martingale 3 Strategy: $-192.00
+
+=== 2025-03-16 ===
+
+Trade Statistics:
+Total Wins: 88
+Martingale 1 Wins: 18
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 27
+
+Profit Scenarios:
+No Martingale Strategy: $43.00
+Martingale 1 Strategy: $7.00
+Martingale 2 Strategy: $-101.00
+Martingale 3 Strategy: $-317.00
+
+=== 2025-03-15 ===
+
+Trade Statistics:
+Total Wins: 50
+Martingale 1 Wins: 11
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 16
+
+Profit Scenarios:
+No Martingale Strategy: $23.00
+Martingale 1 Strategy: $2.00
+Martingale 2 Strategy: $-62.00
+Martingale 3 Strategy: $-190.00
+
+=== 2025-03-14 ===
+
+Trade Statistics:
+Total Wins: 69
+Martingale 1 Wins: 18
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 22
+
+Profit Scenarios:
+No Martingale Strategy: $29.00
+Martingale 1 Strategy: $3.00
+Martingale 2 Strategy: $-85.00
+Martingale 3 Strategy: $-261.00
+
+=== 2025-03-13 ===
+
+Trade Statistics:
+Total Wins: 63
+Martingale 1 Wins: 16
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 21
+
+Profit Scenarios:
+No Martingale Strategy: $26.00
+Martingale 1 Strategy: $0.00
+Martingale 2 Strategy: $-84.00
+Martingale 3 Strategy: $-252.00
+
+=== 2025-03-12 ===
+
+Trade Statistics:
+Total Wins: 70
+Martingale 1 Wins: 11
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 20
+
+Profit Scenarios:
+No Martingale Strategy: $39.00
+Martingale 1 Strategy: $10.00
+Martingale 2 Strategy: $-70.00
+Martingale 3 Strategy: $-230.00
+
+=== 2025-03-11 ===
+
+Trade Statistics:
+Total Wins: 70
+Martingale 1 Wins: 20
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 22
+
+Profit Scenarios:
+No Martingale Strategy: $28.00
+Martingale 1 Strategy: $4.00
+Martingale 2 Strategy: $-84.00
+Martingale 3 Strategy: $-260.00
+
+=== 2025-03-10 ===
+
+Trade Statistics:
+Total Wins: 68
+Martingale 1 Wins: 19
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 23
+
+Profit Scenarios:
+No Martingale Strategy: $26.00
+Martingale 1 Strategy: $-1.00
+Martingale 2 Strategy: $-93.00
+Martingale 3 Strategy: $-277.00
+
+=== 2025-03-09 ===
+
+Trade Statistics:
+Total Wins: 84
+Martingale 1 Wins: 26
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 25
+
+Profit Scenarios:
+No Martingale Strategy: $33.00
+Martingale 1 Strategy: $9.00
+Martingale 2 Strategy: $-91.00
+Martingale 3 Strategy: $-291.00
+
+=== 2025-03-08 ===
+
+Trade Statistics:
+Total Wins: 84
+Martingale 1 Wins: 24
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 23
+
+Profit Scenarios:
+No Martingale Strategy: $37.00
+Martingale 1 Strategy: $15.00
+Martingale 2 Strategy: $-77.00
+Martingale 3 Strategy: $-261.00
+
+=== 2025-03-07 ===
+
+Trade Statistics:
+Total Wins: 28
+Martingale 1 Wins: 6
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 6
+
+Profit Scenarios:
+No Martingale Strategy: $16.00
+Martingale 1 Strategy: $10.00
+Martingale 2 Strategy: $-14.00
+Martingale 3 Strategy: $-62.00
+
+=== 2025-03-06 ===
+
+Trade Statistics:
+Total Wins: 30
+Martingale 1 Wins: 10
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 9
+
+Profit Scenarios:
+No Martingale Strategy: $11.00
+Martingale 1 Strategy: $3.00
+Martingale 2 Strategy: $-33.00
+Martingale 3 Strategy: $-105.00
+
+=== 2025-03-05 ===
+
+Trade Statistics:
+Total Wins: 74
+Martingale 1 Wins: 19
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 24
+
+Profit Scenarios:
+No Martingale Strategy: $31.00
+Martingale 1 Strategy: $2.00
+Martingale 2 Strategy: $-94.00
+Martingale 3 Strategy: $-286.00
+
+=== 2025-03-04 ===
+
+Trade Statistics:
+Total Wins: 78
+Martingale 1 Wins: 16
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 21
+
+Profit Scenarios:
+No Martingale Strategy: $41.00
+Martingale 1 Strategy: $15.00
+Martingale 2 Strategy: $-69.00
+Martingale 3 Strategy: $-237.00
+
+=== 2025-03-03 ===
+
+Trade Statistics:
+Total Wins: 66
+Martingale 1 Wins: 18
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 23
+
+Profit Scenarios:
+No Martingale Strategy: $25.00
+Martingale 1 Strategy: $-3.00
+Martingale 2 Strategy: $-95.00
+Martingale 3 Strategy: $-279.00
+
+=== 2025-03-02 ===
+
+Trade Statistics:
+Total Wins: 70
+Martingale 1 Wins: 18
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 33
+
+Profit Scenarios:
+No Martingale Strategy: $19.00
+Martingale 1 Strategy: $-29.00
+Martingale 2 Strategy: $-161.00
+Martingale 3 Strategy: $-425.00
+
+=== 2025-03-01 ===
+
+Trade Statistics:
+Total Wins: 89
+Martingale 1 Wins: 28
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 22
+
+Profit Scenarios:
+No Martingale Strategy: $39.00
+Martingale 1 Strategy: $23.00
+Martingale 2 Strategy: $-65.00
+Martingale 3 Strategy: $-241.00
+
+=== 2025-02-28 ===
+
+Trade Statistics:
+Total Wins: 76
+Martingale 1 Wins: 20
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 13
+
+Profit Scenarios:
+No Martingale Strategy: $43.00
+Martingale 1 Strategy: $37.00
+Martingale 2 Strategy: $-15.00
+Martingale 3 Strategy: $-119.00
+
+=== 2025-02-27 ===
+
+Trade Statistics:
+Total Wins: 56
+Martingale 1 Wins: 16
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 16
+
+Profit Scenarios:
+No Martingale Strategy: $24.00
+Martingale 1 Strategy: $8.00
+Martingale 2 Strategy: $-56.00
+Martingale 3 Strategy: $-184.00
+
+=== 2025-02-26 ===
+
+Trade Statistics:
+Total Wins: 40
+Martingale 1 Wins: 15
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 8
+
+Profit Scenarios:
+No Martingale Strategy: $17.00
+Martingale 1 Strategy: $16.00
+Martingale 2 Strategy: $-16.00
+Martingale 3 Strategy: $-80.00
+
+=== 2025-02-25 ===
+
+Trade Statistics:
+Total Wins: 71
+Martingale 1 Wins: 20
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 15
+
+Profit Scenarios:
+No Martingale Strategy: $36.00
+Martingale 1 Strategy: $26.00
+Martingale 2 Strategy: $-34.00
+Martingale 3 Strategy: $-154.00
+
+=== 2025-02-24 ===
+
+Trade Statistics:
+Total Wins: 69
+Martingale 1 Wins: 22
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 25
+
+Profit Scenarios:
+No Martingale Strategy: $22.00
+Martingale 1 Strategy: $-6.00
+Martingale 2 Strategy: $-106.00
+Martingale 3 Strategy: $-306.00
+
+=== 2025-02-23 ===
+
+Trade Statistics:
+Total Wins: 81
+Martingale 1 Wins: 22
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 27
+
+Profit Scenarios:
+No Martingale Strategy: $32.00
+Martingale 1 Strategy: $0.00
+Martingale 2 Strategy: $-108.00
+Martingale 3 Strategy: $-324.00
+
+=== 2025-02-22 ===
+
+Trade Statistics:
+Total Wins: 65
+Martingale 1 Wins: 16
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 18
+
+Profit Scenarios:
+No Martingale Strategy: $31.00
+Martingale 1 Strategy: $11.00
+Martingale 2 Strategy: $-61.00
+Martingale 3 Strategy: $-205.00
+
+=== 2025-02-21 ===
+
+Trade Statistics:
+Total Wins: 53
+Martingale 1 Wins: 19
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 13
+
+Profit Scenarios:
+No Martingale Strategy: $21.00
+Martingale 1 Strategy: $14.00
+Martingale 2 Strategy: $-38.00
+Martingale 3 Strategy: $-142.00
+
+=== 2025-02-20 ===
+
+Trade Statistics:
+Total Wins: 70
+Martingale 1 Wins: 16
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 13
+
+Profit Scenarios:
+No Martingale Strategy: $41.00
+Martingale 1 Strategy: $31.00
+Martingale 2 Strategy: $-21.00
+Martingale 3 Strategy: $-125.00
+
+=== 2025-02-19 ===
+
+Trade Statistics:
+Total Wins: 52
+Martingale 1 Wins: 15
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 12
+
+Profit Scenarios:
+No Martingale Strategy: $25.00
+Martingale 1 Strategy: $16.00
+Martingale 2 Strategy: $-32.00
+Martingale 3 Strategy: $-128.00
+
+=== 2025-02-18 ===
+
+Trade Statistics:
+Total Wins: 47
+Martingale 1 Wins: 14
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 10
+
+Profit Scenarios:
+No Martingale Strategy: $23.00
+Martingale 1 Strategy: $17.00
+Martingale 2 Strategy: $-23.00
+Martingale 3 Strategy: $-103.00
+
+=== 2025-02-17 ===
+
+Trade Statistics:
+Total Wins: 66
+Martingale 1 Wins: 17
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 8
+
+Profit Scenarios:
+No Martingale Strategy: $41.00
+Martingale 1 Strategy: $42.00
+Martingale 2 Strategy: $10.00
+Martingale 3 Strategy: $-54.00
+
+=== 2025-02-16 ===
+
+Trade Statistics:
+Total Wins: 81
+Martingale 1 Wins: 17
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 28
+
+Profit Scenarios:
+No Martingale Strategy: $36.00
+Martingale 1 Strategy: $-3.00
+Martingale 2 Strategy: $-115.00
+Martingale 3 Strategy: $-339.00
+
+=== 2025-02-15 ===
+
+Trade Statistics:
+Total Wins: 71
+Martingale 1 Wins: 23
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 27
+
+Profit Scenarios:
+No Martingale Strategy: $21.00
+Martingale 1 Strategy: $-10.00
+Martingale 2 Strategy: $-118.00
+Martingale 3 Strategy: $-334.00
+
+=== 2025-02-14 ===
+
+Trade Statistics:
+Total Wins: 10
+Martingale 1 Wins: 3
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 6
+
+Profit Scenarios:
+No Martingale Strategy: $1.00
+Martingale 1 Strategy: $-8.00
+Martingale 2 Strategy: $-32.00
+Martingale 3 Strategy: $-80.00
+
+=== 2025-02-13 ===
+
+Trade Statistics:
+Total Wins: 54
+Martingale 1 Wins: 11
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 15
+
+Profit Scenarios:
+No Martingale Strategy: $28.00
+Martingale 1 Strategy: $9.00
+Martingale 2 Strategy: $-51.00
+Martingale 3 Strategy: $-171.00
+
+=== 2025-02-12 ===
+
+Trade Statistics:
+Total Wins: 81
+Martingale 1 Wins: 14
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 15
+
+Profit Scenarios:
+No Martingale Strategy: $52.00
+Martingale 1 Strategy: $36.00
+Martingale 2 Strategy: $-24.00
+Martingale 3 Strategy: $-144.00
+
+=== 2025-02-11 ===
+
+Trade Statistics:
+Total Wins: 87
+Martingale 1 Wins: 18
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 16
+
+Profit Scenarios:
+No Martingale Strategy: $53.00
+Martingale 1 Strategy: $39.00
+Martingale 2 Strategy: $-25.00
+Martingale 3 Strategy: $-153.00
+
+=== 2025-02-10 ===
+
+Trade Statistics:
+Total Wins: 75
+Martingale 1 Wins: 23
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 9
+
+Profit Scenarios:
+No Martingale Strategy: $43.00
+Martingale 1 Strategy: $48.00
+Martingale 2 Strategy: $12.00
+Martingale 3 Strategy: $-60.00
+
+=== 2025-02-09 ===
+
+Trade Statistics:
+Total Wins: 63
+Martingale 1 Wins: 17
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 21
+
+Profit Scenarios:
+No Martingale Strategy: $25.00
+Martingale 1 Strategy: $0.00
+Martingale 2 Strategy: $-84.00
+Martingale 3 Strategy: $-252.00
+
+=== 2025-02-08 ===
+
+Trade Statistics:
+Total Wins: 70
+Martingale 1 Wins: 17
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 17
+
+Profit Scenarios:
+No Martingale Strategy: $36.00
+Martingale 1 Strategy: $19.00
+Martingale 2 Strategy: $-49.00
+Martingale 3 Strategy: $-185.00
+
+=== 2025-02-07 ===
+
+Trade Statistics:
+Total Wins: 69
+Martingale 1 Wins: 18
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 17
+
+Profit Scenarios:
+No Martingale Strategy: $34.00
+Martingale 1 Strategy: $18.00
+Martingale 2 Strategy: $-50.00
+Martingale 3 Strategy: $-186.00
+
+=== 2025-02-06 ===
+
+Trade Statistics:
+Total Wins: 63
+Martingale 1 Wins: 14
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 18
+
+Profit Scenarios:
+No Martingale Strategy: $31.00
+Martingale 1 Strategy: $9.00
+Martingale 2 Strategy: $-63.00
+Martingale 3 Strategy: $-207.00
+
+=== 2025-02-05 ===
+
+Trade Statistics:
+Total Wins: 75
+Martingale 1 Wins: 27
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 15
+
+Profit Scenarios:
+No Martingale Strategy: $33.00
+Martingale 1 Strategy: $30.00
+Martingale 2 Strategy: $-30.00
+Martingale 3 Strategy: $-150.00
+
+=== 2025-02-04 ===
+
+Trade Statistics:
+Total Wins: 71
+Martingale 1 Wins: 14
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 15
+
+Profit Scenarios:
+No Martingale Strategy: $42.00
+Martingale 1 Strategy: $26.00
+Martingale 2 Strategy: $-34.00
+Martingale 3 Strategy: $-154.00
+
+=== 2025-02-03 ===
+
+Trade Statistics:
+Total Wins: 60
+Martingale 1 Wins: 11
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 13
+
+Profit Scenarios:
+No Martingale Strategy: $36.00
+Martingale 1 Strategy: $21.00
+Martingale 2 Strategy: $-31.00
+Martingale 3 Strategy: $-135.00
+
+=== 2025-02-02 ===
+
+Trade Statistics:
+Total Wins: 68
+Martingale 1 Wins: 13
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 17
+
+Profit Scenarios:
+No Martingale Strategy: $38.00
+Martingale 1 Strategy: $17.00
+Martingale 2 Strategy: $-51.00
+Martingale 3 Strategy: $-187.00
+
+=== 2025-02-01 ===
+
+Trade Statistics:
+Total Wins: 70
+Martingale 1 Wins: 16
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 26
+
+Profit Scenarios:
+No Martingale Strategy: $28.00
+Martingale 1 Strategy: $-8.00
+Martingale 2 Strategy: $-112.00
+Martingale 3 Strategy: $-320.00
+
+=== 2025-01-31 ===
+
+Trade Statistics:
+Total Wins: 35
+Martingale 1 Wins: 7
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 21
+
+Profit Scenarios:
+No Martingale Strategy: $7.00
+Martingale 1 Strategy: $-28.00
+Martingale 2 Strategy: $-112.00
+Martingale 3 Strategy: $-280.00
+
+=== 2025-01-30 ===
+
+Trade Statistics:
+Total Wins: 66
+Martingale 1 Wins: 13
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 14
+
+Profit Scenarios:
+No Martingale Strategy: $39.00
+Martingale 1 Strategy: $24.00
+Martingale 2 Strategy: $-32.00
+Martingale 3 Strategy: $-144.00
+
+=== 2025-01-29 ===
+
+Trade Statistics:
+Total Wins: 38
+Martingale 1 Wins: 9
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 12
+
+Profit Scenarios:
+No Martingale Strategy: $17.00
+Martingale 1 Strategy: $2.00
+Martingale 2 Strategy: $-46.00
+Martingale 3 Strategy: $-142.00
+
+=== 2025-01-28 ===
+
+Trade Statistics:
+Total Wins: 79
+Martingale 1 Wins: 13
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 12
+
+Profit Scenarios:
+No Martingale Strategy: $54.00
+Martingale 1 Strategy: $43.00
+Martingale 2 Strategy: $-5.00
+Martingale 3 Strategy: $-101.00
+
+=== 2025-01-27 ===
+
+Trade Statistics:
+Total Wins: 55
+Martingale 1 Wins: 15
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 18
+
+Profit Scenarios:
+No Martingale Strategy: $22.00
+Martingale 1 Strategy: $1.00
+Martingale 2 Strategy: $-71.00
+Martingale 3 Strategy: $-215.00
+
+=== 2025-01-26 ===
+
+Trade Statistics:
+Total Wins: 79
+Martingale 1 Wins: 16
+Martingale 2 Wins: 1
+Martingale 3 Wins: 0
+Losses: 16
+
+Profit Scenarios:
+No Martingale Strategy: $46.00
+Martingale 1 Strategy: $28.00
+Martingale 2 Strategy: $-33.00
+Martingale 3 Strategy: $-161.00
+
+=== 2025-01-25 ===
+
+Trade Statistics:
+Total Wins: 84
+Martingale 1 Wins: 21
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 12
+
+Profit Scenarios:
+No Martingale Strategy: $51.00
+Martingale 1 Strategy: $48.00
+Martingale 2 Strategy: $0.00
+Martingale 3 Strategy: $-96.00
+
+=== 2025-01-24 ===
+
+Trade Statistics:
+Total Wins: 65
+Martingale 1 Wins: 20
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 9
+
+Profit Scenarios:
+No Martingale Strategy: $36.00
+Martingale 1 Strategy: $38.00
+Martingale 2 Strategy: $2.00
+Martingale 3 Strategy: $-70.00
+
+=== 2025-01-23 ===
+
+Trade Statistics:
+Total Wins: 61
+Martingale 1 Wins: 8
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 14
+
+Profit Scenarios:
+No Martingale Strategy: $39.00
+Martingale 1 Strategy: $19.00
+Martingale 2 Strategy: $-37.00
+Martingale 3 Strategy: $-149.00
+
+=== 2025-01-22 ===
+
+Trade Statistics:
+Total Wins: 73
+Martingale 1 Wins: 19
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 21
+
+Profit Scenarios:
+No Martingale Strategy: $33.00
+Martingale 1 Strategy: $10.00
+Martingale 2 Strategy: $-74.00
+Martingale 3 Strategy: $-242.00
+
+=== 2025-01-21 ===
+
+Trade Statistics:
+Total Wins: 66
+Martingale 1 Wins: 20
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 14
+
+Profit Scenarios:
+No Martingale Strategy: $32.00
+Martingale 1 Strategy: $24.00
+Martingale 2 Strategy: $-32.00
+Martingale 3 Strategy: $-144.00
+
+=== 2025-01-20 ===
+
+Trade Statistics:
+Total Wins: 69
+Martingale 1 Wins: 19
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 20
+
+Profit Scenarios:
+No Martingale Strategy: $30.00
+Martingale 1 Strategy: $9.00
+Martingale 2 Strategy: $-71.00
+Martingale 3 Strategy: $-231.00
+
+=== 2025-01-19 ===
+
+Trade Statistics:
+Total Wins: 75
+Martingale 1 Wins: 15
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 19
+
+Profit Scenarios:
+No Martingale Strategy: $41.00
+Martingale 1 Strategy: $18.00
+Martingale 2 Strategy: $-58.00
+Martingale 3 Strategy: $-210.00
+
+=== 2025-01-18 ===
+
+Trade Statistics:
+Total Wins: 80
+Martingale 1 Wins: 16
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 21
+
+Profit Scenarios:
+No Martingale Strategy: $43.00
+Martingale 1 Strategy: $17.00
+Martingale 2 Strategy: $-67.00
+Martingale 3 Strategy: $-235.00
+
+=== 2025-01-17 ===
+
+Trade Statistics:
+Total Wins: 51
+Martingale 1 Wins: 15
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 13
+
+Profit Scenarios:
+No Martingale Strategy: $23.00
+Martingale 1 Strategy: $12.00
+Martingale 2 Strategy: $-40.00
+Martingale 3 Strategy: $-144.00
+
+=== 2025-01-16 ===
+
+Trade Statistics:
+Total Wins: 55
+Martingale 1 Wins: 18
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 28
+
+Profit Scenarios:
+No Martingale Strategy: $9.00
+Martingale 1 Strategy: $-29.00
+Martingale 2 Strategy: $-141.00
+Martingale 3 Strategy: $-365.00
+
+=== 2025-01-15 ===
+
+Trade Statistics:
+Total Wins: 39
+Martingale 1 Wins: 12
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 12
+
+Profit Scenarios:
+No Martingale Strategy: $15.00
+Martingale 1 Strategy: $3.00
+Martingale 2 Strategy: $-45.00
+Martingale 3 Strategy: $-141.00
+
+=== 2025-01-14 ===
+
+Trade Statistics:
+Total Wins: 60
+Martingale 1 Wins: 16
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 9
+
+Profit Scenarios:
+No Martingale Strategy: $35.00
+Martingale 1 Strategy: $33.00
+Martingale 2 Strategy: $-3.00
+Martingale 3 Strategy: $-75.00
+
+=== 2025-01-13 ===
+
+Trade Statistics:
+Total Wins: 60
+Martingale 1 Wins: 13
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 12
+
+Profit Scenarios:
+No Martingale Strategy: $35.00
+Martingale 1 Strategy: $24.00
+Martingale 2 Strategy: $-24.00
+Martingale 3 Strategy: $-120.00
+
+=== 2025-01-12 ===
+
+Trade Statistics:
+Total Wins: 80
+Martingale 1 Wins: 19
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 21
+
+Profit Scenarios:
+No Martingale Strategy: $40.00
+Martingale 1 Strategy: $17.00
+Martingale 2 Strategy: $-67.00
+Martingale 3 Strategy: $-235.00
+
+=== 2025-01-11 ===
+
+Trade Statistics:
+Total Wins: 72
+Martingale 1 Wins: 20
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 21
+
+Profit Scenarios:
+No Martingale Strategy: $31.00
+Martingale 1 Strategy: $9.00
+Martingale 2 Strategy: $-75.00
+Martingale 3 Strategy: $-243.00
+
+=== 2025-01-10 ===
+
+Trade Statistics:
+Total Wins: 46
+Martingale 1 Wins: 14
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 13
+
+Profit Scenarios:
+No Martingale Strategy: $19.00
+Martingale 1 Strategy: $7.00
+Martingale 2 Strategy: $-45.00
+Martingale 3 Strategy: $-149.00
+
+=== 2025-01-09 ===
+
+Trade Statistics:
+Total Wins: 28
+Martingale 1 Wins: 8
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 5
+
+Profit Scenarios:
+No Martingale Strategy: $15.00
+Martingale 1 Strategy: $13.00
+Martingale 2 Strategy: $-7.00
+Martingale 3 Strategy: $-47.00
+
+=== 2025-01-08 ===
+
+Trade Statistics:
+Total Wins: 59
+Martingale 1 Wins: 13
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 11
+
+Profit Scenarios:
+No Martingale Strategy: $35.00
+Martingale 1 Strategy: $26.00
+Martingale 2 Strategy: $-18.00
+Martingale 3 Strategy: $-106.00
+
+=== 2025-01-07 ===
+
+Trade Statistics:
+Total Wins: 55
+Martingale 1 Wins: 10
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 29
+
+Profit Scenarios:
+No Martingale Strategy: $16.00
+Martingale 1 Strategy: $-32.00
+Martingale 2 Strategy: $-148.00
+Martingale 3 Strategy: $-380.00
+
+=== 2025-01-06 ===
+
+Trade Statistics:
+Total Wins: 65
+Martingale 1 Wins: 18
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 26
+
+Profit Scenarios:
+No Martingale Strategy: $21.00
+Martingale 1 Strategy: $-13.00
+Martingale 2 Strategy: $-117.00
+Martingale 3 Strategy: $-325.00
+
+=== 2025-01-05 ===
+
+Trade Statistics:
+Total Wins: 72
+Martingale 1 Wins: 29
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 33
+
+Profit Scenarios:
+No Martingale Strategy: $10.00
+Martingale 1 Strategy: $-27.00
+Martingale 2 Strategy: $-159.00
+Martingale 3 Strategy: $-423.00
+
+=== 2025-01-04 ===
+
+Trade Statistics:
+Total Wins: 88
+Martingale 1 Wins: 28
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 19
+
+Profit Scenarios:
+No Martingale Strategy: $41.00
+Martingale 1 Strategy: $31.00
+Martingale 2 Strategy: $-45.00
+Martingale 3 Strategy: $-197.00
+
+=== 2025-01-03 ===
+
+Trade Statistics:
+Total Wins: 77
+Martingale 1 Wins: 17
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 24
+
+Profit Scenarios:
+No Martingale Strategy: $36.00
+Martingale 1 Strategy: $5.00
+Martingale 2 Strategy: $-91.00
+Martingale 3 Strategy: $-283.00
+
+=== 2025-01-02 ===
+
+Trade Statistics:
+Total Wins: 56
+Martingale 1 Wins: 15
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 29
+
+Profit Scenarios:
+No Martingale Strategy: $12.00
+Martingale 1 Strategy: $-31.00
+Martingale 2 Strategy: $-147.00
+Martingale 3 Strategy: $-379.00
+
+=== 2025-01-01 ===
+
+Trade Statistics:
+Total Wins: 82
+Martingale 1 Wins: 26
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 24
+
+Profit Scenarios:
+No Martingale Strategy: $32.00
+Martingale 1 Strategy: $10.00
+Martingale 2 Strategy: $-86.00
+Martingale 3 Strategy: $-278.00
+
+=== 2024-12-31 ===
+
+Trade Statistics:
+Total Wins: 36
+Martingale 1 Wins: 12
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 15
+
+Profit Scenarios:
+No Martingale Strategy: $9.00
+Martingale 1 Strategy: $-9.00
+Martingale 2 Strategy: $-69.00
+Martingale 3 Strategy: $-189.00
+
+=== 2024-12-30 ===
+
+Trade Statistics:
+Total Wins: 40
+Martingale 1 Wins: 13
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 12
+
+Profit Scenarios:
+No Martingale Strategy: $15.00
+Martingale 1 Strategy: $4.00
+Martingale 2 Strategy: $-44.00
+Martingale 3 Strategy: $-140.00
+
+=== 2024-12-29 ===
+
+Trade Statistics:
+Total Wins: 76
+Martingale 1 Wins: 22
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 31
+
+Profit Scenarios:
+No Martingale Strategy: $23.00
+Martingale 1 Strategy: $-17.00
+Martingale 2 Strategy: $-141.00
+Martingale 3 Strategy: $-389.00
+
+=== 2024-12-28 ===
+
+Trade Statistics:
+Total Wins: 81
+Martingale 1 Wins: 30
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 24
+
+Profit Scenarios:
+No Martingale Strategy: $27.00
+Martingale 1 Strategy: $9.00
+Martingale 2 Strategy: $-87.00
+Martingale 3 Strategy: $-279.00
+
+=== 2024-12-27 ===
+
+Trade Statistics:
+Total Wins: 71
+Martingale 1 Wins: 16
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 30
+
+Profit Scenarios:
+No Martingale Strategy: $25.00
+Martingale 1 Strategy: $-19.00
+Martingale 2 Strategy: $-139.00
+Martingale 3 Strategy: $-379.00
+
+=== 2024-12-26 ===
+
+Trade Statistics:
+Total Wins: 82
+Martingale 1 Wins: 21
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 21
+
+Profit Scenarios:
+No Martingale Strategy: $40.00
+Martingale 1 Strategy: $19.00
+Martingale 2 Strategy: $-65.00
+Martingale 3 Strategy: $-233.00
+
+=== 2024-12-25 ===
+
+Trade Statistics:
+Total Wins: 85
+Martingale 1 Wins: 24
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 24
+
+Profit Scenarios:
+No Martingale Strategy: $37.00
+Martingale 1 Strategy: $13.00
+Martingale 2 Strategy: $-83.00
+Martingale 3 Strategy: $-275.00
+
+=== 2024-12-24 ===
+
+Trade Statistics:
+Total Wins: 80
+Martingale 1 Wins: 21
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 19
+
+Profit Scenarios:
+No Martingale Strategy: $40.00
+Martingale 1 Strategy: $23.00
+Martingale 2 Strategy: $-53.00
+Martingale 3 Strategy: $-205.00
+
+=== 2024-12-23 ===
+
+Trade Statistics:
+Total Wins: 55
+Martingale 1 Wins: 15
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 22
+
+Profit Scenarios:
+No Martingale Strategy: $18.00
+Martingale 1 Strategy: $-11.00
+Martingale 2 Strategy: $-99.00
+Martingale 3 Strategy: $-275.00
+
+=== 2024-12-22 ===
+
+Trade Statistics:
+Total Wins: 81
+Martingale 1 Wins: 19
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 24
+
+Profit Scenarios:
+No Martingale Strategy: $38.00
+Martingale 1 Strategy: $9.00
+Martingale 2 Strategy: $-87.00
+Martingale 3 Strategy: $-279.00
+
+=== 2024-12-21 ===
+
+Trade Statistics:
+Total Wins: 78
+Martingale 1 Wins: 28
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 26
+
+Profit Scenarios:
+No Martingale Strategy: $24.00
+Martingale 1 Strategy: $0.00
+Martingale 2 Strategy: $-104.00
+Martingale 3 Strategy: $-312.00
+
+=== 2024-12-20 ===
+
+Trade Statistics:
+Total Wins: 61
+Martingale 1 Wins: 21
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 9
+
+Profit Scenarios:
+No Martingale Strategy: $31.00
+Martingale 1 Strategy: $34.00
+Martingale 2 Strategy: $-2.00
+Martingale 3 Strategy: $-74.00
+
+=== 2024-12-19 ===
+
+Trade Statistics:
+Total Wins: 82
+Martingale 1 Wins: 25
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 23
+
+Profit Scenarios:
+No Martingale Strategy: $34.00
+Martingale 1 Strategy: $13.00
+Martingale 2 Strategy: $-79.00
+Martingale 3 Strategy: $-263.00
+
+=== 2024-12-18 ===
+
+Trade Statistics:
+Total Wins: 68
+Martingale 1 Wins: 17
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 17
+
+Profit Scenarios:
+No Martingale Strategy: $34.00
+Martingale 1 Strategy: $17.00
+Martingale 2 Strategy: $-51.00
+Martingale 3 Strategy: $-187.00
+
+=== 2024-12-17 ===
+
+Trade Statistics:
+Total Wins: 85
+Martingale 1 Wins: 27
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 16
+
+Profit Scenarios:
+No Martingale Strategy: $42.00
+Martingale 1 Strategy: $37.00
+Martingale 2 Strategy: $-27.00
+Martingale 3 Strategy: $-155.00
+
+=== 2024-12-16 ===
+
+Trade Statistics:
+Total Wins: 78
+Martingale 1 Wins: 22
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 15
+
+Profit Scenarios:
+No Martingale Strategy: $41.00
+Martingale 1 Strategy: $33.00
+Martingale 2 Strategy: $-27.00
+Martingale 3 Strategy: $-147.00
+
+=== 2024-12-15 ===
+
+Trade Statistics:
+Total Wins: 81
+Martingale 1 Wins: 33
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 25
+
+Profit Scenarios:
+No Martingale Strategy: $23.00
+Martingale 1 Strategy: $6.00
+Martingale 2 Strategy: $-94.00
+Martingale 3 Strategy: $-294.00
+
+=== 2024-12-14 ===
+
+Trade Statistics:
+Total Wins: 82
+Martingale 1 Wins: 25
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 26
+
+Profit Scenarios:
+No Martingale Strategy: $31.00
+Martingale 1 Strategy: $4.00
+Martingale 2 Strategy: $-100.00
+Martingale 3 Strategy: $-308.00
+
+=== 2024-12-13 ===
+
+Trade Statistics:
+Total Wins: 75
+Martingale 1 Wins: 30
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 18
+
+Profit Scenarios:
+No Martingale Strategy: $27.00
+Martingale 1 Strategy: $21.00
+Martingale 2 Strategy: $-51.00
+Martingale 3 Strategy: $-195.00
+
+=== 2024-12-12 ===
+
+Trade Statistics:
+Total Wins: 35
+Martingale 1 Wins: 9
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 13
+
+Profit Scenarios:
+No Martingale Strategy: $13.00
+Martingale 1 Strategy: $-4.00
+Martingale 2 Strategy: $-56.00
+Martingale 3 Strategy: $-160.00
+
+=== 2024-12-11 ===
+
+Trade Statistics:
+Total Wins: 61
+Martingale 1 Wins: 21
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 17
+
+Profit Scenarios:
+No Martingale Strategy: $23.00
+Martingale 1 Strategy: $10.00
+Martingale 2 Strategy: $-58.00
+Martingale 3 Strategy: $-194.00
+
+=== 2024-12-10 ===
+
+Trade Statistics:
+Total Wins: 73
+Martingale 1 Wins: 23
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 21
+
+Profit Scenarios:
+No Martingale Strategy: $29.00
+Martingale 1 Strategy: $10.00
+Martingale 2 Strategy: $-74.00
+Martingale 3 Strategy: $-242.00
+
+=== 2024-12-09 ===
+
+Trade Statistics:
+Total Wins: 74
+Martingale 1 Wins: 19
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 19
+
+Profit Scenarios:
+No Martingale Strategy: $36.00
+Martingale 1 Strategy: $17.00
+Martingale 2 Strategy: $-59.00
+Martingale 3 Strategy: $-211.00
+
+=== 2024-12-08 ===
+
+Trade Statistics:
+Total Wins: 36
+Martingale 1 Wins: 13
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 11
+
+Profit Scenarios:
+No Martingale Strategy: $12.00
+Martingale 1 Strategy: $3.00
+Martingale 2 Strategy: $-41.00
+Martingale 3 Strategy: $-129.00
+
+=== 2024-12-07 ===
+
+Trade Statistics:
+Total Wins: 80
+Martingale 1 Wins: 27
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 27
+
+Profit Scenarios:
+No Martingale Strategy: $26.00
+Martingale 1 Strategy: $-1.00
+Martingale 2 Strategy: $-109.00
+Martingale 3 Strategy: $-325.00
+
+=== 2024-12-06 ===
+
+Trade Statistics:
+Total Wins: 36
+Martingale 1 Wins: 15
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 12
+
+Profit Scenarios:
+No Martingale Strategy: $9.00
+Martingale 1 Strategy: $0.00
+Martingale 2 Strategy: $-48.00
+Martingale 3 Strategy: $-144.00
+
+=== 2024-12-05 ===
+
+Trade Statistics:
+Total Wins: 21
+Martingale 1 Wins: 4
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 8
+
+Profit Scenarios:
+No Martingale Strategy: $9.00
+Martingale 1 Strategy: $-3.00
+Martingale 2 Strategy: $-35.00
+Martingale 3 Strategy: $-99.00
+
+=== 2024-12-04 ===
+
+Trade Statistics:
+Total Wins: 2
+Martingale 1 Wins: 1
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 3
+
+Profit Scenarios:
+No Martingale Strategy: $-2.00
+Martingale 1 Strategy: $-7.00
+Martingale 2 Strategy: $-19.00
+Martingale 3 Strategy: $-43.00
+
+=== 2024-12-03 ===
+
+Trade Statistics:
+Total Wins: 61
+Martingale 1 Wins: 18
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 14
+
+Profit Scenarios:
+No Martingale Strategy: $29.00
+Martingale 1 Strategy: $19.00
+Martingale 2 Strategy: $-37.00
+Martingale 3 Strategy: $-149.00
+
+=== 2024-12-02 ===
+
+Trade Statistics:
+Total Wins: 54
+Martingale 1 Wins: 15
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 18
+
+Profit Scenarios:
+No Martingale Strategy: $21.00
+Martingale 1 Strategy: $0.00
+Martingale 2 Strategy: $-72.00
+Martingale 3 Strategy: $-216.00
+
+=== 2024-12-01 ===
+
+Trade Statistics:
+Total Wins: 83
+Martingale 1 Wins: 27
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 22
+
+Profit Scenarios:
+No Martingale Strategy: $34.00
+Martingale 1 Strategy: $17.00
+Martingale 2 Strategy: $-71.00
+Martingale 3 Strategy: $-247.00
+
+=== 2024-11-30 ===
+
+Trade Statistics:
+Total Wins: 47
+Martingale 1 Wins: 9
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 15
+
+Profit Scenarios:
+No Martingale Strategy: $23.00
+Martingale 1 Strategy: $2.00
+Martingale 2 Strategy: $-58.00
+Martingale 3 Strategy: $-178.00
+
+=== 2024-11-29 ===
+
+Trade Statistics:
+Total Wins: 45
+Martingale 1 Wins: 14
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 22
+
+Profit Scenarios:
+No Martingale Strategy: $9.00
+Martingale 1 Strategy: $-21.00
+Martingale 2 Strategy: $-109.00
+Martingale 3 Strategy: $-285.00
+
+=== 2024-11-28 ===
+
+Trade Statistics:
+Total Wins: 66
+Martingale 1 Wins: 19
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 15
+
+Profit Scenarios:
+No Martingale Strategy: $32.00
+Martingale 1 Strategy: $21.00
+Martingale 2 Strategy: $-39.00
+Martingale 3 Strategy: $-159.00
+
+=== 2024-11-27 ===
+
+Trade Statistics:
+Total Wins: 66
+Martingale 1 Wins: 18
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 25
+
+Profit Scenarios:
+No Martingale Strategy: $23.00
+Martingale 1 Strategy: $-9.00
+Martingale 2 Strategy: $-109.00
+Martingale 3 Strategy: $-309.00
+
+=== 2024-11-26 ===
+
+Trade Statistics:
+Total Wins: 41
+Martingale 1 Wins: 9
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 15
+
+Profit Scenarios:
+No Martingale Strategy: $17.00
+Martingale 1 Strategy: $-4.00
+Martingale 2 Strategy: $-64.00
+Martingale 3 Strategy: $-184.00
+
+=== 2024-11-25 ===
+
+Trade Statistics:
+Total Wins: 75
+Martingale 1 Wins: 24
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 19
+
+Profit Scenarios:
+No Martingale Strategy: $32.00
+Martingale 1 Strategy: $18.00
+Martingale 2 Strategy: $-58.00
+Martingale 3 Strategy: $-210.00
+
+=== 2024-11-24 ===
+
+Trade Statistics:
+Total Wins: 74
+Martingale 1 Wins: 16
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 31
+
+Profit Scenarios:
+No Martingale Strategy: $27.00
+Martingale 1 Strategy: $-19.00
+Martingale 2 Strategy: $-143.00
+Martingale 3 Strategy: $-391.00
+
+=== 2024-11-23 ===
+
+Trade Statistics:
+Total Wins: 88
+Martingale 1 Wins: 29
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 19
+
+Profit Scenarios:
+No Martingale Strategy: $40.00
+Martingale 1 Strategy: $31.00
+Martingale 2 Strategy: $-45.00
+Martingale 3 Strategy: $-197.00
+
+=== 2024-11-22 ===
+
+Trade Statistics:
+Total Wins: 60
+Martingale 1 Wins: 16
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 20
+
+Profit Scenarios:
+No Martingale Strategy: $24.00
+Martingale 1 Strategy: $0.00
+Martingale 2 Strategy: $-80.00
+Martingale 3 Strategy: $-240.00
+
+=== 2024-11-21 ===
+
+Trade Statistics:
+Total Wins: 64
+Martingale 1 Wins: 23
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 16
+
+Profit Scenarios:
+No Martingale Strategy: $25.00
+Martingale 1 Strategy: $16.00
+Martingale 2 Strategy: $-48.00
+Martingale 3 Strategy: $-176.00
+
+=== 2024-11-20 ===
+
+Trade Statistics:
+Total Wins: 40
+Martingale 1 Wins: 14
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 12
+
+Profit Scenarios:
+No Martingale Strategy: $14.00
+Martingale 1 Strategy: $4.00
+Martingale 2 Strategy: $-44.00
+Martingale 3 Strategy: $-140.00
+
+=== 2024-11-19 ===
+
+Trade Statistics:
+Total Wins: 74
+Martingale 1 Wins: 21
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 23
+
+Profit Scenarios:
+No Martingale Strategy: $30.00
+Martingale 1 Strategy: $5.00
+Martingale 2 Strategy: $-87.00
+Martingale 3 Strategy: $-271.00
+
+=== 2024-11-18 ===
+
+Trade Statistics:
+Total Wins: 84
+Martingale 1 Wins: 24
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 20
+
+Profit Scenarios:
+No Martingale Strategy: $40.00
+Martingale 1 Strategy: $24.00
+Martingale 2 Strategy: $-56.00
+Martingale 3 Strategy: $-216.00
+
+=== 2024-11-17 ===
+
+Trade Statistics:
+Total Wins: 84
+Martingale 1 Wins: 33
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 21
+
+Profit Scenarios:
+No Martingale Strategy: $30.00
+Martingale 1 Strategy: $21.00
+Martingale 2 Strategy: $-63.00
+Martingale 3 Strategy: $-231.00
+
+=== 2024-11-16 ===
+
+Trade Statistics:
+Total Wins: 79
+Martingale 1 Wins: 16
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 27
+
+Profit Scenarios:
+No Martingale Strategy: $36.00
+Martingale 1 Strategy: $-2.00
+Martingale 2 Strategy: $-110.00
+Martingale 3 Strategy: $-326.00
+
+=== 2024-11-15 ===
+
+Trade Statistics:
+Total Wins: 58
+Martingale 1 Wins: 16
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 26
+
+Profit Scenarios:
+No Martingale Strategy: $16.00
+Martingale 1 Strategy: $-20.00
+Martingale 2 Strategy: $-124.00
+Martingale 3 Strategy: $-332.00
+
+=== 2024-11-14 ===
+
+Trade Statistics:
+Total Wins: 70
+Martingale 1 Wins: 20
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 15
+
+Profit Scenarios:
+No Martingale Strategy: $35.00
+Martingale 1 Strategy: $25.00
+Martingale 2 Strategy: $-35.00
+Martingale 3 Strategy: $-155.00
+
+=== 2024-11-13 ===
+
+Trade Statistics:
+Total Wins: 45
+Martingale 1 Wins: 15
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 19
+
+Profit Scenarios:
+No Martingale Strategy: $11.00
+Martingale 1 Strategy: $-12.00
+Martingale 2 Strategy: $-88.00
+Martingale 3 Strategy: $-240.00
+
+=== 2024-11-12 ===
+
+Trade Statistics:
+Total Wins: 77
+Martingale 1 Wins: 26
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 18
+
+Profit Scenarios:
+No Martingale Strategy: $33.00
+Martingale 1 Strategy: $23.00
+Martingale 2 Strategy: $-49.00
+Martingale 3 Strategy: $-193.00
+
+=== 2024-11-11 ===
+
+Trade Statistics:
+Total Wins: 76
+Martingale 1 Wins: 18
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 18
+
+Profit Scenarios:
+No Martingale Strategy: $40.00
+Martingale 1 Strategy: $22.00
+Martingale 2 Strategy: $-50.00
+Martingale 3 Strategy: $-194.00
+
+=== 2024-11-10 ===
+
+Trade Statistics:
+Total Wins: 74
+Martingale 1 Wins: 21
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 30
+
+Profit Scenarios:
+No Martingale Strategy: $23.00
+Martingale 1 Strategy: $-16.00
+Martingale 2 Strategy: $-136.00
+Martingale 3 Strategy: $-376.00
+
+=== 2024-11-09 ===
+
+Trade Statistics:
+Total Wins: 83
+Martingale 1 Wins: 25
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 23
+
+Profit Scenarios:
+No Martingale Strategy: $35.00
+Martingale 1 Strategy: $14.00
+Martingale 2 Strategy: $-78.00
+Martingale 3 Strategy: $-262.00
+
+=== 2024-11-08 ===
+
+Trade Statistics:
+Total Wins: 77
+Martingale 1 Wins: 23
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 14
+
+Profit Scenarios:
+No Martingale Strategy: $40.00
+Martingale 1 Strategy: $35.00
+Martingale 2 Strategy: $-21.00
+Martingale 3 Strategy: $-133.00
+
+=== 2024-11-07 ===
+
+Trade Statistics:
+Total Wins: 45
+Martingale 1 Wins: 14
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 13
+
+Profit Scenarios:
+No Martingale Strategy: $18.00
+Martingale 1 Strategy: $6.00
+Martingale 2 Strategy: $-46.00
+Martingale 3 Strategy: $-150.00
+
+=== 2024-11-06 ===
+
+Trade Statistics:
+Total Wins: 48
+Martingale 1 Wins: 12
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 16
+
+Profit Scenarios:
+No Martingale Strategy: $20.00
+Martingale 1 Strategy: $0.00
+Martingale 2 Strategy: $-64.00
+Martingale 3 Strategy: $-192.00
+
+=== 2024-11-05 ===
+
+Trade Statistics:
+Total Wins: 73
+Martingale 1 Wins: 26
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 25
+
+Profit Scenarios:
+No Martingale Strategy: $22.00
+Martingale 1 Strategy: $-2.00
+Martingale 2 Strategy: $-102.00
+Martingale 3 Strategy: $-302.00
+
+=== 2024-11-04 ===
+
+Trade Statistics:
+Total Wins: 72
+Martingale 1 Wins: 24
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 15
+
+Profit Scenarios:
+No Martingale Strategy: $33.00
+Martingale 1 Strategy: $27.00
+Martingale 2 Strategy: $-33.00
+Martingale 3 Strategy: $-153.00
+
+=== 2024-11-03 ===
+
+Trade Statistics:
+Total Wins: 73
+Martingale 1 Wins: 20
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 23
+
+Profit Scenarios:
+No Martingale Strategy: $30.00
+Martingale 1 Strategy: $4.00
+Martingale 2 Strategy: $-88.00
+Martingale 3 Strategy: $-272.00
+
+=== 2024-11-02 ===
+
+Trade Statistics:
+Total Wins: 70
+Martingale 1 Wins: 27
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 24
+
+Profit Scenarios:
+No Martingale Strategy: $19.00
+Martingale 1 Strategy: $-2.00
+Martingale 2 Strategy: $-98.00
+Martingale 3 Strategy: $-290.00
+
+=== 2024-11-01 ===
+
+Trade Statistics:
+Total Wins: 77
+Martingale 1 Wins: 25
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 22
+
+Profit Scenarios:
+No Martingale Strategy: $30.00
+Martingale 1 Strategy: $11.00
+Martingale 2 Strategy: $-77.00
+Martingale 3 Strategy: $-253.00
+
+=== 2024-10-31 ===
+
+Trade Statistics:
+Total Wins: 75
+Martingale 1 Wins: 24
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 21
+
+Profit Scenarios:
+No Martingale Strategy: $30.00
+Martingale 1 Strategy: $12.00
+Martingale 2 Strategy: $-72.00
+Martingale 3 Strategy: $-240.00
+
+=== 2024-10-30 ===
+
+Trade Statistics:
+Total Wins: 67
+Martingale 1 Wins: 13
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 20
+
+Profit Scenarios:
+No Martingale Strategy: $34.00
+Martingale 1 Strategy: $7.00
+Martingale 2 Strategy: $-73.00
+Martingale 3 Strategy: $-233.00
+
+=== 2024-10-29 ===
+
+Trade Statistics:
+Total Wins: 77
+Martingale 1 Wins: 18
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 22
+
+Profit Scenarios:
+No Martingale Strategy: $37.00
+Martingale 1 Strategy: $11.00
+Martingale 2 Strategy: $-77.00
+Martingale 3 Strategy: $-253.00
+
+=== 2024-10-28 ===
+
+Trade Statistics:
+Total Wins: 46
+Martingale 1 Wins: 15
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 7
+
+Profit Scenarios:
+No Martingale Strategy: $24.00
+Martingale 1 Strategy: $25.00
+Martingale 2 Strategy: $-3.00
+Martingale 3 Strategy: $-59.00
+
+=== 2024-10-27 ===
+
+Trade Statistics:
+Total Wins: 56
+Martingale 1 Wins: 13
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 21
+
+Profit Scenarios:
+No Martingale Strategy: $22.00
+Martingale 1 Strategy: $-7.00
+Martingale 2 Strategy: $-91.00
+Martingale 3 Strategy: $-259.00
+
+=== 2024-10-26 ===
+
+Trade Statistics:
+Total Wins: 66
+Martingale 1 Wins: 14
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 17
+
+Profit Scenarios:
+No Martingale Strategy: $35.00
+Martingale 1 Strategy: $15.00
+Martingale 2 Strategy: $-53.00
+Martingale 3 Strategy: $-189.00
+
+=== 2024-10-25 ===
+
+Trade Statistics:
+Total Wins: 29
+Martingale 1 Wins: 9
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 9
+
+Profit Scenarios:
+No Martingale Strategy: $11.00
+Martingale 1 Strategy: $2.00
+Martingale 2 Strategy: $-34.00
+Martingale 3 Strategy: $-106.00
+
+=== 2024-10-24 ===
+
+Trade Statistics:
+Total Wins: 57
+Martingale 1 Wins: 11
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 12
+
+Profit Scenarios:
+No Martingale Strategy: $34.00
+Martingale 1 Strategy: $21.00
+Martingale 2 Strategy: $-27.00
+Martingale 3 Strategy: $-123.00
+
+=== 2024-10-23 ===
+
+Trade Statistics:
+Total Wins: 66
+Martingale 1 Wins: 10
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 12
+
+Profit Scenarios:
+No Martingale Strategy: $44.00
+Martingale 1 Strategy: $30.00
+Martingale 2 Strategy: $-18.00
+Martingale 3 Strategy: $-114.00
+
+=== 2024-10-22 ===
+
+Trade Statistics:
+Total Wins: 51
+Martingale 1 Wins: 12
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 19
+
+Profit Scenarios:
+No Martingale Strategy: $20.00
+Martingale 1 Strategy: $-6.00
+Martingale 2 Strategy: $-82.00
+Martingale 3 Strategy: $-234.00
+
+=== 2024-10-21 ===
+
+Trade Statistics:
+Total Wins: 64
+Martingale 1 Wins: 15
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 16
+
+Profit Scenarios:
+No Martingale Strategy: $33.00
+Martingale 1 Strategy: $16.00
+Martingale 2 Strategy: $-48.00
+Martingale 3 Strategy: $-176.00
+
+=== 2024-10-20 ===
+
+Trade Statistics:
+Total Wins: 52
+Martingale 1 Wins: 10
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 8
+
+Profit Scenarios:
+No Martingale Strategy: $34.00
+Martingale 1 Strategy: $28.00
+Martingale 2 Strategy: $-4.00
+Martingale 3 Strategy: $-68.00
+
+=== 2024-10-19 ===
+
+Trade Statistics:
+Total Wins: 69
+Martingale 1 Wins: 17
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 17
+
+Profit Scenarios:
+No Martingale Strategy: $35.00
+Martingale 1 Strategy: $18.00
+Martingale 2 Strategy: $-50.00
+Martingale 3 Strategy: $-186.00
+
+=== 2024-10-18 ===
+
+Trade Statistics:
+Total Wins: 58
+Martingale 1 Wins: 14
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 12
+
+Profit Scenarios:
+No Martingale Strategy: $32.00
+Martingale 1 Strategy: $22.00
+Martingale 2 Strategy: $-26.00
+Martingale 3 Strategy: $-122.00
+
+=== 2024-10-17 ===
+
+Trade Statistics:
+Total Wins: 44
+Martingale 1 Wins: 12
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 5
+
+Profit Scenarios:
+No Martingale Strategy: $27.00
+Martingale 1 Strategy: $29.00
+Martingale 2 Strategy: $9.00
+Martingale 3 Strategy: $-31.00
+
+=== 2024-10-16 ===
+
+Trade Statistics:
+Total Wins: 64
+Martingale 1 Wins: 16
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 12
+
+Profit Scenarios:
+No Martingale Strategy: $36.00
+Martingale 1 Strategy: $28.00
+Martingale 2 Strategy: $-20.00
+Martingale 3 Strategy: $-116.00
+
+=== 2024-10-15 ===
+
+Trade Statistics:
+Total Wins: 20
+Martingale 1 Wins: 6
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 1
+
+Profit Scenarios:
+No Martingale Strategy: $13.00
+Martingale 1 Strategy: $17.00
+Martingale 2 Strategy: $13.00
+Martingale 3 Strategy: $5.00
+
+=== 2024-10-14 ===
+
+Trade Statistics:
+Total Wins: 28
+Martingale 1 Wins: 5
+Martingale 2 Wins: 0
+Martingale 3 Wins: 0
+Losses: 5
+
+Profit Scenarios:
+No Martingale Strategy: $18.00
+Martingale 1 Strategy: $13.00
+Martingale 2 Strategy: $-7.00
+Martingale 3 Strategy: $-47.00
+
+[Done] exited with code=0 in 0.038 seconds
+

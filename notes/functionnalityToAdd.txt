@@ -1,0 +1,1 @@
+- Check profit before each martingale and calculate the next amount to bet so we always be in profit

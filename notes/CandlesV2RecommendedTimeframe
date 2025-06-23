@@ -1,0 +1,12 @@
+1s : SAME ALWAYS (Recent candles)
+5s : SAME ALWAYS (Recent candles)
+15s : 18000 (Recent candles)
+30s : 18000 (Recent candles)
+60s : 10800
+120s : 18000
+180s : 28800
+300s : 46800
+600s : 90000
+900s : 136800
+1800s : 270000
+3600s : 540000 (Recent candles)

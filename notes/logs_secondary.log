@@ -1,0 +1,195 @@
+source /workspaces/TelegramClient/.venv/bin/activate
+/workspaces/TelegramClient/.venv/bin/python /workspaces/TelegramClient/src/MainTradingAccountSecondary.py
+codeany ➜ /workspaces/TelegramClient (21f7976) $ source /workspaces/TelegramClient/.venv/bin/activate
+(.venv) codeany ➜ /workspaces/TelegramClient (21f7976) $ /workspaces/TelegramClient/.venv/bin/python /workspaces/TelegramClient/src/MainTradingAccountSecondary.py
+Length of layers: 1
+False
+Connecting...
+[WARNING 2025-04-14 14:14:29,988] BinaryOptionsTools.platforms.pocketoption.ws.client: Error connecting, 'NoneType' object has no attribute 'join'
+wss://api-hk.po.market/socket.io/?EIO=4&transport=websocket
+[INFO 2025-04-14 14:14:39,999] telethon.network.mtprotosender: Connecting to 149.154.167.91:443/TcpFull...
+[INFO 2025-04-14 14:14:40,099] telethon.network.mtprotosender: Connection to 149.154.167.91:443/TcpFull complete!
+[ERROR 2025-04-14 14:14:50,031] BinaryOptionsTools.platforms.pocketoption.ws.client: 
+wss://api-c.po.market/socket.io/?EIO=4&transport=websocket
+[ERROR 2025-04-14 14:14:50,303] BinaryOptionsTools.platforms.pocketoption.ws.client: server rejected WebSocket connection: HTTP 525
+wss://api-us-south.po.market/socket.io/?EIO=4&transport=websocket
+CONNECTED SUCCESSFUL
+[INFO 2025-04-14 14:29:40,794] telethon.client.updates: Got difference for account updates
+[INFO 2025-04-14 14:29:40,913] telethon.client.updates: Got difference for channel 1889644650 updates
+[ERROR 2025-04-14 14:30:25,701] telethon.client.updates: Unhandled exception on message_handler
+Traceback (most recent call last):
+  File "/workspaces/TelegramClient/.venv/lib/python3.10/site-packages/telethon/client/updates.py", line 570, in _dispatch_update
+    await callback(event)
+  File "/workspaces/TelegramClient/src/MainTradingAccountSecondary.py", line 45, in message_handler
+    await bot.start(event.raw_text)
+  File "/workspaces/TelegramClient/src/ViperionTrading.py", line 171, in start
+    await self.handle_trade_execution(message)
+  File "/workspaces/TelegramClient/src/ViperionTrading.py", line 50, in handle_trade_execution
+    extracted_data = self.parse_trading_signal(message)
+  File "/workspaces/TelegramClient/src/ViperionTrading.py", line 109, in parse_trading_signal
+    elif message[0] in self.ACTIONS:
+IndexError: string index out of range
+[INFO 2025-04-14 14:30:25,705] root: ViperionTrading.py [{'key': 'asset', 'value': 'AUDCAD'}, {'key': 'expiration', 'value': 60}]
+[INFO 2025-04-14 14:30:26,773] root: ViperionTrading.py {'key': 'action', 'value': 'SELL'}
+[INFO 2025-04-14 14:30:26,773] root: ViperionTrading.py Trade parameters: {'asset': 'AUDCAD', 'expiration': 60, 'action': 'SELL', 'amount': 1.0}
+[INFO 2025-04-14 14:30:26,773] root: ViperionTrading.py INITIATE TRADE
+[INFO 2025-04-14 14:30:27,576] root: ViperionTrading.py TRADE PLACED SUCCESSFULLY: "0618fc92-a08b-4c24-af66-e536ee4470bd" AND WAITING FOR RESPONSE
+[INFO 2025-04-14 14:31:27,417] root: ViperionTrading.py Trade result: lose
+[WARNING 2025-04-14 14:31:27,417] root: ViperionTrading.py Trade 0618fc92-a08b-4c24-af66-e536ee4470bd failed (lose)
+[INFO 2025-04-14 14:31:27,618] telethon.client.updates: Got difference for channel 1851061994 updates
+[INFO 2025-04-14 14:31:27,804] telethon.client.updates: Got difference for channel 2129513531 updates
+[ERROR 2025-04-14 14:32:27,584] telethon.client.updates: Unhandled exception on message_handler
+Traceback (most recent call last):
+  File "/workspaces/TelegramClient/.venv/lib/python3.10/site-packages/telethon/client/updates.py", line 570, in _dispatch_update
+    await callback(event)
+  File "/workspaces/TelegramClient/src/MainTradingAccountSecondary.py", line 45, in message_handler
+    await bot.start(event.raw_text)
+  File "/workspaces/TelegramClient/src/ViperionTrading.py", line 171, in start
+    await self.handle_trade_execution(message)
+  File "/workspaces/TelegramClient/src/ViperionTrading.py", line 50, in handle_trade_execution
+    extracted_data = self.parse_trading_signal(message)
+  File "/workspaces/TelegramClient/src/ViperionTrading.py", line 109, in parse_trading_signal
+    elif message[0] in self.ACTIONS:
+IndexError: string index out of range
+[INFO 2025-04-14 14:33:27,657] root: ViperionTrading.py [{'key': 'asset', 'value': 'EURUSD_otc'}, {'key': 'expiration', 'value': 120}]
+[INFO 2025-04-14 14:33:48,244] root: ViperionTrading.py {'key': 'action', 'value': 'SELL'}
+[INFO 2025-04-14 14:33:48,244] root: ViperionTrading.py Trade parameters: {'asset': 'EURUSD_otc', 'expiration': 120, 'action': 'SELL', 'amount': 1.0}
+[INFO 2025-04-14 14:33:48,244] root: ViperionTrading.py INITIATE TRADE
+[WARNING 2025-04-14 14:33:48,454] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: 'isDemo'
+[ERROR 2025-04-14 14:33:53,259] root: Unknown error occurred during buy operation
+[WARNING 2025-04-14 14:33:53,259] PocketOptionMethod: Empty result on attempt 1, retrying...
+[WARNING 2025-04-14 14:33:58,265] PocketOptionMethod: Empty result on attempt 2, retrying...
+[ERROR 2025-04-14 14:34:03,270] root: No opened deals found
+[WARNING 2025-04-14 14:34:50,828] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-l.po.market/socket.io/?EIO=4&transport=websocket
+[ERROR 2025-04-14 14:34:51,221] BinaryOptionsTools.platforms.pocketoption.ws.client: server rejected WebSocket connection: HTTP 200
+wss://try-demo-eu.po.market/socket.io/?EIO=4&transport=websocket
+[WARNING 2025-04-14 14:34:52,019] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: received 1005 (no status code [internal]); then sent 1005 (no status code [internal])
+[WARNING 2025-04-14 14:35:11,717] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-asia.po.market/socket.io/?EIO=4&transport=websocket
+[ERROR 2025-04-14 14:35:21,728] BinaryOptionsTools.platforms.pocketoption.ws.client: 
+wss://api-us2.po.market/socket.io/?EIO=4&transport=websocket
+CONNECTED SUCCESSFUL
+[INFO 2025-04-14 15:01:28,138] telethon.client.updates: Got difference for channel 2129513531 updates
+[INFO 2025-04-14 15:06:16,865] root: AlexTrading.py Trade parameters: {'action': 'BUY', 'asset': 'NZDUSD_otc', 'expiration': 60, 'amount': 1.0}
+[INFO 2025-04-14 15:06:16,865] root: AlexTrading.py INITIATE TRADE
+[WARNING 2025-04-14 15:06:17,070] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: 'isDemo'
+[ERROR 2025-04-14 15:06:21,873] root: Unknown error occurred during buy operation
+[WARNING 2025-04-14 15:06:21,873] PocketOptionMethod: Empty result on attempt 1, retrying...
+[WARNING 2025-04-14 15:06:26,879] PocketOptionMethod: Empty result on attempt 2, retrying...
+[ERROR 2025-04-14 15:06:31,883] root: No opened deals found
+[WARNING 2025-04-14 15:07:02,330] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-fr2.po.market/socket.io/?EIO=4&transport=websocket
+[ERROR 2025-04-14 15:07:02,536] BinaryOptionsTools.platforms.pocketoption.ws.client: server rejected WebSocket connection: HTTP 521
+wss://api-fin.po.market/socket.io/?EIO=4&transport=websocket
+[ERROR 2025-04-14 15:07:22,556] BinaryOptionsTools.platforms.pocketoption.ws.client: 
+wss://api-us-north.po.market/socket.io/?EIO=4&transport=websocket
+[WARNING 2025-04-14 15:07:23,167] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: received 1005 (no status code [internal]); then sent 1005 (no status code [internal])
+[WARNING 2025-04-14 15:07:42,998] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-in.po.market/socket.io/?EIO=4&transport=websocket
+[ERROR 2025-04-14 15:07:43,837] BinaryOptionsTools.platforms.pocketoption.ws.client: server rejected WebSocket connection: HTTP 404
+wss://api-fr.po.market/socket.io/?EIO=4&transport=websocket
+[ERROR 2025-04-14 15:08:03,858] BinaryOptionsTools.platforms.pocketoption.ws.client: 
+wss://api-sc.po.market/socket.io/?EIO=4&transport=websocket
+[WARNING 2025-04-14 15:08:04,472] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: received 1005 (no status code [internal]); then sent 1005 (no status code [internal])
+[WARNING 2025-04-14 15:08:24,295] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-us4.po.market/socket.io/?EIO=4&transport=websocket
+[WARNING 2025-04-14 15:08:24,983] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: received 1005 (no status code [internal]); then sent 1005 (no status code [internal])
+[WARNING 2025-04-14 15:08:44,752] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-msk.po.market/socket.io/?EIO=4&transport=websocket
+[WARNING 2025-04-14 15:08:45,986] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: received 1005 (no status code [internal]); then sent 1005 (no status code [internal])
+[WARNING 2025-04-14 15:09:05,560] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-spb.po.market/socket.io/?EIO=4&transport=websocket
+[WARNING 2025-04-14 15:09:07,215] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: received 1005 (no status code [internal]); then sent 1005 (no status code [internal])
+[WARNING 2025-04-14 15:09:26,692] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-eu.po.market/socket.io/?EIO=4&transport=websocket
+CONNECTED SUCCESSFUL
+[INFO 2025-04-14 15:09:53,189] root: AlexTrading.py Trade parameters: {'action': 'SELL', 'asset': 'NZDUSD_otc', 'expiration': 60, 'amount': 1.0}
+[INFO 2025-04-14 15:09:53,192] root: AlexTrading.py INITIATE TRADE
+[WARNING 2025-04-14 15:09:53,321] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: 'isDemo'
+[ERROR 2025-04-14 15:09:58,207] root: Unknown error occurred during buy operation
+[WARNING 2025-04-14 15:09:58,207] PocketOptionMethod: Empty result on attempt 1, retrying...
+[WARNING 2025-04-14 15:10:03,210] PocketOptionMethod: Empty result on attempt 2, retrying...
+[ERROR 2025-04-14 15:10:08,215] root: No opened deals found
+[WARNING 2025-04-14 15:10:47,182] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-us3.po.market/socket.io/?EIO=4&transport=websocket
+[WARNING 2025-04-14 15:10:47,865] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: received 1005 (no status code [internal]); then sent 1005 (no status code [internal])
+[WARNING 2025-04-14 15:11:07,629] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-in.po.market/socket.io/?EIO=4&transport=websocket
+[ERROR 2025-04-14 15:11:09,469] BinaryOptionsTools.platforms.pocketoption.ws.client: server rejected WebSocket connection: HTTP 404
+wss://api-fin.po.market/socket.io/?EIO=4&transport=websocket
+[ERROR 2025-04-14 15:11:29,492] BinaryOptionsTools.platforms.pocketoption.ws.client: 
+wss://api-hk.po.market/socket.io/?EIO=4&transport=websocket
+[ERROR 2025-04-14 15:11:49,513] BinaryOptionsTools.platforms.pocketoption.ws.client: 
+wss://api-us-north.po.market/socket.io/?EIO=4&transport=websocket
+[WARNING 2025-04-14 15:11:50,166] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: received 1005 (no status code [internal]); then sent 1005 (no status code [internal])
+[WARNING 2025-04-14 15:12:09,988] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-fr.po.market/socket.io/?EIO=4&transport=websocket
+[ERROR 2025-04-14 15:12:30,009] BinaryOptionsTools.platforms.pocketoption.ws.client: 
+wss://api-l.po.market/socket.io/?EIO=4&transport=websocket
+[ERROR 2025-04-14 15:12:30,464] BinaryOptionsTools.platforms.pocketoption.ws.client: server rejected WebSocket connection: HTTP 200
+wss://api-msk.po.market/socket.io/?EIO=4&transport=websocket
+[WARNING 2025-04-14 15:12:31,411] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: received 1005 (no status code [internal]); then sent 1005 (no status code [internal])
+[WARNING 2025-04-14 15:12:51,126] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-us3.po.market/socket.io/?EIO=4&transport=websocket
+[WARNING 2025-04-14 15:12:51,798] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: received 1005 (no status code [internal]); then sent 1005 (no status code [internal])
+[WARNING 2025-04-14 15:13:11,619] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-spb.po.market/socket.io/?EIO=4&transport=websocket
+[WARNING 2025-04-14 15:13:13,249] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: received 1005 (no status code [internal]); then sent 1005 (no status code [internal])
+[WARNING 2025-04-14 15:13:32,732] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-sc.po.market/socket.io/?EIO=4&transport=websocket
+[WARNING 2025-04-14 15:13:33,366] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: received 1005 (no status code [internal]); then sent 1005 (no status code [internal])
+[WARNING 2025-04-14 15:13:53,188] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-us2.po.market/socket.io/?EIO=4&transport=websocket
+CONNECTED SUCCESSFUL
+[INFO 2025-04-14 15:17:17,748] root: AlexTrading.py Trade parameters: {'action': 'SELL', 'asset': 'CHFJPY_otc', 'expiration': 60, 'amount': 1.0}
+[INFO 2025-04-14 15:17:17,748] root: AlexTrading.py INITIATE TRADE
+[WARNING 2025-04-14 15:17:17,982] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: 'isDemo'
+[ERROR 2025-04-14 15:17:22,762] root: Unknown error occurred during buy operation
+[WARNING 2025-04-14 15:17:22,763] PocketOptionMethod: Empty result on attempt 1, retrying...
+[WARNING 2025-04-14 15:17:27,768] PocketOptionMethod: Empty result on attempt 2, retrying...
+[ERROR 2025-04-14 15:17:32,769] root: No opened deals found
+[WARNING 2025-04-14 15:18:13,653] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-c.po.market/socket.io/?EIO=4&transport=websocket
+[ERROR 2025-04-14 15:18:13,952] BinaryOptionsTools.platforms.pocketoption.ws.client: server rejected WebSocket connection: HTTP 525
+wss://api-us4.po.market/socket.io/?EIO=4&transport=websocket
+[WARNING 2025-04-14 15:18:14,661] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: received 1005 (no status code [internal]); then sent 1005 (no status code [internal])
+[WARNING 2025-04-14 15:18:34,409] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://try-demo-eu.po.market/socket.io/?EIO=4&transport=websocket
+[WARNING 2025-04-14 15:18:35,192] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: received 1005 (no status code [internal]); then sent 1005 (no status code [internal])
+[WARNING 2025-04-14 15:18:54,887] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-eu.po.market/socket.io/?EIO=4&transport=websocket
+[WARNING 2025-04-14 15:18:55,661] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: received 1005 (no status code [internal]); then sent 1005 (no status code [internal])
+[WARNING 2025-04-14 15:19:15,377] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-asia.po.market/socket.io/?EIO=4&transport=websocket
+[ERROR 2025-04-14 15:19:25,391] BinaryOptionsTools.platforms.pocketoption.ws.client: 
+wss://api-fr2.po.market/socket.io/?EIO=4&transport=websocket
+[ERROR 2025-04-14 15:19:25,598] BinaryOptionsTools.platforms.pocketoption.ws.client: server rejected WebSocket connection: HTTP 521
+wss://api-us-south.po.market/socket.io/?EIO=4&transport=websocket
+CONNECTED SUCCESSFUL
+[INFO 2025-04-14 15:21:33,023] root: AlexTrading.py Trade parameters: {'action': 'BUY', 'asset': 'NZDUSD_otc', 'expiration': 60, 'amount': 1.0}
+[INFO 2025-04-14 15:21:33,023] root: AlexTrading.py INITIATE TRADE
+[WARNING 2025-04-14 15:21:33,229] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: 'isDemo'
+[ERROR 2025-04-14 15:21:38,030] root: Unknown error occurred during buy operation
+[WARNING 2025-04-14 15:21:38,031] PocketOptionMethod: Empty result on attempt 1, retrying...
+[WARNING 2025-04-14 15:21:43,036] PocketOptionMethod: Empty result on attempt 2, retrying...
+[ERROR 2025-04-14 15:21:48,041] root: No opened deals found
+[WARNING 2025-04-14 15:22:26,050] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-us4.po.market/socket.io/?EIO=4&transport=websocket
+CONNECTED SUCCESSFUL
+^C[INFO 2025-04-14 15:32:45,413] telethon.network.mtprotosender: Disconnecting from 149.154.167.91:443/TcpFull...
+[INFO 2025-04-14 15:32:45,413] telethon.network.mtprotosender: Disconnection from 149.154.167.91:443/TcpFull complete!
+Traceback (most recent call last):
+  File "/workspaces/TelegramClient/src/MainTradingAccountSecondary.py", line 79, in <module>
+    main()
+  File "/workspaces/TelegramClient/src/MainTradingAccountSecondary.py", line 73, in main
+    asyncio.run(bot.start())
+  File "/workspaces/TelegramClient/.venv/lib/python3.10/site-packages/nest_asyncio.py", line 30, in run
+    return loop.run_until_complete(task)
+  File "/workspaces/TelegramClient/.venv/lib/python3.10/site-packages/nest_asyncio.py", line 92, in run_until_complete
+    self._run_once()
+  File "/workspaces/TelegramClient/.venv/lib/python3.10/site-packages/nest_asyncio.py", line 115, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/usr/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt

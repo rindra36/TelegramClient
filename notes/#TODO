@@ -1,0 +1,9 @@
+TODO:
+- Add monitor when the API is initialized so it reinitialized automatically when this time is exceeded
+- Make it that when getting candles simultaneously, if done for one asset, immediatly check if there is signal within it but not waiting for all the asset to be treated before checking signal
+- Implement the functionnality to run continuously on best pairs using the new functionnality
+- Test the price action by always entering the trade whenever the value to get the correct value to assign
+
+Strategy :
+- BB (20, 2, close, offset : 0)
+- SO - RSI (Upper band : 80, Lower band : 20, K and D : 3, SO Lenght : 5, RSI length : 10)

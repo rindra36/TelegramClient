@@ -1,0 +1,67 @@
+Forex Trading Sessions : 
+
+The market close at 12:00 AM UTC+3 (GMT : 9:00 PM, EST : 4:00 PM) and opens at Sydney session
+Pocket Option : 3:00 AM - 11:45 PM UTC+3 | 5:10 AM - 11:45 PM UTC+3 for GBP/CAD, GBP/CHF
+
+Sydney:
+    US Spring / Summer Session : 1:00 AM - 10:00 AM UTC+3 (GMT : 10:00 PM - 7:00 AM, EST : 6:00 PM - 3:00 AM)
+    US Autumn / Winter Session : 12:00 PM - 9:00 AM UTC+3 (GMT : 9:00 PM - 6:00 AM, EST : 5:00 PM - 2:00 AM)
+
+        AUD/USD : AUD Key during this session
+        NZD/USD : NZD Also reacts during this session
+        USD/JPY : JPY sees some activity
+
+Tokyo (Asian):
+    US Spring / Summer Session : 2:00 AM - 11:00 AM UTC+3 (GMT : 11:00 PM - 8:00 AM, EST : 7:00 PM - 4:00 AM)
+    US Autumn / Winter Session : 2:00 AM - 11:00 AM UTC+3 (GMT : 11:00 PM - 8:00 AM, EST : 6:00 PM - 3:00 AM)
+
+        USD/JPY : JPY heavily traded during this session
+        AUD/JPY : Popular cross-pair
+        NZD/JPY : Similar to AUD/JPY, sees increased activity
+        EUR/JPY : Moderate activity
+
+London (European):
+    US Spring / Summer Session : 10:00 AM - 7:00 PM UTC+3 (GMT : 7:00 AM - 4:00 PM, EST : 3:00 AM - 12:00 PM)
+    US Autumn / Winter Session : 11:00 AM - 8:00 PM UTC+3 (GMT : 8:00 AM - 5:00 PM, EST : 3:00 AM - 12:00 PM)
+
+        EUR/USD : Most liquid pair in the world, strong activity during London hours
+        GBP/USD : Second most popular pair during this session
+        EUR/GBP : Strong activity
+        USD/CHF : CHF sees higher liquidity
+        EUR/JPY, GBP/JPY : Asian overlaps drive volatility
+
+New York (American):
+    US Spring / Summer Session : 3:00 PM - 12:00 AM UTC+3 (GMT : 12:00 AM - 9:00 PM, EST : 8:00 AM - 5:00 PM)
+    US Autumn / Winter Session : 4:00 PM - 1:00 AM UTC+3 (GMT : 1:00 PM - 10:00 PM, EST : 8:00 AM - 5:00 PM)
+
+        EUR/USD : Very active
+        GBP/USD : GBP remains active while London still open
+        USD/CAD : CAD moves with US activity
+        USD/JPY : Remains active
+        AUD/USD, NZD/USD : See movements, though tapering off after London
+
+=======================================
+
+Forex session overlaps
+
+London - New York Overlap : 4:00 PM - 7:00 PM UTC+3 (GMT : 1:00 PM - 4:00 PM, EST : 8:00 AM - 11:00 PM)
+    Most active and volatile period
+    EUR/USD
+    GBP/USD
+    USD/JPY
+    EUR/GBP
+
+Tokyo - London Overlap : 11:00 AM - 12:00 AM UTC+3 (GMT : 8:00 AM - 9:00 AM, EST : 3:00 AM - 4:00 AM)
+    Shorter and less signifiant overlap period, but can still see currency movement. JPY tends to be active here
+    USD/JPY
+    EUR/JPY
+    GBP/JPY
+    AUD/JPY
+
+Sydney - Tokyo Overlap : 3:00 PM - 10:00 PM UTC+3 (GMT : 12:00 AM - 7:00 AM, EST : 7:00 PM - 2:00 AM)
+    A quieter overlap, suitable for traders focusing on Asia-Pacific currencies
+    AUD/JPY
+    AUD/USD
+    NZD/USD
+    USD/JPY
+

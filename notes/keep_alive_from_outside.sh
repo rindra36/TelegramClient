@@ -1,0 +1,1 @@
+for i in {1..1000}; do sleep 30m; echo $(date '+%d/%m/%Y %H:%M:%S'); xdotool search --name TelegramClient windowfocus key --window %@ b; done

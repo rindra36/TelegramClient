@@ -1,0 +1,97 @@
+source /workspaces/TelegramClient/.venv/bin/activate
+/workspaces/TelegramClient/.venv/bin/python /workspaces/TelegramClient/src/MainTradingAccountPrimary.py
+codeany ➜ /workspaces/TelegramClient (21f7976) $ source /workspaces/TelegramClient/.venv/bin/activate
+(.venv) codeany ➜ /workspaces/TelegramClient (21f7976) $ /workspaces/TelegramClient/.venv/bin/python /workspaces/TelegramClient/src/MainTradingAccountPrimary.py
+Length of layers: 1
+False
+Connecting...
+[WARNING 2025-04-14 14:14:27,476] BinaryOptionsTools.platforms.pocketoption.ws.client: Error connecting, 'NoneType' object has no attribute 'join'
+wss://api-msk.po.market/socket.io/?EIO=4&transport=websocket
+CONNECTED SUCCESSFUL
+[INFO 2025-04-14 14:14:37,486] telethon.network.mtprotosender: Connecting to 149.154.167.91:443/TcpFull...
+[INFO 2025-04-14 14:14:37,575] telethon.network.mtprotosender: Connection to 149.154.167.91:443/TcpFull complete!
+CONNECTED SUCCESSFUL
+[INFO 2025-04-14 14:20:05,071] root: YoussefTrading.py Trade parameters: {'action': 'SELL', 'asset': 'GBPUSD_otc', 'expiration': 300, 'amount': 1.0}
+[INFO 2025-04-14 14:20:05,073] root: Waiting 295.43 seconds...
+[INFO 2025-04-14 14:25:00,522] root: YoussefTrading.py INITIATE TRADE
+[INFO 2025-04-14 14:25:00,924] root: YoussefTrading.py TRADE PLACED SUCCESSFULLY: "d6592be8-2a86-4a40-b6af-42dbbfcf1f69" AND WAITING FOR RESPONSE
+[INFO 2025-04-14 14:25:00,924] root: YoussefTrading.py Waiting for the expiration time minus 5 seconds : 295
+[INFO 2025-04-14 14:29:38,185] telethon.client.updates: Got difference for account updates
+[INFO 2025-04-14 14:29:38,293] telethon.client.updates: Got difference for channel 1889644650 updates
+[INFO 2025-04-14 14:30:00,460] root: YoussefTrading.py Trade result: lose
+[WARNING 2025-04-14 14:30:00,460] root: YoussefTrading.py Trade d6592be8-2a86-4a40-b6af-42dbbfcf1f69 failed (lose), retrying...
+[INFO 2025-04-14 14:30:00,460] root: YoussefTrading.py MARTINGALE 1 INITIATE TRADE
+[INFO 2025-04-14 14:30:00,861] root: YoussefTrading.py MARTINGALE 1 TRADE PLACED SUCCESSFULLY: "db04e5ad-3848-4960-9666-5f2a7c12c764" AND WAITING FOR RESPONSE
+[INFO 2025-04-14 14:30:00,861] root: YoussefTrading.py Waiting for the expiration time minus 5 seconds : 295
+[ERROR 2025-04-14 14:30:25,701] telethon.client.updates: Unhandled exception on message_handler
+Traceback (most recent call last):
+  File "/workspaces/TelegramClient/.venv/lib/python3.10/site-packages/telethon/client/updates.py", line 570, in _dispatch_update
+    await callback(event)
+  File "/workspaces/TelegramClient/src/MainTradingAccountPrimary.py", line 45, in message_handler
+    await bot.start(event.raw_text)
+  File "/workspaces/TelegramClient/src/ViperionTrading.py", line 171, in start
+    await self.handle_trade_execution(message)
+  File "/workspaces/TelegramClient/src/ViperionTrading.py", line 50, in handle_trade_execution
+    extracted_data = self.parse_trading_signal(message)
+  File "/workspaces/TelegramClient/src/ViperionTrading.py", line 109, in parse_trading_signal
+    elif message[0] in self.ACTIONS:
+IndexError: string index out of range
+[INFO 2025-04-14 14:30:25,705] root: ViperionTrading.py [{'key': 'asset', 'value': 'AUDCAD'}, {'key': 'expiration', 'value': 60}]
+[INFO 2025-04-14 14:30:26,771] root: ViperionTrading.py {'key': 'action', 'value': 'SELL'}
+[INFO 2025-04-14 14:30:26,772] root: ViperionTrading.py Trade parameters: {'asset': 'AUDCAD', 'expiration': 60, 'action': 'SELL', 'amount': 1.0}
+[INFO 2025-04-14 14:30:26,772] root: ViperionTrading.py INITIATE TRADE
+[INFO 2025-04-14 14:30:27,474] root: ViperionTrading.py TRADE PLACED SUCCESSFULLY: "c5db3e44-451b-40b4-b2ab-31e000fea590" AND WAITING FOR RESPONSE
+[INFO 2025-04-14 14:31:27,407] root: ViperionTrading.py Trade result: lose
+[WARNING 2025-04-14 14:31:27,407] root: ViperionTrading.py Trade c5db3e44-451b-40b4-b2ab-31e000fea590 failed (lose)
+[INFO 2025-04-14 14:31:27,548] telethon.client.updates: Got difference for channel 1851061994 updates
+[INFO 2025-04-14 14:31:27,672] telethon.client.updates: Got difference for channel 2129513531 updates
+[ERROR 2025-04-14 14:32:27,556] telethon.client.updates: Unhandled exception on message_handler
+Traceback (most recent call last):
+  File "/workspaces/TelegramClient/.venv/lib/python3.10/site-packages/telethon/client/updates.py", line 570, in _dispatch_update
+    await callback(event)
+  File "/workspaces/TelegramClient/src/MainTradingAccountPrimary.py", line 45, in message_handler
+    await bot.start(event.raw_text)
+  File "/workspaces/TelegramClient/src/ViperionTrading.py", line 171, in start
+    await self.handle_trade_execution(message)
+  File "/workspaces/TelegramClient/src/ViperionTrading.py", line 50, in handle_trade_execution
+    extracted_data = self.parse_trading_signal(message)
+  File "/workspaces/TelegramClient/src/ViperionTrading.py", line 109, in parse_trading_signal
+    elif message[0] in self.ACTIONS:
+IndexError: string index out of range
+[INFO 2025-04-14 14:33:27,622] root: ViperionTrading.py [{'key': 'asset', 'value': 'EURUSD_otc'}, {'key': 'expiration', 'value': 120}]
+[INFO 2025-04-14 14:33:48,355] root: ViperionTrading.py {'key': 'action', 'value': 'SELL'}
+[INFO 2025-04-14 14:33:48,356] root: ViperionTrading.py Trade parameters: {'asset': 'EURUSD_otc', 'expiration': 120, 'action': 'SELL', 'amount': 1.0}
+[INFO 2025-04-14 14:33:48,356] root: ViperionTrading.py INITIATE TRADE
+[INFO 2025-04-14 14:33:48,657] root: ViperionTrading.py TRADE PLACED SUCCESSFULLY: "b4ebc11b-347a-4a06-80a4-9098e33a8656" AND WAITING FOR RESPONSE
+[INFO 2025-04-14 14:35:48,435] root: ViperionTrading.py Trade result: win
+[INFO 2025-04-14 14:35:48,436] root: ViperionTrading.py Trade successful: win
+[ERROR 2025-04-14 14:37:48,524] root: Timeout: Could not retrieve order info in time.
+[INFO 2025-04-14 14:37:48,524] root: YoussefTrading.py Trade result: unknown
+[INFO 2025-04-14 14:37:48,628] telethon.client.updates: Got difference for channel 1770790377 updates
+[WARNING 2025-04-14 15:03:32,043] BinaryOptionsTools.platforms.pocketoption.ws.client: Error occurred: no close frame received or sent
+[WARNING 2025-04-14 15:03:48,333] BinaryOptionsTools.platforms.pocketoption.ws.client: Trying another server
+wss://api-sc.po.market/socket.io/?EIO=4&transport=websocket
+CONNECTED SUCCESSFUL
+[INFO 2025-04-14 15:06:16,863] root: AlexTrading.py Trade parameters: {'action': 'BUY', 'asset': 'NZDUSD_otc', 'expiration': 60, 'amount': 1.0}
+[INFO 2025-04-14 15:06:16,863] root: AlexTrading.py INITIATE TRADE
+[INFO 2025-04-14 15:06:17,165] root: AlexTrading.py TRADE PLACED SUCCESSFULLY: "86473b74-1627-4933-aaa8-5760006b0b65" AND WAITING FOR RESPONSE
+[INFO 2025-04-14 15:07:16,286] root: AlexTrading.py Trade result: lose
+[WARNING 2025-04-14 15:07:16,286] root: AlexTrading.py Trade 86473b74-1627-4933-aaa8-5760006b0b65 failed (lose)
+[INFO 2025-04-14 15:09:53,187] root: AlexTrading.py Trade parameters: {'action': 'SELL', 'asset': 'NZDUSD_otc', 'expiration': 60, 'amount': 1.0}
+[INFO 2025-04-14 15:09:53,187] root: AlexTrading.py INITIATE TRADE
+[INFO 2025-04-14 15:09:53,491] root: AlexTrading.py TRADE PLACED SUCCESSFULLY: "698539ff-5bca-4612-8319-2ca987d4166f" AND WAITING FOR RESPONSE
+[INFO 2025-04-14 15:10:53,523] root: AlexTrading.py Trade result: lose
+[WARNING 2025-04-14 15:10:53,523] root: AlexTrading.py Trade 698539ff-5bca-4612-8319-2ca987d4166f failed (lose)
+[INFO 2025-04-14 15:14:38,698] telethon.client.updates: Got difference for account updates
+[INFO 2025-04-14 15:17:17,746] root: AlexTrading.py Trade parameters: {'action': 'SELL', 'asset': 'CHFJPY_otc', 'expiration': 60, 'amount': 1.0}
+[INFO 2025-04-14 15:17:17,746] root: AlexTrading.py INITIATE TRADE
+[INFO 2025-04-14 15:17:18,049] root: AlexTrading.py TRADE PLACED SUCCESSFULLY: "0d9ab477-cd1f-484b-a61c-4684fa3026b1" AND WAITING FOR RESPONSE
+[INFO 2025-04-14 15:18:17,773] root: AlexTrading.py Trade result: lose
+[WARNING 2025-04-14 15:18:17,773] root: AlexTrading.py Trade 0d9ab477-cd1f-484b-a61c-4684fa3026b1 failed (lose)
+[INFO 2025-04-14 15:21:33,021] root: AlexTrading.py Trade parameters: {'action': 'BUY', 'asset': 'NZDUSD_otc', 'expiration': 60, 'amount': 1.0}
+[INFO 2025-04-14 15:21:33,021] root: AlexTrading.py INITIATE TRADE
+[INFO 2025-04-14 15:21:33,322] root: AlexTrading.py TRADE PLACED SUCCESSFULLY: "ea99dff2-6b1e-4c32-833b-fcf2cc8c0139" AND WAITING FOR RESPONSE
+[INFO 2025-04-14 15:22:32,238] root: AlexTrading.py Trade result: win
+[INFO 2025-04-14 15:22:32,238] root: AlexTrading.py Trade successful: win
+CONNECTED SUCCESSFUL
+CONNECTED SUCCESSFUL
