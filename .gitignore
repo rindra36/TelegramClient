@@ -6,5 +6,6 @@ __pycache__/
 assets/env/*
 notes/*
 candles_data/*
+plots/*
 bot/*
 bot-v2/*

@@ -1,0 +1,114 @@
+
+Begin datetime : 2025-06-12 19:42:26.240441
+End datetime : 2025-06-12 19:42:36.249988
+Timeframe: 1s, Period: 1s
+First 0 candles:
+Empty DataFrame
+Columns: []
+Index: []
+Last 0 candles:
+Empty DataFrame
+Columns: []
+Index: []
+Number of candles: 0
+--------------------------------------------------
+
+Begin datetime : 2025-06-12 19:42:36.252357
+End datetime : 2025-06-12 19:42:36.498661
+Timeframe: 5s, Period: 1s
+First 5 candles:
+                                  0                1                2               3                 4              5                    6               7
+0  (timestamp, 2025-06-12 21:36:55)  (open, 1.15575)  (high, 1.15591)  (low, 1.15587)  (close, 1.15575)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 5)
+1  (timestamp, 2025-06-12 21:36:50)  (open, 1.15578)   (high, 1.1558)  (low, 1.15575)  (close, 1.15574)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 5)
+2  (timestamp, 2025-06-12 21:36:45)  (open, 1.15577)  (high, 1.15582)  (low, 1.15577)  (close, 1.15576)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 5)
+3  (timestamp, 2025-06-12 21:36:40)  (open, 1.15576)  (high, 1.15579)  (low, 1.15579)  (close, 1.15576)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 5)
+4  (timestamp, 2025-06-12 21:36:35)  (open, 1.15582)  (high, 1.15583)  (low, 1.15576)  (close, 1.15575)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 5)
+Last 5 candles:
+                                   0                1                2               3                 4              5                    6               7
+31  (timestamp, 2025-06-12 21:34:20)  (open, 1.15577)  (high, 1.15577)  (low, 1.15571)  (close, 1.15571)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 5)
+32  (timestamp, 2025-06-12 21:34:15)  (open, 1.15576)  (high, 1.15576)  (low, 1.15575)   (close, 1.1557)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 5)
+33  (timestamp, 2025-06-12 21:34:10)  (open, 1.15574)  (high, 1.15579)  (low, 1.15579)  (close, 1.15572)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 5)
+34  (timestamp, 2025-06-12 21:34:05)   (open, 1.1557)  (high, 1.15582)  (low, 1.15569)  (close, 1.15569)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 5)
+35  (timestamp, 2025-06-12 21:34:00)  (open, 1.15576)  (high, 1.15576)  (low, 1.15567)  (close, 1.15565)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 5)
+Number of candles: 36
+--------------------------------------------------
+
+Begin datetime : 2025-06-12 19:42:36.510165
+End datetime : 2025-06-12 19:42:36.650099
+Timeframe: 15s, Period: 1s
+First 5 candles:
+                                  0                1                2               3                 4              5                    6                7
+0  (timestamp, 2025-06-12 21:36:45)  (open, 1.15577)  (high, 1.15591)  (low, 1.15587)  (close, 1.15574)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 15)
+1  (timestamp, 2025-06-12 21:36:30)  (open, 1.15583)  (high, 1.15586)  (low, 1.15579)  (close, 1.15575)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 15)
+2  (timestamp, 2025-06-12 21:36:15)  (open, 1.15571)  (high, 1.15586)  (low, 1.15581)  (close, 1.15567)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 15)
+3  (timestamp, 2025-06-12 21:36:00)  (open, 1.15583)  (high, 1.15589)  (low, 1.15572)   (close, 1.1557)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 15)
+4  (timestamp, 2025-06-12 21:35:45)  (open, 1.15586)  (high, 1.15587)  (low, 1.15582)  (close, 1.15579)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 15)
+Last 5 candles:
+                                   0                1                2               3                 4              5                    6                7
+73  (timestamp, 2025-06-12 21:18:30)  (open, 1.15521)  (high, 1.15527)  (low, 1.15527)  (close, 1.15517)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 15)
+74  (timestamp, 2025-06-12 21:18:15)  (open, 1.15527)  (high, 1.15527)  (low, 1.15521)  (close, 1.15513)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 15)
+75  (timestamp, 2025-06-12 21:18:00)  (open, 1.15513)  (high, 1.15529)  (low, 1.15527)  (close, 1.15513)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 15)
+76  (timestamp, 2025-06-12 21:17:45)  (open, 1.15507)  (high, 1.15519)  (low, 1.15513)  (close, 1.15507)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 15)
+77  (timestamp, 2025-06-12 21:17:30)  (open, 1.15505)   (high, 1.1552)  (low, 1.15507)  (close, 1.15502)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 15)
+Number of candles: 78
+--------------------------------------------------
+
+Begin datetime : 2025-06-12 19:42:36.660292
+End datetime : 2025-06-12 19:42:36.797103
+Timeframe: 30s, Period: 1s
+First 5 candles:
+                                  0                1                2               3                 4              5                    6                7
+0  (timestamp, 2025-06-12 21:36:30)  (open, 1.15583)  (high, 1.15591)  (low, 1.15587)  (close, 1.15574)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 30)
+1  (timestamp, 2025-06-12 21:36:00)  (open, 1.15583)  (high, 1.15589)  (low, 1.15581)  (close, 1.15567)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 30)
+2  (timestamp, 2025-06-12 21:35:30)  (open, 1.15593)  (high, 1.15599)  (low, 1.15582)  (close, 1.15579)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 30)
+3  (timestamp, 2025-06-12 21:35:00)  (open, 1.15592)  (high, 1.15598)  (low, 1.15592)  (close, 1.15577)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 30)
+4  (timestamp, 2025-06-12 21:34:30)  (open, 1.15573)  (high, 1.15599)  (low, 1.15593)  (close, 1.15573)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 30)
+Last 5 candles:
+                                   0                1                2               3                 4              5                    6                7
+84  (timestamp, 2025-06-12 20:54:30)  (open, 1.15314)  (high, 1.15339)  (low, 1.15334)  (close, 1.15307)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 30)
+85  (timestamp, 2025-06-12 20:54:00)  (open, 1.15302)  (high, 1.15314)  (low, 1.15309)    (close, 1.153)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 30)
+86  (timestamp, 2025-06-12 20:53:30)  (open, 1.15302)  (high, 1.15313)    (low, 1.153)  (close, 1.15292)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 30)
+87  (timestamp, 2025-06-12 20:53:00)  (open, 1.15318)  (high, 1.15328)  (low, 1.15302)  (close, 1.15302)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 30)
+88  (timestamp, 2025-06-12 20:52:30)   (open, 1.1534)   (high, 1.1534)  (low, 1.15318)  (close, 1.15295)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 30)
+Number of candles: 89
+--------------------------------------------------
+
+Begin datetime : 2025-06-12 19:42:36.807297
+End datetime : 2025-06-12 19:42:37.111977
+Timeframe: 60s, Period: 1s
+First 5 candles:
+                                  0                1                2               3                 4              5                    6                7
+0  (timestamp, 2025-06-12 21:36:00)  (open, 1.15583)  (high, 1.15591)  (low, 1.15587)  (close, 1.15567)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 60)
+1  (timestamp, 2025-06-12 21:35:00)  (open, 1.15592)  (high, 1.15599)  (low, 1.15582)  (close, 1.15577)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 60)
+2  (timestamp, 2025-06-12 21:34:00)  (open, 1.15576)  (high, 1.15599)  (low, 1.15593)  (close, 1.15565)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 60)
+3  (timestamp, 2025-06-12 21:33:00)  (open, 1.15535)  (high, 1.15578)  (low, 1.15578)  (close, 1.15531)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 60)
+4  (timestamp, 2025-06-12 21:32:00)   (open, 1.1554)  (high, 1.15551)  (low, 1.15533)  (close, 1.15518)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 60)
+Last 5 candles:
+                                   0                1                2               3                 4              5                    6                7
+89  (timestamp, 2025-06-12 20:07:00)  (open, 1.15527)  (high, 1.15565)  (low, 1.15561)  (close, 1.15526)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 60)
+90  (timestamp, 2025-06-12 20:06:00)  (open, 1.15535)  (high, 1.15541)  (low, 1.15526)   (close, 1.1551)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 60)
+91  (timestamp, 2025-06-12 20:05:00)  (open, 1.15511)  (high, 1.15552)  (low, 1.15535)  (close, 1.15511)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 60)
+92  (timestamp, 2025-06-12 20:04:00)  (open, 1.15556)  (high, 1.15556)  (low, 1.15511)  (close, 1.15506)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 60)
+93  (timestamp, 2025-06-12 20:03:00)  (open, 1.15568)  (high, 1.15574)  (low, 1.15556)  (close, 1.15549)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 60)
+Number of candles: 94
+--------------------------------------------------
+
+Begin datetime : 2025-06-12 19:42:37.134848
+End datetime : 2025-06-12 19:42:37.272822
+Timeframe: 300s, Period: 1s
+First 5 candles:
+                                  0                1                2               3                 4              5                    6                 7
+0  (timestamp, 2025-06-12 21:35:00)  (open, 1.15592)  (high, 1.15599)  (low, 1.15587)  (close, 1.15567)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 300)
+1  (timestamp, 2025-06-12 21:30:00)   (open, 1.1556)  (high, 1.15599)  (low, 1.15593)  (close, 1.15518)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 300)
+2  (timestamp, 2025-06-12 21:25:00)  (open, 1.15519)  (high, 1.15583)  (low, 1.15561)  (close, 1.15519)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 300)
+3  (timestamp, 2025-06-12 21:20:00)  (open, 1.15533)    (high, 1.156)  (low, 1.15519)  (close, 1.15518)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 300)
+4  (timestamp, 2025-06-12 21:15:00)  (open, 1.15451)  (high, 1.15572)  (low, 1.15534)  (close, 1.15437)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 300)
+Last 5 candles:
+                                   0                1                2               3                 4              5                    6                 7
+94  (timestamp, 2025-06-12 13:45:00)  (open, 1.16238)  (high, 1.16265)  (low, 1.16236)  (close, 1.16211)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 300)
+95  (timestamp, 2025-06-12 13:40:00)  (open, 1.16181)  (high, 1.16244)  (low, 1.16235)  (close, 1.16142)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 300)
+96  (timestamp, 2025-06-12 13:35:00)  (open, 1.16269)  (high, 1.16269)  (low, 1.16182)  (close, 1.16147)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 300)
+97  (timestamp, 2025-06-12 13:30:00)  (open, 1.16256)  (high, 1.16327)  (low, 1.16268)   (close, 1.1622)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 300)
+98  (timestamp, 2025-06-12 13:25:00)  (open, 1.16277)  (high, 1.16323)  (low, 1.16255)  (close, 1.16248)  (volume, 0.0)  (asset, EURUSD_otc)  (timeframe, 300)
+Number of candles: 99
+--------------------------------------------------

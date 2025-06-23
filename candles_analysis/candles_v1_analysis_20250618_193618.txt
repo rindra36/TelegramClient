@@ -1,0 +1,264 @@
+
+Begin datetime : 2025-06-18 19:36:18.307336
+End datetime : 2025-06-18 19:36:18.511924
+Timeframe: 1s, Period: 3600s
+First 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:16  EURUSD_otc  1.16222
+2025-06-18 21:36:16  EURUSD_otc  1.16221
+Last 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:16  EURUSD_otc  1.16222
+2025-06-18 21:36:16  EURUSD_otc  1.16221
+Number of candles: 2
+--------------------------------------------------
+
+Begin datetime : 2025-06-18 19:36:18.514779
+End datetime : 2025-06-18 19:36:18.718179
+Timeframe: 5s, Period: 3600s
+First 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:14  EURUSD_otc  1.16227
+2025-06-18 21:36:14  EURUSD_otc  1.16226
+Last 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:14  EURUSD_otc  1.16227
+2025-06-18 21:36:14  EURUSD_otc  1.16226
+Number of candles: 2
+--------------------------------------------------
+
+Begin datetime : 2025-06-18 19:36:18.720646
+End datetime : 2025-06-18 19:36:18.923476
+Timeframe: 15s, Period: 3600s
+First 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:14  EURUSD_otc  1.16227
+2025-06-18 21:36:14  EURUSD_otc  1.16226
+Last 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:14  EURUSD_otc  1.16227
+2025-06-18 21:36:14  EURUSD_otc  1.16226
+Number of candles: 2
+--------------------------------------------------
+
+Begin datetime : 2025-06-18 19:36:18.925362
+End datetime : 2025-06-18 19:36:19.128797
+Timeframe: 30s, Period: 3600s
+First 3 candles:
+                          asset    price
+time                                    
+2025-06-18 21:35:59  EURUSD_otc  1.16224
+2025-06-18 21:35:59  EURUSD_otc  1.16223
+2025-06-18 21:35:59  EURUSD_otc  1.16219
+Last 3 candles:
+                          asset    price
+time                                    
+2025-06-18 21:35:59  EURUSD_otc  1.16224
+2025-06-18 21:35:59  EURUSD_otc  1.16223
+2025-06-18 21:35:59  EURUSD_otc  1.16219
+Number of candles: 3
+--------------------------------------------------
+
+Begin datetime : 2025-06-18 19:36:19.131669
+End datetime : 2025-06-18 19:36:19.334504
+Timeframe: 1s, Period: 7200s
+First 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:17  EURUSD_otc  1.16218
+2025-06-18 21:36:17  EURUSD_otc  1.16216
+Last 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:17  EURUSD_otc  1.16218
+2025-06-18 21:36:17  EURUSD_otc  1.16216
+Number of candles: 2
+--------------------------------------------------
+
+Begin datetime : 2025-06-18 19:36:19.336201
+End datetime : 2025-06-18 19:36:19.639771
+Timeframe: 5s, Period: 7200s
+First 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:14  EURUSD_otc  1.16227
+2025-06-18 21:36:14  EURUSD_otc  1.16226
+Last 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:14  EURUSD_otc  1.16227
+2025-06-18 21:36:14  EURUSD_otc  1.16226
+Number of candles: 2
+--------------------------------------------------
+
+Begin datetime : 2025-06-18 19:36:19.642285
+End datetime : 2025-06-18 19:36:19.845221
+Timeframe: 15s, Period: 7200s
+First 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:14  EURUSD_otc  1.16227
+2025-06-18 21:36:14  EURUSD_otc  1.16226
+Last 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:14  EURUSD_otc  1.16227
+2025-06-18 21:36:14  EURUSD_otc  1.16226
+Number of candles: 2
+--------------------------------------------------
+
+Begin datetime : 2025-06-18 19:36:19.846940
+End datetime : 2025-06-18 19:36:20.150233
+Timeframe: 30s, Period: 7200s
+First 3 candles:
+                          asset    price
+time                                    
+2025-06-18 21:35:59  EURUSD_otc  1.16224
+2025-06-18 21:35:59  EURUSD_otc  1.16223
+2025-06-18 21:35:59  EURUSD_otc  1.16219
+Last 3 candles:
+                          asset    price
+time                                    
+2025-06-18 21:35:59  EURUSD_otc  1.16224
+2025-06-18 21:35:59  EURUSD_otc  1.16223
+2025-06-18 21:35:59  EURUSD_otc  1.16219
+Number of candles: 3
+--------------------------------------------------
+
+Begin datetime : 2025-06-18 19:36:20.152391
+End datetime : 2025-06-18 19:36:20.355733
+Timeframe: 1s, Period: 10800s
+First 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:18  EURUSD_otc  1.16216
+2025-06-18 21:36:18  EURUSD_otc  1.16220
+Last 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:18  EURUSD_otc  1.16216
+2025-06-18 21:36:18  EURUSD_otc  1.16220
+Number of candles: 2
+--------------------------------------------------
+
+Begin datetime : 2025-06-18 19:36:20.357789
+End datetime : 2025-06-18 19:36:20.661207
+Timeframe: 5s, Period: 10800s
+First 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:14  EURUSD_otc  1.16227
+2025-06-18 21:36:14  EURUSD_otc  1.16226
+Last 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:14  EURUSD_otc  1.16227
+2025-06-18 21:36:14  EURUSD_otc  1.16226
+Number of candles: 2
+--------------------------------------------------
+
+Begin datetime : 2025-06-18 19:36:20.664058
+End datetime : 2025-06-18 19:36:20.867315
+Timeframe: 15s, Period: 10800s
+First 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:14  EURUSD_otc  1.16227
+2025-06-18 21:36:14  EURUSD_otc  1.16226
+Last 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:14  EURUSD_otc  1.16227
+2025-06-18 21:36:14  EURUSD_otc  1.16226
+Number of candles: 2
+--------------------------------------------------
+
+Begin datetime : 2025-06-18 19:36:20.869376
+End datetime : 2025-06-18 19:36:21.172787
+Timeframe: 30s, Period: 10800s
+First 3 candles:
+                          asset    price
+time                                    
+2025-06-18 21:35:59  EURUSD_otc  1.16224
+2025-06-18 21:35:59  EURUSD_otc  1.16223
+2025-06-18 21:35:59  EURUSD_otc  1.16219
+Last 3 candles:
+                          asset    price
+time                                    
+2025-06-18 21:35:59  EURUSD_otc  1.16224
+2025-06-18 21:35:59  EURUSD_otc  1.16223
+2025-06-18 21:35:59  EURUSD_otc  1.16219
+Number of candles: 3
+--------------------------------------------------
+
+Begin datetime : 2025-06-18 19:36:21.174946
+End datetime : 2025-06-18 19:36:21.378489
+Timeframe: 1s, Period: 14400s
+First 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:19  EURUSD_otc  1.16221
+2025-06-18 21:36:19  EURUSD_otc  1.16220
+Last 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:19  EURUSD_otc  1.16221
+2025-06-18 21:36:19  EURUSD_otc  1.16220
+Number of candles: 2
+--------------------------------------------------
+
+Begin datetime : 2025-06-18 19:36:21.380457
+End datetime : 2025-06-18 19:36:21.583915
+Timeframe: 5s, Period: 14400s
+First 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:19  EURUSD_otc  1.16221
+2025-06-18 21:36:19  EURUSD_otc  1.16220
+Last 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:19  EURUSD_otc  1.16221
+2025-06-18 21:36:19  EURUSD_otc  1.16220
+Number of candles: 2
+--------------------------------------------------
+
+Begin datetime : 2025-06-18 19:36:21.586440
+End datetime : 2025-06-18 19:36:21.789591
+Timeframe: 15s, Period: 14400s
+First 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:14  EURUSD_otc  1.16227
+2025-06-18 21:36:14  EURUSD_otc  1.16226
+Last 2 candles:
+                          asset    price
+time                                    
+2025-06-18 21:36:14  EURUSD_otc  1.16227
+2025-06-18 21:36:14  EURUSD_otc  1.16226
+Number of candles: 2
+--------------------------------------------------
+
+Begin datetime : 2025-06-18 19:36:21.791616
+End datetime : 2025-06-18 19:36:21.994780
+Timeframe: 30s, Period: 14400s
+First 3 candles:
+                          asset    price
+time                                    
+2025-06-18 21:35:59  EURUSD_otc  1.16224
+2025-06-18 21:35:59  EURUSD_otc  1.16223
+2025-06-18 21:35:59  EURUSD_otc  1.16219
+Last 3 candles:
+                          asset    price
+time                                    
+2025-06-18 21:35:59  EURUSD_otc  1.16224
+2025-06-18 21:35:59  EURUSD_otc  1.16223
+2025-06-18 21:35:59  EURUSD_otc  1.16219
+Number of candles: 3
+--------------------------------------------------
