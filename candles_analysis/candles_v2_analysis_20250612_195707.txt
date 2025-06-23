@@ -1,0 +1,84 @@
+
+Begin datetime : 2025-06-12 19:57:07.409847
+End datetime : 2025-06-12 19:57:07.548917
+Timeframe: 1s, Period: 1s
+First 0 candles:
+Empty DataFrame
+Columns: []
+Index: []
+Last 0 candles:
+Empty DataFrame
+Columns: []
+Index: []
+Number of candles: 0
+--------------------------------------------------
+
+Begin datetime : 2025-06-12 19:57:07.551611
+End datetime : 2025-06-12 19:57:07.755228
+Timeframe: 5s, Period: 1s
+First 0 candles:
+Empty DataFrame
+Columns: []
+Index: []
+Last 0 candles:
+Empty DataFrame
+Columns: []
+Index: []
+Number of candles: 0
+--------------------------------------------------
+
+Begin datetime : 2025-06-12 19:57:07.756748
+End datetime : 2025-06-12 19:57:07.879735
+Timeframe: 15s, Period: 1s
+First 0 candles:
+Empty DataFrame
+Columns: []
+Index: []
+Last 0 candles:
+Empty DataFrame
+Columns: []
+Index: []
+Number of candles: 0
+--------------------------------------------------
+
+Begin datetime : 2025-06-12 19:57:07.881169
+End datetime : 2025-06-12 19:57:08.005555
+Timeframe: 30s, Period: 1s
+First 0 candles:
+Empty DataFrame
+Columns: []
+Index: []
+Last 0 candles:
+Empty DataFrame
+Columns: []
+Index: []
+Number of candles: 0
+--------------------------------------------------
+
+Begin datetime : 2025-06-12 19:57:08.006981
+End datetime : 2025-06-12 19:57:08.128046
+Timeframe: 60s, Period: 1s
+First 0 candles:
+Empty DataFrame
+Columns: []
+Index: []
+Last 0 candles:
+Empty DataFrame
+Columns: []
+Index: []
+Number of candles: 0
+--------------------------------------------------
+
+Begin datetime : 2025-06-12 19:57:08.129357
+End datetime : 2025-06-12 19:57:08.437721
+Timeframe: 300s, Period: 1s
+First 0 candles:
+Empty DataFrame
+Columns: []
+Index: []
+Last 0 candles:
+Empty DataFrame
+Columns: []
+Index: []
+Number of candles: 0
+--------------------------------------------------

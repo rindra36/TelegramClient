@@ -1,0 +1,19 @@
+{
+    "trading_type": "progressive_compound",
+    "initial_amount": 10.0,
+    "current_amount": 10.0,
+    "max_compound_level": 5,
+    "current_compound_level": 0,
+    "consecutive_wins": 0,
+    "save_csv": true,
+    "max_stages": 4,
+    "current_stage": 1,
+    "current_step": 1,
+    "stage_profits": {
+        "1": 17.664,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0
+    },
+    "current_profit": 0.0
+}

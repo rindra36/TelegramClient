@@ -1,6 +1,7 @@
 from typing import Dict, Any, Optional, Union
 import asyncio
 import logging
+from BinaryOptionsToolsV2.validator import Validator
 from PocketOptionMethod import PocketOptionMethod
 
 
@@ -14,17 +15,18 @@ class PocketOptionAPI:
     LIMIT_BALANCE = 25
     MAX_BID = 4  # Maximum bid amount considering Martingale strategy with base amount of $1
 
-    def __init__(self, wallet_type: str = 'demo'):
+    def __init__(self, account: int, wallet_type: str = 'demo'):
         """
         Initialize PocketOption API wrapper.
 
         Args:
+            account (int): The account in which launching the trade
             wallet_type (str): Type of wallet ('demo' or 'real')
         """
         self._variables: Dict[str, Dict[str, Any]] = {}
         self.wallet_type = wallet_type.lower()
         self._logger = logging.getLogger(__name__)
-        self.pocket_option_method = PocketOptionMethod(self.wallet_type)
+        self.pocket_option_method = PocketOptionMethod(account, self.wallet_type)
 
     @property
     def variables(self) -> Dict[str, Dict[str, Any]]:
@@ -130,6 +132,35 @@ class PocketOptionAPI:
             self._variables[channel] = {}
         if key != "channel":  # Prevent overwriting channel identifier
             self._variables[channel][key] = value
+
+    def are_channels_identical(self, channel1: str, channel2: str) -> bool:
+        """
+        Compare if two channels have exactly the same data.
+
+        Args:
+            channel1: First channel identifier
+            channel2: Second channel identifier
+
+        Returns:
+            bool: True if channels have identical data, False otherwise
+        """
+        # Check if both channels exist
+        if not self.has_channel(channel1) or not self.has_channel(channel2):
+            return False
+
+        data1 = self.get_channel_data(channel1)
+        data2 = self.get_channel_data(channel2)
+
+        # Check if they have the same keys
+        if set(data1.keys()) != set(data2.keys()):
+            return False
+
+        # Compare all values except the channel identifier
+        return all(
+            data1[key] == data2[key] 
+            for key in data1.keys() 
+            if key != "channel"
+        )
 
     async def trade(self, channel: str, check_win: bool = False, use_v1: bool = True) -> Union[str, bool, None]:
         """
@@ -243,3 +274,17 @@ class PocketOptionAPI:
             Any: Trade data
         """
         return await self.pocket_option_method.get_trade_data(trade_id)
+
+    async def get_best_payout(self):
+        """
+        Get the best payout.
+        Returns:
+            Any: Best payout
+        """
+        return await self.pocket_option_method.get_best_payout()
+
+    async def create_raw_order(self, message: str, validator: Validator):
+        return await self.pocket_option_method.create_raw_order(message, validator)
+
+    async def get_payout(self, asset: str):
+        return await self.pocket_option_method.get_payout(asset)

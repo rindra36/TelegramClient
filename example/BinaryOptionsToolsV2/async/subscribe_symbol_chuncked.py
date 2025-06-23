@@ -5,7 +5,7 @@ import asyncio
 async def main(ssid: str):
     # The api automatically detects if the 'ssid' is for real or demo account
     api = PocketOptionAsync(ssid)    
-    stream = await api.subscribe_symbol_chuncked("EURUSD_otc", 15) # Returns a candle obtained from combining 15 (chunk_size) candles
+    stream = await api.subscribe_symbol_chuncked("EURUSD_otc", 60) # Returns a candle obtained from combining 15 (chunk_size) candles
     
     # This should run forever so you will need to force close the program
     async for candle in stream:

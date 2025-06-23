@@ -2,4 +2,10 @@
 logs/*
 lib/*
 __pycache__/
-*.session
+*.session*
+assets/env/*
+notes/*
+candles_data/*
+plots/*
+bot/*
+bot-v2/*
