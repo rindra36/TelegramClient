@@ -1,0 +1,70 @@
+from typing import Iterable, Optional, TypeVar
+
+from stock_indicators._cslib import CsIndicator
+from stock_indicators._cstypes import List as CsList
+from stock_indicators.indicators.common.helpers import CondenseMixin, RemoveWarmupMixin
+from stock_indicators.indicators.common.results import IndicatorResults, ResultBase
+from stock_indicators.indicators.common.quote import Quote
+
+
+def get_elder_ray(quotes: Iterable[Quote], lookback_periods: int = 13):
+    """Get Elder-ray Index calculated.
+
+    The Elder-ray Index depicts buying and selling pressure, also known as Bull and Bear Power.
+
+    Parameters:
+        `quotes` : Iterable[Quote]
+            Historical price quotes.
+
+        `lookback_periods` : int, defaults 13
+            Number of periods for the EMA.
+
+    Returns:
+        `ElderRayResults[ElderRayResult]`
+            ElderRayResults is list of ElderRayResult with providing useful helper methods.
+
+    See more:
+         - [Elder-ray Index Reference](https://python.stockindicators.dev/indicators/ElderRay/#content)
+         - [Helper Methods](https://python.stockindicators.dev/utilities/#content)
+    """
+    results = CsIndicator.GetElderRay[Quote](CsList(Quote, quotes), lookback_periods)
+    return ElderRayResults(results, ElderRayResult)
+
+
+class ElderRayResult(ResultBase):
+    """
+    A wrapper class for a single unit of Elder-ray Index results.
+    """
+
+    @property
+    def ema(self) -> Optional[float]:
+        return self._csdata.Ema
+
+    @ema.setter
+    def ema(self, value):
+        self._csdata.Ema = value
+
+    @property
+    def bull_power(self) -> Optional[float]:
+        return self._csdata.BullPower
+
+    @bull_power.setter
+    def bull_power(self, value):
+        self._csdata.BullPower = value
+
+    @property
+    def bear_power(self) -> Optional[float]:
+        return self._csdata.BearPower
+
+    @bear_power.setter
+    def bear_power(self, value):
+        self._csdata.BearPower = value
+
+
+_T = TypeVar("_T", bound=ElderRayResult)
+class ElderRayResults(CondenseMixin, RemoveWarmupMixin, IndicatorResults[_T]):
+    """
+    A wrapper class for the list of Elder-ray Index results.
+    It is exactly same with built-in `list` except for that it provides
+    some useful helper methods written in C# implementation.
+    """

@@ -1,0 +1,68 @@
+from typing import Iterable, Optional, TypeVar
+
+from stock_indicators._cslib import CsIndicator
+from stock_indicators._cstypes import List as CsList
+from stock_indicators.indicators.common.helpers import CondenseMixin, RemoveWarmupMixin
+from stock_indicators.indicators.common.results import IndicatorResults, ResultBase
+from stock_indicators.indicators.common.quote import Quote
+
+
+def get_ht_trendline(quotes: Iterable[Quote]):
+    """Get HTL calculated.
+
+    Hilbert Transform Instantaneous Trendline (HTL) is a 5-period
+    trendline of high/low price that uses signal processing to reduce noise.
+
+    Parameters:
+        `quotes` : Iterable[Quote]
+            Historical price quotes.
+
+    Returns:
+        `HTTrendlineResults[HTTrendlineResult]`
+            HTTrendlineResults is list of HTTrendlineResult with providing useful helper methods.
+
+    See more:
+         - [HTL Reference](https://python.stockindicators.dev/indicators/HtTrendline/#content)
+         - [Helper Methods](https://python.stockindicators.dev/utilities/#content)
+    """
+    results = CsIndicator.GetHtTrendline[Quote](CsList(Quote, quotes))
+    return HTTrendlineResults(results, HTTrendlineResult)
+
+
+class HTTrendlineResult(ResultBase):
+    """
+    A wrapper class for a single unit of Hilbert Transform Instantaneous Trendline (HTL) results.
+    """
+
+    @property
+    def trendline(self) -> Optional[float]:
+        return self._csdata.Trendline
+
+    @trendline.setter
+    def trendline(self, value):
+        self._csdata.Trendline = value
+
+    @property
+    def dc_periods(self) -> Optional[int]:
+        return self._csdata.DcPeriods
+
+    @dc_periods.setter
+    def dc_periods(self, value):
+        self._csdata.DcPeriods = value
+
+    @property
+    def smooth_price(self) -> Optional[float]:
+        return self._csdata.SmoothPrice
+
+    @smooth_price.setter
+    def smooth_price(self, value):
+        self._csdata.SmoothPrice = value
+
+
+_T = TypeVar("_T", bound=HTTrendlineResult)
+class HTTrendlineResults(CondenseMixin, RemoveWarmupMixin, IndicatorResults[_T]):
+    """
+    A wrapper class for the list of Hilbert Transform Instantaneous Trendline (HTL) results.
+    It is exactly same with built-in `list` except for that it provides
+    some useful helper methods written in CSharp implementation.
+    """
