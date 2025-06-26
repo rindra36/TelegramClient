@@ -626,6 +626,7 @@ async def plot_market_structure(df: pd.DataFrame, market_structure: dict, asset:
     filename = f"{output_dir}/{selected_strategy}_{asset}_time_{timestamp}.png"
     await asyncio.sleep(0)
     plt.savefig(filename)
+    plt.close()
 
 def check_trade_conditions(current_price: float, current_index: int, market_structure: dict, proximity_pct: float = 0.005):
     """

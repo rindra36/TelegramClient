@@ -2787,7 +2787,6 @@ async def process_candle_data_async(candles: list, current_asset: str, full_cand
         # The real decision your strategy will use:
         current_decision = signals['decision_current']
         print("\n[1] CURRENT DECISION (Based on Horizontal Levels Only)")
-        print(f"  State:         {current_decision['state']}")
         print(f"  Current price: {current_decision['current_price']}")
         print(f"  Allow Buy?  -> {current_decision['allow_buy']}")
         print(f"  Reason:        {current_decision['buy_reason']}")
@@ -2797,7 +2796,6 @@ async def process_candle_data_async(candles: list, current_asset: str, full_cand
         # The hypothetical decision for your information:
         trend_decision = signals['decision_with_trends']
         print("\n[2] HYPOTHETICAL DECISION (If Trend Lines Were Rules)")
-        print(f"  State:         {trend_decision['state']}")
         print(f"  Current price: {trend_decision['current_price']}")
         print(f"  Allow Buy?  -> {trend_decision['allow_buy']}")
         print(f"  Reason:        {trend_decision['buy_reason']}")

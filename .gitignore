@@ -1,10 +1,6 @@
-.venv
 logs/*
-lib/*
 __pycache__/
 *.session*
 assets/env/*
 candles_data/*
 plots/*
-bot/*
-bot-v2/*

@@ -30,12 +30,27 @@ mkdir lib && cd lib
 git clone https://github.com/ChipaDevTeam/BinaryOptionsTools-v2.git
 cd BinaryOptionsTools-v2/BinaryOptionsToolsV2
 maturin develop -r
+
+# If error : (Especially on codeanywhere)
+# 1. Go to https://rust-lang.github.io/rustup-components-history and see the last date
+# 2. Install the latest toolchain
+rustup toolchain install nightly-2025-06-23 (The latest date)
+# 3. Uninstall the toolchain pre-installed
+rustup toolchain uninstall stable-x86_64-unknown-linux-gnu
+# 4. List the toolchain : It will install the correct version of the one we uninstalled
+rustup toolchain list
+# 5. Re-run the build of the library
 cd ..
 
 # Install BinaryOptionsTools-V1
 git clone https://github.com/theshadow76/BinaryOptionsTools.git
 cd BinaryOptionsTools
 pip install .
+
+# Install PocketOptionAPI
+git clone https://github.com/ChipaDevTeam/PocketOptionAPI.git
+cd PocketOptionAPI
+pip install -r requirements.txt
 ```
 
 ## ⚙️ Configuration
