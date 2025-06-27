@@ -333,6 +333,96 @@ async def change_trading_settings():
             # Reload last valid config
             trading_config = load_trading_config()
 
+class AssetDataManager:
+    def __init__(self):
+        self.asset_data = {}  # Stores DataFrame for each asset
+        self.last_update = {}  # Tracks last update time for each asset
+        self._lock = asyncio.Lock()  # For thread-safe data updates
+
+    async def update_asset_data(self, asset: str, new_data: pd.DataFrame):
+        async with self._lock:
+            if asset not in self.asset_data:
+                self.asset_data[asset] = new_data
+            else:
+                # Merge existing and new data
+                combined = pd.concat([self.asset_data[asset], new_data])
+                # Remove duplicates and sort by time
+                combined = combined.drop_duplicates(subset=['time'], keep='last').sort_values('time')
+                self.asset_data[asset] = combined
+            self.last_update[asset] = datetime.now()
+
+    async def get_latest_data(self, asset: str) -> pd.DataFrame:
+        async with self._lock:            
+            return self.asset_data.get(asset, pd.DataFrame())
+
+async def background_candle_fetcher(data_manager: AssetDataManager, assets: List[str]):
+    """Continuously fetches candles for all assets"""
+    while True:
+        try:
+            for asset in assets:
+                # Fetch new candles
+                new_candles = await get_candles(candle_ssid, asset, action, need_restart=False)
+                # Update the shared data manager
+                await data_manager.update_asset_data(asset, new_candles)
+            await asyncio.sleep(1)  # Adjust delay as needed
+        except Exception as e:
+            print(f"Error in candle fetcher: {e}")
+            await asyncio.sleep(5)
+
+async def signal_processor(data_manager: AssetDataManager, assets: List[str]):
+    """Processes signals using latest available data"""
+    while True:
+        try:
+            for asset in assets:
+                # Get latest data without waiting for new fetches
+                df = await data_manager.get_latest_data(asset)
+                if df.empty:
+                    print(f"No data available for {asset}")
+                    continue
+
+                # Add debug logging
+                print(f"\nProcessing signals for {asset}")
+                print(f"Latest candle time: {df['time'].iloc[-1]}")
+
+                # Check for signals
+                call_signal, put_signal, signal_time = selected_strategy.check_trade_entry(df)
+
+                # Log signal check results
+                print(f"Signal check results for {asset}:")
+                print(f"Call signal: {call_signal}")
+                print(f"Put signal: {put_signal}")
+                print(f"Signal time: {signal_time}")
+                
+                if call_signal:
+                    print(f"\nBUY CALL signal for {asset} at {signal_time}")
+                    await trade(api, api_v1, asset, 0)
+                elif put_signal:
+                    print(f"\nBUY PUT signal for {asset} at {signal_time}")
+                    await trade(api, api_v1, asset, 1)
+                else:
+                    print(f"No valid signals for {asset}")
+
+            await asyncio.sleep(0.1)  # Adjust processing frequency as needed
+        except Exception as e:
+            print(f"Error in signal processor: {e}")
+            await asyncio.sleep(1)
+
+# Modified action '3' implementation
+async def run_continuous_trading(api, assets: List[str]):
+    data_manager = AssetDataManager()
+    
+    # Create tasks for both processes
+    fetcher = asyncio.create_task(background_candle_fetcher(data_manager, assets))
+    processor = asyncio.create_task(signal_processor(data_manager, assets))
+    
+    try:
+        # Wait for both tasks (they'll run until cancelled)
+        await asyncio.gather(fetcher, processor)
+    except asyncio.CancelledError:
+        fetcher.cancel()
+        processor.cancel()
+        await asyncio.gather(fetcher, processor, return_exceptions=True)
+
 # Initialize trading config
 trading_config = load_trading_config()
 
@@ -1424,8 +1514,103 @@ async def main(ssid: str, asset: str|list|None = None, action: str|None = None, 
             print("\nAnalysis completed. Returning to main menu...")
             await show_menu(ssid)
             return
+
+        elif action == '8':  # New background fetching mode
+            continuous_mode = True
+            payouts = []
+            processed_assets = set()
+            state_file = "trading_state.json"
+            payout_method = None
+            min_payout = 70
+
+            # If assets provided from backtesting, use them directly
+            if isinstance(asset, list) and asset:
+                payouts = asset.copy()  # Use the provided assets
+                payout_method = 2
+                print(f"\nStarting continuous trading with {len(payouts)} selected assets from backtesting")
+                print("Assets:", ", ".join(payouts))
+                
+                # Save initial state
+                with open(state_file, 'w') as f:
+                    json.dump({
+                        'assets': payouts,
+                        'processed_assets': list(processed_assets)
+                    }, f)
+            else:
+                # Load or get initial preferences for asset selection
+                if os.path.exists(state_file):
+                    try:
+                        with open(state_file, 'r') as f:
+                            state = json.load(f)
+                            payout_method = state.get('method')
+                            min_payout = state.get('min_payout', 70)
+                            processed_assets = set(state.get('processed_assets', []))
+                            print(f"Restored trading preferences - Method: {'Maximum Payout' if payout_method == '1' else f'Minimum {min_payout}%'}")
+                            print(f"Loaded {len(processed_assets)} previously processed assets")
+                    except Exception as e:
+                        print(f"Error loading state file: {e}")
+                        payout_method = None
+
+                # If no saved preferences, get initial preferences
+                if payout_method is None:
+                    print("\nFirst time setup - Please select your trading preferences")
+                    while True:
+                        method = input("\nSelect trading method:\n1. Trade only assets with maximum payout\n2. Trade assets above minimum payout (70%)\nChoice (1/2): ").strip()
+                        if method in ['1', '2']:
+                            payout_method = method
+                            if method == '2':
+                                min_input = input("\nEnter minimum payout percentage (default 70): ").strip()
+                                try:
+                                    min_payout = int(min_input) if min_input else 70
+                                except ValueError:
+                                    min_payout = 70
+                                    print("Invalid input. Using default minimum payout: 70%")
+
+                            # Save initial preferences
+                            with open(state_file, 'w') as f:
+                                json.dump({
+                                    'method': payout_method,
+                                    'min_payout': min_payout,
+                                    'processed_assets': list(processed_assets)
+                                }, f)
+                                
+                            # Save trading config with CSV preference
+                            save_trading_config(trading_config)
+                            break
+                        print("Invalid choice. Please enter 1 or 2.")
+
+                # Get initial assets based on preferences
+                raw_payouts = await api.payout()
+                if payout_method == '1':
+                    payouts = await get_best_payouts(api, True)
+                    print(f"\nSelected assets with maximum payout")
+                else:
+                    payouts = await get_best_payouts(api, False, min_payout)
+                    print(f"\nSelected assets with payout >= {min_payout}%")
+
+            if not payouts:
+                print("No valid assets to trade. Returning to main menu...")
+                return
+
+            print(f"\nStarting background fetching mode with {len(payouts)} assets")
+            print("Assets:", ", ".join(payouts))
+
+            try:
+                # TODO: Missing the funtionality to checking if the payout is still valid
+                # TODO: Add funtionality to trade only if the time does not exceed 5 seconds of the signal time
+                data_manager = AssetDataManager()
+                
+                # Create and run the continuous trading tasks
+                await run_continuous_trading(api, payouts)
+                
+            except KeyboardInterrupt:
+                print("\nTrading interrupted by user")
+            except Exception as e:
+                print(f"Error in background fetching mode: {e}")
+                traceback_str = traceback.format_exc()
+                print(f"Full traceback:\n{traceback_str}")
         else:
-            print("Invalid action. Please choose 1, 2, 3, 4, 5, or 6.")
+            print("Invalid action. Please choose 1, 2, 3, 4, 5, 6, 7, or 8.")
 
     except KeyboardInterrupt:
         print("\nReturning to main menu...")
@@ -2436,24 +2621,25 @@ async def show_menu(ssid: str, is_demo: bool = True):
         print("5. Multi-asset Analysis")
         print("6. Backtest")
         print("7. Analyze CSV file")
-        print("8. Change strategy")
-        print("9. Change trading settings")
+        print("8. Run continuously with background fetching (New)")
+        print("9. Change strategy")
+        print("10. Change trading settings")
         print("0. Exit")
-        action = input("\nChoose action (0-9): ").strip()
+        action = input("\nChoose action (0-10): ").strip()
         
         if action == "0":
             print("Exiting program...")
             return True  # Signal clean exit
             
-        if action == "8":
+        if action == "9":
             selected_strategy = await select_strategy()
             continue
             
-        if action == "9":
+        if action == "10":
             await change_trading_settings()
             continue
             
-        if action in ["1", "2", "3", "4", "5", "6", "7"]:
+        if action in ["1", "2", "3", "4", "5", "6", "7", "8"]:
             asset = None
             if action == "1":
                 asset = input("Enter asset symbol: ")
@@ -2467,7 +2653,7 @@ async def show_menu(ssid: str, is_demo: bool = True):
                 print("Returning to main menu...")
                 continue
         else:
-            print("Invalid action. Please choose 1-7.")
+            print("Invalid action. Please choose 1-8.")
 
 def exit_program():
     """Exit the program cleanly"""
@@ -2786,21 +2972,21 @@ async def process_candle_data_async(candles: list, current_asset: str, full_cand
         signals = check_trade_conditions(current_price, current_idx, structure, proximity_pct=0.01) # 1% proximity
         # The real decision your strategy will use:
         current_decision = signals['decision_current']
-        print("\n[1] CURRENT DECISION (Based on Horizontal Levels Only)")
-        print(f"  Current price: {current_decision['current_price']}")
-        print(f"  Allow Buy?  -> {current_decision['allow_buy']}")
-        print(f"  Reason:        {current_decision['buy_reason']}")
-        print(f"  Allow Sell? -> {current_decision['allow_sell']}")
-        print(f"  Reason:        {current_decision['sell_reason']}")
+        # print("\n[1] CURRENT DECISION (Based on Horizontal Levels Only)")
+        # print(f"  Current price: {current_decision['current_price']}")
+        # print(f"  Allow Buy?  -> {current_decision['allow_buy']}")
+        # print(f"  Reason:        {current_decision['buy_reason']}")
+        # print(f"  Allow Sell? -> {current_decision['allow_sell']}")
+        # print(f"  Reason:        {current_decision['sell_reason']}")
 
         # The hypothetical decision for your information:
         trend_decision = signals['decision_with_trends']
-        print("\n[2] HYPOTHETICAL DECISION (If Trend Lines Were Rules)")
-        print(f"  Current price: {trend_decision['current_price']}")
-        print(f"  Allow Buy?  -> {trend_decision['allow_buy']}")
-        print(f"  Reason:        {trend_decision['buy_reason']}")
-        print(f"  Allow Sell? -> {trend_decision['allow_sell']}")
-        print(f"  Reason:        {trend_decision['sell_reason']}")
+        # print("\n[2] HYPOTHETICAL DECISION (If Trend Lines Were Rules)")
+        # print(f"  Current price: {trend_decision['current_price']}")
+        # print(f"  Allow Buy?  -> {trend_decision['allow_buy']}")
+        # print(f"  Reason:        {trend_decision['buy_reason']}")
+        # print(f"  Allow Sell? -> {trend_decision['allow_sell']}")
+        # print(f"  Reason:        {trend_decision['sell_reason']}")
         df = generate_signals(candles_pd)
         dropna_strategy = strategy_timeframe.get('dropna', 'any')
         df_clean = df.dropna(how=dropna_strategy)
