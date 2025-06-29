@@ -438,9 +438,9 @@ class FastPriceActionStrategy(BaseStrategy):
             movement = point['price'] - start_price
             self.log_and_print(f"Time: {point['time']}, Price: {point['price']:.6f}, Movement: {movement:.6f}")
 
-    def check_trade_entry(self, df_clean: pd.DataFrame) -> Tuple[bool, bool, str]:
+    def check_trade_entry(self, df_clean: pd.DataFrame) -> Tuple[bool, bool, str, str]:
         """Not used for real-time operation."""
-        return False, False, ""
+        return False, False, "", ""
 
     def generate_signals(self, df: pd.DataFrame) -> pd.DataFrame:
         """Not used for real-time operation."""

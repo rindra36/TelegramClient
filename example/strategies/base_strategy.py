@@ -85,7 +85,7 @@ class BaseStrategy(ABC):
         pass
 
     @abstractmethod
-    def check_trade_entry(self, df_clean: pd.DataFrame) -> Tuple[bool, bool, str]:
+    def check_trade_entry(self, df_clean: pd.DataFrame) -> Tuple[bool, bool, str, str]:
         """
         Check for trade entry signals based on strategy-specific conditions.
         
@@ -97,6 +97,7 @@ class BaseStrategy(ABC):
                 - call_signal: True if should enter a call trade
                 - put_signal: True if should enter a put trade
                 - signal_time: Timestamp of the signal
+                - trade_time: Timestamp of the trade entry time
         """
         pass
 

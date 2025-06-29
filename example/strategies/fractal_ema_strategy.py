@@ -256,21 +256,25 @@ class FractalEMAStrategy(BaseStrategy):
         """Get the trading parameters for this strategy."""
         return self.trade_parameters.copy()
 
-    def check_trade_entry(self, df_clean: pd.DataFrame) -> Tuple[bool, bool, str]:
+    def check_trade_entry(self, df_clean: pd.DataFrame) -> Tuple[bool, bool, str, str]:
         """Check for Fractal-EMA based trade entry signals."""
         if df_clean.empty:
             return False, False, ""
             
         # Get the last row for signal checking
         last_row = df_clean.iloc[-1]
+        signal_row = df_clean.iloc[-1]
         
-        call_signal = bool(last_row['call_signal'])
-        put_signal = bool(last_row['put_signal'])
+        call_signal = bool(signal_row['call_signal'])
+        put_signal = bool(signal_row['put_signal'])
         
         # Get the signal time
-        signal_time = str(last_row['time']) if 'time' in last_row else ""
+        signal_time = str(signal_row['time']) if 'time' in signal_row else ""
         
-        return call_signal, put_signal, signal_time
+        # Get the trade time
+        trade_time = str(last_row['time']) if 'time' in last_row else ""
+        
+        return call_signal, put_signal, signal_time, trade_time
     
     def pandas_dataframe_to_quote(self, df: pd.DataFrame):
         """Transforming the pandas dataframe into quote to work with stock_indicators."""

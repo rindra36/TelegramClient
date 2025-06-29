@@ -458,7 +458,8 @@ def find_trend_lines(df, is_support: bool, window_size: int = 5, tolerance: floa
     for i in range(len(pivots_idx)):
         for j in range(i + 1, len(pivots_idx)):
             p1_idx, p2_idx = pivots_idx[i], pivots_idx[j]
-            p1_price, p2_price = df[price_col].loc[p1_idx], df[price_col].loc[p2_idx]
+            p1_price = float(df.iloc[p1_idx][price_col])
+            p2_price = float(df.iloc[p2_idx][price_col])
             
             # Calculate slope
             slope = (p2_price - p1_price) / (p2_idx - p1_idx)
@@ -470,10 +471,10 @@ def find_trend_lines(df, is_support: bool, window_size: int = 5, tolerance: floa
             is_violated = False
             for k in range(p1_idx + 1, p2_idx):
                 line_price_at_k = p1_price + slope * (k - p1_idx)
-                if is_support and df['low'].loc[k] < line_price_at_k:
+                if is_support and float(df.iloc[k]['low']) < line_price_at_k:
                     is_violated = True
                     break
-                elif not is_support and df['high'].loc[k] > line_price_at_k:
+                elif not is_support and float(df.iloc[k]['high']) > line_price_at_k:
                     is_violated = True
                     break
             if is_violated:
@@ -482,9 +483,10 @@ def find_trend_lines(df, is_support: bool, window_size: int = 5, tolerance: floa
             for k_idx in pivots_idx:
                 if k_idx not in [p1_idx, p2_idx]:
                     line_price_at_k = p1_price + slope * (k_idx - p1_idx)
+                    k_price = float(df.iloc[k_idx][price_col])
                     # Check if the pivot is close to the line
-                    if abs(df[price_col].loc[k_idx] - line_price_at_k) / line_price_at_k < tolerance:
-                         touches.append({'idx': k_idx, 'price': df[price_col].loc[k_idx]})
+                    if abs(k_price - line_price_at_k) / line_price_at_k < tolerance:
+                         touches.append({'idx': k_idx, 'price': k_price})
             
             # A valid trend line needs at least 3 touches
             if len(touches) >= 3:
@@ -748,26 +750,29 @@ def find_flipped_levels(df: pd.DataFrame, original_levels: list, is_support_flip
     Returns:
         list: A list of prices for levels that have flipped.
     """
+    # Create a copy of the DataFrame with reset index
+    df_reset = df.reset_index(drop=True)
     flipped_levels = []
     
     for level in original_levels:
         # Find the index of the last time this level acted as its original role
         if is_support_flip: # Original role was RESISTANCE
             price_col_original = 'high'
-            pivots_original = df[price_col_original] == df[price_col_original].rolling(window_size*2+1, center=True).max()
-            relevant_pivots = df[(pivots_original) & (abs(df[price_col_original] - level) / level < tolerance)]
+            pivots_original = df_reset[price_col_original] == df_reset[price_col_original].rolling(window_size*2+1, center=True).max()
+            relevant_pivots = df_reset[(pivots_original) & (abs(df_reset[price_col_original] - level) / level < tolerance)]
         else: # Original role was SUPPORT
             price_col_original = 'low'
-            pivots_original = df[price_col_original] == df[price_col_original].rolling(window_size*2+1, center=True).min()
-            relevant_pivots = df[(pivots_original) & (abs(df[price_col_original] - level) / level < tolerance)]
+            pivots_original = df_reset[price_col_original] == df_reset[price_col_original].rolling(window_size*2+1, center=True).min()
+            relevant_pivots = df_reset[(pivots_original) & (abs(df_reset[price_col_original] - level) / level < tolerance)]
 
         if relevant_pivots.empty:
             continue
             
-        last_original_pivot_idx = relevant_pivots.index[-1]
+        # Get the position (not the index) of the last original pivot
+        last_original_pivot_pos = relevant_pivots.index[-1]
         
-        # Data after the last original touch
-        df_after = df.loc[last_original_pivot_idx + 1:]
+        # Data after the last original touch using integer position
+        df_after = df.iloc[last_original_pivot_pos + 1:]
         
         # Check for a break of the level
         if is_support_flip: # Break ABOVE resistance

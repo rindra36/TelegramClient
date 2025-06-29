@@ -5,3 +5,8 @@ websockets==10.4
 tzlocal
 requests
 nest_asyncio
+stock_indicators
+technical_analysis
+pytz
+matplotlib
+ta

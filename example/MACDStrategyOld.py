@@ -338,6 +338,16 @@ class AssetDataManager:
         self.asset_data = {}  # Stores DataFrame for each asset
         self.last_update = {}  # Tracks last update time for each asset
         self._lock = asyncio.Lock()  # For thread-safe data updates
+        self.processed_assets = set()  # Add tracking of processed assets
+        self.state_file = "trading_state.json"  # Add state file path
+        # Add status tracking
+        self.fetch_count = 0
+        self.last_status_print = datetime.now()
+        self.skipped_trades = set()  # Add set to track skipped trade times
+
+        # Create directory for debug CSV files
+        # self.debug_dir = 'debug_data'
+        # os.makedirs(self.debug_dir, exist_ok=True)
 
     async def update_asset_data(self, asset: str, new_data: pd.DataFrame):
         async with self._lock:
@@ -351,77 +361,293 @@ class AssetDataManager:
                 self.asset_data[asset] = combined
             self.last_update[asset] = datetime.now()
 
+            # Save to CSV for debugging
+            # timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            # filename = f"{self.debug_dir}/{asset}_{timestamp}.csv"
+            # self.asset_data[asset].to_csv(filename, index=False)
+            # print(f"Saved debug data for {asset} to {filename}")
+
     async def get_latest_data(self, asset: str) -> pd.DataFrame:
         async with self._lock:            
-            return self.asset_data.get(asset, pd.DataFrame())
+            df = self.asset_data.get(asset, pd.DataFrame())
+            
+            # Save to CSV when data is retrieved
+            # if not df.empty:
+            #     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            #     filename = f"{self.debug_dir}/{asset}_retrieved_{timestamp}.csv"
+            #     df.to_csv(filename, index=False)
+            #     print(f"Saved retrieved data for {asset} to {filename}")
+            
+            return df
 
-async def background_candle_fetcher(data_manager: AssetDataManager, assets: List[str]):
+    async def save_state(self):
+        """Save current state to file"""
+        state = {
+            'processed_assets': list(self.processed_assets),
+            'last_update': {k: v.isoformat() for k, v in self.last_update.items()},
+            'method': self.payout_method,
+            'min_payout': self.min_payout
+        }
+        with open(self.state_file, 'w') as f:
+            json.dump(state, f)
+
+    async def load_state(self):
+        """Load state from file"""
+        try:
+            with open(self.state_file, 'r') as f:
+                state = json.load(f)
+                self.processed_assets = set(state.get('processed_assets', []))
+                self.payout_method = state.get('method')
+                self.min_payout = state.get('min_payout', 70)
+        except FileNotFoundError:
+            pass
+
+    async def get_status_summary(self):
+        """Get concise status summary"""
+        return {
+            'total_assets': len(self.asset_data),
+            'processed': len(self.processed_assets),
+            'last_update': min(self.last_update.values()) if self.last_update else None,
+            'fetch_count': self.fetch_count
+        }
+
+    async def is_trade_skipped(self, asset: str, trade_time: str) -> bool:
+        """Check if this trade was already skipped"""
+        trade_key = f"{asset}_{trade_time}"
+        if trade_key in self.skipped_trades:
+            return True
+        return False
+
+    async def mark_trade_skipped(self, asset: str, trade_time: str):
+        """Mark this trade as skipped"""
+        trade_key = f"{asset}_{trade_time}"
+        self.skipped_trades.add(trade_key)
+
+async def background_candle_fetcher(data_manager: AssetDataManager):
     """Continuously fetches candles for all assets"""
+    status_interval = 60  # Print status every 30 seconds
+    last_status_time = datetime.now()
+
+    print(f"\n[{datetime.now().strftime('%H:%M:%S')}] Background fetcher started")  # Confirm start
+
     while True:
         try:
-            for asset in assets:
+            current_time = datetime.now()
+            
+            # Print periodic status
+            if (current_time - last_status_time).total_seconds() >= status_interval:
+                status = await data_manager.get_status_summary()
+                print(f"\n[{current_time.strftime('%H:%M:%S')}] Fetcher Status:")
+                print(f"Assets: {status['total_assets']}/{len(data_manager.assets)} | Processed: {status['processed']}")
+                print(f"Fetch cycles: {status['fetch_count']}")
+                last_status_time = current_time
+
+            # Get current payouts
+            current_raw_payouts = await api.payout()
+            active_assets = len(data_manager.assets)
+
+            # Process each asset
+            for asset in data_manager.assets[:]:  # Create copy to allow modification during iteration
+                # Skip if payout no longer meets criteria
+                payout_value = current_raw_payouts.get(asset, 0)
+
+                if data_manager.payout_method == '1':
+                    if payout_value < max(current_raw_payouts.values()):
+                        print(f"↓ {asset} dropped (payout: {payout_value}%)")
+                        data_manager.assets.remove(asset)
+                        continue
+                else:
+                    if payout_value < data_manager.min_payout:
+                        print(f"↓ {asset} dropped (payout: {payout_value}%)")
+                        data_manager.assets.remove(asset)
+                        continue
+
                 # Fetch new candles
                 new_candles = await get_candles(candle_ssid, asset, action, need_restart=False)
-                # Update the shared data manager
                 await data_manager.update_asset_data(asset, new_candles)
-            await asyncio.sleep(1)  # Adjust delay as needed
+
+                if asset in data_manager.processed_assets:
+                    data_manager.processed_assets.remove(asset)
+
+            data_manager.fetch_count += 1
+
+            # If assets changed, log it
+            if len(data_manager.assets) != active_assets:
+                print(f"← Active assets: {len(data_manager.assets)}")
+
+            # If all assets processed, start new cycle
+            data_manager.processed_assets.clear()  # Clear processed assets
+            
+            # Get fresh list of assets based on current payouts
+            if data_manager.payout_method == '1':
+                new_assets = await get_best_payouts(api, True, log=False)
+            else:
+                new_assets = await get_best_payouts(api, False, data_manager.min_payout, log=False)
+            
+            data_manager.assets = new_assets  # Update shared assets list
+            await data_manager.save_state()  # Save state after cycle reset
+
+            # Ensure we have a consistent delay between cycles
+            await asyncio.sleep(1)
         except Exception as e:
-            print(f"Error in candle fetcher: {e}")
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] ⚠️ Fetcher error: {e}")
+            traceback_str = traceback.format_exc()
+            print(f"Full traceback:\n{traceback_str}")
             await asyncio.sleep(5)
 
-async def signal_processor(data_manager: AssetDataManager, assets: List[str]):
+async def signal_processor(data_manager: AssetDataManager):
     """Processes signals using latest available data"""
+    global selected_strategy
+
+    signals_checked = 0
+    last_status_time = datetime.now()
+    status_interval = 60  # Print status every 30 seconds
+    MAX_PROCESSING_DELAY = 3  # Maximum allowed delay in seconds
+
     while True:
         try:
-            for asset in assets:
-                # Get latest data without waiting for new fetches
-                df = await data_manager.get_latest_data(asset)
-                if df.empty:
-                    print(f"No data available for {asset}")
+            current_time = datetime.now()
+            
+            # Print periodic status
+            if (current_time - last_status_time).total_seconds() >= status_interval:
+                print(f"\n[{current_time.strftime('%H:%M:%S')}] Signal Processor:")
+                print(f"Signals checked: {signals_checked}")
+                print(f"Processed assets: {len(data_manager.processed_assets)}")
+                last_status_time = current_time
+
+            for asset in data_manager.assets[:]:  # Create copy to allow modification
+                if asset in data_manager.processed_assets:
                     continue
 
-                # Add debug logging
-                print(f"\nProcessing signals for {asset}")
-                print(f"Latest candle time: {df['time'].iloc[-1]}")
+                df = await data_manager.get_latest_data(asset)
+                if df.empty:
+                    continue
 
-                # Check for signals
-                call_signal, put_signal, signal_time = selected_strategy.check_trade_entry(df)
-
-                # Log signal check results
-                print(f"Signal check results for {asset}:")
-                print(f"Call signal: {call_signal}")
-                print(f"Put signal: {put_signal}")
-                print(f"Signal time: {signal_time}")
+                signals_checked += 1
+                call_signal, put_signal, signal_time, trade_time = selected_strategy.check_trade_entry(df)
                 
-                if call_signal:
-                    print(f"\nBUY CALL signal for {asset} at {signal_time}")
-                    await trade(api, api_v1, asset, 0)
-                elif put_signal:
-                    print(f"\nBUY PUT signal for {asset} at {signal_time}")
-                    await trade(api, api_v1, asset, 1)
-                else:
-                    print(f"No valid signals for {asset}")
+                if call_signal or put_signal:
+                    # Check if this trade was already skipped
+                    if await data_manager.is_trade_skipped(asset, trade_time):
+                        continue
 
-            await asyncio.sleep(0.1)  # Adjust processing frequency as needed
+                    # TODO: Saving data when trading
+                    # Create output directory
+                    output_dir = 'candles_data'
+                    os.makedirs(output_dir, exist_ok=True)
+                    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                    allow_buy = False
+                    allow_sell = False
+
+                    if not df.empty:
+                        structure = analyze_market_structure(df)
+                        current_candle = df.iloc[-1]
+                        current_price = current_candle['close']
+                        current_idx = current_candle.name
+                        signals = check_trade_conditions(current_price, current_idx, structure, proximity_pct=0.01) # 1% proximity
+                        # The real decision your strategy will use:
+                        current_decision = signals['decision_current']
+                        print("\n[1] CURRENT DECISION (Based on Horizontal Levels Only)")
+                        print(f"  Current price: {current_decision['current_price']}")
+                        print(f"  Allow Buy?  -> {current_decision['allow_buy']}")
+                        print(f"  Reason:        {current_decision['buy_reason']}")
+                        print(f"  Allow Sell? -> {current_decision['allow_sell']}")
+                        print(f"  Reason:        {current_decision['sell_reason']}")
+                        allow_buy = current_decision['allow_buy']
+                        allow_sell = current_decision['allow_sell']
+
+                        # The hypothetical decision for your information:
+                        trend_decision = signals['decision_with_trends']
+                        print("\n[2] HYPOTHETICAL DECISION (If Trend Lines Were Rules)")
+                        print(f"  Current price: {trend_decision['current_price']}")
+                        print(f"  Allow Buy?  -> {trend_decision['allow_buy']}")
+                        print(f"  Reason:        {trend_decision['buy_reason']}")
+                        print(f"  Allow Sell? -> {trend_decision['allow_sell']}")
+                        print(f"  Reason:        {trend_decision['sell_reason']}")
+
+                        # filename = f"{output_dir}/{selected_strategy.__class__.__name__}_{asset}_{timestamp}.csv"
+                        # await asyncio.sleep(0)
+                        # df.to_csv(filename, index=False)
+                        # await plot_market_structure(df, structure, asset, timestamp, selected_strategy.__class__.__name__)
+                        # print(f"Saved candle data to {filename} at {datetime.now()}")
+                    # END TODO
+                    
+                    signal_type = "CALL" if call_signal else "PUT"
+
+                    # Convert trade_time to datetime and add 2 hours to current_time
+                    trade_time_dt = pd.to_datetime(trade_time)
+                    current_time = datetime.now(timezone.utc) + timedelta(hours=2)
+
+                    if not trade_time_dt.tzinfo:
+                        trade_time_dt = trade_time_dt.tz_localize('UTC')
+
+                    time_diff = current_time - trade_time_dt
+                    time_diff_seconds = abs(time_diff.total_seconds())
+                    
+                    print(f"\n[{current_time.strftime('%H:%M:%S')}] ↑ {signal_type} signal for {asset}")
+                    print(f"Current time: {current_time}")
+                    print(f"Signal time: {signal_time}")
+                    print(f"Trade time: {trade_time}")
+                    print(f"Processing delay: {time_diff_seconds:.2f} seconds")
+
+                    # Check processing delay
+                    if time_diff_seconds <= MAX_PROCESSING_DELAY:
+                        if call_signal and allow_buy:
+                            print(f"✓ Processing delay acceptable, executing trade")
+                            await trade(api, api_v1, asset, 0)
+                        elif put_signal and allow_sell:
+                            print(f"✓ Processing delay acceptable, executing trade")
+                            await trade(api, api_v1, asset, 1)
+                        else:
+                            print(f"⚠️ Skipped trade due to signal type mismatch")
+                            
+                            # Mark this trade as skipped
+                            await data_manager.mark_trade_skipped(asset, trade_time)
+                    else:
+                        print(f"⚠️ Skipped trade due to high processing delay ({time_diff_seconds:.2f}s > {MAX_PROCESSING_DELAY}s)")
+
+                        # Mark this trade as skipped
+                        await data_manager.mark_trade_skipped(asset, trade_time)
+                    
+                # Mark asset as processed
+                data_manager.processed_assets.add(asset)
+                await data_manager.save_state()  # Save state after processing
+
+            await asyncio.sleep(0.1)  # Wait before next check
         except Exception as e:
-            print(f"Error in signal processor: {e}")
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] ⚠️ Processor error: {e}")
+            traceback_str = traceback.format_exc()
+            print(f"Full traceback:\n{traceback_str}")
             await asyncio.sleep(1)
 
-# Modified action '3' implementation
-async def run_continuous_trading(api, assets: List[str]):
+async def run_continuous_trading(api, initial_assets: List[str], payout_method: str, min_payout: int = 70):
+    print(f"\n[{datetime.now().strftime('%H:%M:%S')}] Starting continuous trading system")
+    print(f"Initial assets: {len(initial_assets)}")
+    print(f"Mode: {'Maximum payout' if payout_method == '1' else f'Minimum {min_payout}% payout'}")
+
     data_manager = AssetDataManager()
+    data_manager.payout_method = payout_method
+    data_manager.min_payout = min_payout
+    data_manager.assets = initial_assets.copy()  # Initialize shared assets list
+
+    # Load previous state
+    await data_manager.load_state()
     
     # Create tasks for both processes
-    fetcher = asyncio.create_task(background_candle_fetcher(data_manager, assets))
-    processor = asyncio.create_task(signal_processor(data_manager, assets))
+    print("\nInitializing background processes...")
+    fetcher = asyncio.create_task(background_candle_fetcher(data_manager))
+    processor = asyncio.create_task(signal_processor(data_manager))
     
     try:
         # Wait for both tasks (they'll run until cancelled)
+        print("System running...")
         await asyncio.gather(fetcher, processor)
     except asyncio.CancelledError:
+        print("\nShutting down...")
         fetcher.cancel()
         processor.cancel()
         await asyncio.gather(fetcher, processor, return_exceptions=True)
+        await data_manager.save_state()  # Save state on exit
 
 # Initialize trading config
 trading_config = load_trading_config()
@@ -460,9 +686,9 @@ async def main(ssid: str, asset: str|list|None = None, action: str|None = None, 
     candle_ssid = ssid
     if not is_demo:
         demo_SSID = [
+            '''42["auth",{"session":"vtftn12e6f5f5008moitsd6skl","isDemo":1,"uid":27658142,"platform":2}]''',
             '''42["auth",{"session":"j079fsgog45pjnbsj9a2hvpnnb","isDemo":1,"uid":102766033,"platform":3,"isFastHistory":true}]''',
             '''42["auth",{"session":"upen8g2mcd3cvu5ai5i4jjl6si","isDemo":1,"uid":102365452,"platform":3,"isFastHistory":false}]''',
-            '''42["auth",{"session":"vtftn12e6f5f5008moitsd6skl","isDemo":1,"uid":27658142,"platform":2}]'''
         ]
         candle_ssid = SSIDManager.acquire_ssid(demo_SSID)
         if candle_ssid is None:
@@ -516,7 +742,7 @@ async def main(ssid: str, asset: str|list|None = None, action: str|None = None, 
                         df_clean = await get_candles(candle_ssid, asset, action)
                         
                         # Check trade entry conditions using current strategy
-                        call_signal, put_signal, signal_time = selected_strategy.check_trade_entry(df_clean)
+                        call_signal, put_signal, signal_time, trade_time = selected_strategy.check_trade_entry(df_clean)
                         
                         if call_signal:
                             print(f"BUY CALL at {signal_time} at {datetime.now()} UTC")
@@ -602,7 +828,7 @@ async def main(ssid: str, asset: str|list|None = None, action: str|None = None, 
                         df_clean = await get_candles(candle_ssid, current_asset, action, need_restart=False)
 
                         # Check trade entry conditions using current strategy
-                        call_signal, put_signal, signal_time = selected_strategy.check_trade_entry(df_clean)
+                        call_signal, put_signal, signal_time, trade_time = selected_strategy.check_trade_entry(df_clean)
                         
                         if call_signal:
                             print(f"BUY CALL at {signal_time} at {datetime.now()} UTC")
@@ -793,7 +1019,7 @@ async def main(ssid: str, asset: str|list|None = None, action: str|None = None, 
                             continue
 
                         # Check trade entry conditions
-                        call_signal, put_signal, signal_time = selected_strategy.check_trade_entry(df_clean)
+                        call_signal, put_signal, signal_time, trade_time = selected_strategy.check_trade_entry(df_clean)
                         
                         if call_signal:
                             print(f"BUY CALL at {signal_time} at {datetime.now()} UTC")
@@ -1006,7 +1232,7 @@ async def main(ssid: str, asset: str|list|None = None, action: str|None = None, 
                     signal_results = []
                     for asset_name, df in assets_data.items():
                         try:
-                            call_signal, put_signal, signal_time = selected_strategy.check_trade_entry(df)
+                            call_signal, put_signal, signal_time, trade_time = selected_strategy.check_trade_entry(df)
                             
                             if call_signal or put_signal:
                                 signal_type = "CALL" if call_signal else "PUT"
@@ -1194,7 +1420,7 @@ async def main(ssid: str, asset: str|list|None = None, action: str|None = None, 
             signal_results = []
             
             for asset_name, df in assets_data.items():
-                call_signal, put_signal, signal_time = selected_strategy.check_trade_entry(df)
+                call_signal, put_signal, signal_time, trade_time = selected_strategy.check_trade_entry(df)
                 
                 if call_signal or put_signal:
                     signal_type = "CALL" if call_signal else "PUT"
@@ -1596,12 +1822,10 @@ async def main(ssid: str, asset: str|list|None = None, action: str|None = None, 
             print("Assets:", ", ".join(payouts))
 
             try:
-                # TODO: Missing the funtionality to checking if the payout is still valid
-                # TODO: Add funtionality to trade only if the time does not exceed 5 seconds of the signal time
                 data_manager = AssetDataManager()
                 
                 # Create and run the continuous trading tasks
-                await run_continuous_trading(api, payouts)
+                await run_continuous_trading(api, payouts, payout_method, min_payout)
                 
             except KeyboardInterrupt:
                 print("\nTrading interrupted by user")
@@ -2367,7 +2591,7 @@ def restart_script(ssid: str, asset: str|list|tuple|None = None, command: str|No
         print(f"Full traceback:\n{traceback_str}")
         sys.exit(1)
 
-async def get_best_payouts(api, get_max: bool = False, min_payout: int = 70):
+async def get_best_payouts(api, get_max: bool = False, min_payout: int = 70, log: bool = True):
     """
     Retrieves assets with the highest payout rates from PocketOption.
     
@@ -2388,10 +2612,11 @@ async def get_best_payouts(api, get_max: bool = False, min_payout: int = 70):
         print("Warning: None of the restricted assets found in available payouts")
         return []
 
-    sorted_payouts = sorted(payouts.items(), key=lambda x: x[1], reverse=True)
-    print("\nAvailable restricted assets and payouts:")
-    for asset, payout in sorted_payouts:
-        print(f"{asset}: {payout}%")
+    if log:
+        sorted_payouts = sorted(payouts.items(), key=lambda x: x[1], reverse=True)
+        print("\nAvailable restricted assets and payouts:")
+        for asset, payout in sorted_payouts:
+            print(f"{asset}: {payout}%")
 
     # Handle maximum payout filtering
     if get_max:
@@ -3237,9 +3462,9 @@ if __name__ == '__main__':
     strategy_name = None
     is_demo = True
     demo_SSID = [
+        '''42["auth",{"session":"vtftn12e6f5f5008moitsd6skl","isDemo":1,"uid":27658142,"platform":2}]''',
         '''42["auth",{"session":"j079fsgog45pjnbsj9a2hvpnnb","isDemo":1,"uid":102766033,"platform":3,"isFastHistory":true}]''',
         '''42["auth",{"session":"upen8g2mcd3cvu5ai5i4jjl6si","isDemo":1,"uid":102365452,"platform":3,"isFastHistory":false}]''',
-        '''42["auth",{"session":"vtftn12e6f5f5008moitsd6skl","isDemo":1,"uid":27658142,"platform":2}]'''
     ]
     
     if len(sys.argv) > 1:

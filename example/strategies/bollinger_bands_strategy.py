@@ -177,22 +177,26 @@ class BollingerBandsStrategy(BaseStrategy):
         # Return a copy of trade parameters to prevent modification of internal state
         return self.trade_parameters.copy()
 
-    def check_trade_entry(self, df_clean: pd.DataFrame) -> Tuple[bool, bool, str]:
+    def check_trade_entry(self, df_clean: pd.DataFrame) -> Tuple[bool, bool, str, str]:
         """Check for Bollinger Bands-based trade entry signals."""
         if df_clean.empty:
             return False, False, ""
             
         # Get the last row for signal checking
         last_row = df_clean.iloc[-1]
+        signal_row = df_clean.iloc[-1]
         
         # Check conditions specific to Bollinger Bands strategy:
         # - Price crossing back above lower band for calls
         # - Price crossing back below upper band for puts
         # - ADX below 20 for ranging market confirmation
-        call_signal = bool(last_row['call_signal'])  # ((close_below_lower.shift(1)) & (close > bb_lower) & (adx < 20))
-        put_signal = bool(last_row['put_signal'])    # ((close_above_upper.shift(1)) & (close < bb_upper) & (adx < 20))
+        call_signal = bool(signal_row['call_signal'])  # ((close_below_lower.shift(1)) & (close > bb_lower) & (adx < 20))
+        put_signal = bool(signal_row['put_signal'])    # ((close_above_upper.shift(1)) & (close < bb_upper) & (adx < 20))
         
         # Get the signal time
-        signal_time = str(last_row['time']) if 'time' in last_row else ""
+        signal_time = str(signal_row['time']) if 'time' in signal_row else ""
+
+        # Get the trade time
+        trade_time = str(last_row['time']) if 'time' in last_row else ""
         
-        return call_signal, put_signal, signal_time
+        return call_signal, put_signal, signal_time, trade_time
